@@ -1,6 +1,6 @@
 import React from 'react';
 
-git const App = () =>{
+const App = () =>{
     return (
         <div>
             <h1>Hello Worl</h1>
