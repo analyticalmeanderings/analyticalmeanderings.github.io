@@ -3,13 +3,15 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import postRoutes from './routes/posts.js';
+
 const app = express();
 
 /* TODO: figure out why this is not working
 app.arguments(bodyParser.json({limit:"30mb", extended:true}));
 app.arguments(bodyParser.urlencoded({limit:"30mb", extended:true}));
 */
-app.use(cors());
+app.use('/post', postRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://analyticalmeanderings:gopher@oilsupplymap.hqm30.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
