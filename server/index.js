@@ -5,8 +5,10 @@ import cors from 'cors';
 
 const app = express();
 
+/* TODO: figure out why this is not working
 app.arguments(bodyParser.json({limit:"30mb", extended:true}));
 app.arguments(bodyParser.urlencoded({limit:"30mb", extended:true}));
+*/
 app.use(cors());
 
 const CONNECTION_URL = 'mongodb+srv://analyticalmeanderings:gopher@oilsupplymap.hqm30.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
