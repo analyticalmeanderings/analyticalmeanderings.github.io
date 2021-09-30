@@ -178,3 +178,15 @@ tr:hover {background-color: #ddd;}
     padding:20px;width:100%;
     font-size:28px;font-weight:700;text-transform:uppercase;text-align:left;color:#fff;
     background:#4b9cd3;border:none}
+.man_site .filter-toggle:after{content:'+';position:absolute;right:20px;top:14px;font-size:40px}
+.man_site .filter{display:none;width:auto}
+.man_site .show-filter .filter-toggle:after{content:'—';top:11px}
+.man_site .show-filter .filter{display:block}
+.man_site .results{display:block;padding:50px 25px;width:auto}
+.man_site .display-filter form .layout{grid-template-columns:1fr 1fr}
+.man_site .groups-map button.pin svg{width:20px;height:32.5px}
+.man_site .groups-map .popup{display:none}
+.man_site .mobile-groups-popups{display:block}
+.man_site .mobile-groups-popups .mobile-popup{display:none}
+.man_site .mobile-groups-popups .mobile-popup.active-mobile-group{display:block;margin:2em 0 0}}
+@media (max-width:500px){.man_site .display-filter form .layout{grid-template-columns:1fr}}
