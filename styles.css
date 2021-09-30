@@ -102,27 +102,8 @@ tr:hover {background-color: #ddd;}
 .man_site .display-toggle button.active-display{opacity:1}
  .man_site .display-toggle button:hover{opacity:1}
 
-  .man_site .display-filter button.filter-reset svg{margin-right:5px;vertical-align:-3px}
-  .man_site .display-filter button.filter-reset.hidden{display:none}
-  .man_site .programs-display{width:100%}.man_site .programs-display>*{display:none}
-  .man_site .programs-display>.active{display:block}
-
-  .man_site .groups-map:focus{outline:0}
-  .man_site .groups-map .map{position:relative}
-  .man_site .groups-map .map-bg img{display:block;width:100%;height:auto}
-  .man_site .groups-map .group {
-    position:absolute;
-    z-index:1;
-    transform:scale(1);
-    transition:all 350ms cubic-bezier(.175,.885,.32,1.275)}
 .man_site .groups-map .group:hover{z-index:3}
-.man_site .groups-map .group.hide {
-      opacity:0;
-      visibility:hidden;
-      cursor:default;
-      pointer-events:none;
-      transform:scale(0)
-    }
+
     
 .man_site .groups-map button.pin {
   position:absolute;
@@ -134,7 +115,6 @@ tr:hover {background-color: #ddd;}
   border:none;
   transition:.2s
 }
-.man_site .groups-map button.pin svg,.man_site .groups-map button.pin svg path{transition:.2s}
 .man_site .groups-map button.pin:focus,.man_site .groups-map button.pin:hover{z-index:2}
 .man_site .groups-map button.pin:focus svg path,.man_site .groups-map button.pin:hover svg path {
   fill:#c55510
@@ -152,10 +132,9 @@ tr:hover {background-color: #ddd;}
 .man_site .groups-map .group.active-group{z-index:2}
 .man_site .groups-map .group.active-group button.pin svg path{fill:#c55510}
 .man_site .groups-map .group.active-group .popup{opacity:1;visibility:visible}
-  .man_site .mobile-groups-popups{display:none}
 
-  .man_site .filter-toggle {
-    appearance:none;-moz-appearance:none;-webkit-appearance:none;display:block;position:relative;
-    padding:20px;width:100%;
-    font-size:28px;font-weight:700;text-transform:uppercase;text-align:left;color:#fff;
-    background:#4b9cd3;border:none}
+
+.man_site .filter-toggle {
+  position:relative;
+  background:#4b9cd3;border:
+}
