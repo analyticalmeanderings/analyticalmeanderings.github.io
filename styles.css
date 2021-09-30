@@ -99,30 +99,14 @@ tr:hover {background-color: #ddd;}
     opacity:.7;
     transition:.2s}
   
-  .man_site .display-toggle button span{margin-left:8px}
-  .man_site .display-toggle button.active-display{opacity:1}
-  .man_site .display-toggle button:hover{opacity:1}
-  .man_site .display-filter form{margin:0}
-  .man_site .display-filter form .layout{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    margin-bottom:20px
-  }
-.man_site .display-filter button.filter-reset {
-  margin:0 0 0 35px;
-  padding:0;
-  border:none;
-  color:#fff;
-  background:0 0;
-  font-size:16px;
-  font-weight:700;text-transform:uppercase}
+.man_site .display-toggle button.active-display{opacity:1}
+ .man_site .display-toggle button:hover{opacity:1}
+
   .man_site .display-filter button.filter-reset svg{margin-right:5px;vertical-align:-3px}
   .man_site .display-filter button.filter-reset.hidden{display:none}
   .man_site .programs-display{width:100%}.man_site .programs-display>*{display:none}
   .man_site .programs-display>.active{display:block}
-  .man_site .programs-list-table tbody tr{border-top:1px solid #ddd;background:0 0!important}
-  .man_site .programs-list-table tbody tr.hide{display:none}
+
   .man_site .groups-map:focus{outline:0}
   .man_site .groups-map .map{position:relative}
   .man_site .groups-map .map-bg img{display:block;width:100%;height:auto}
@@ -162,17 +146,14 @@ tr:hover {background-color: #ddd;}
 .man_site .groups-map .popup h4 {
   margin:1em 0 .5em;line-height:1;color:#121212;
   font-weight:700;font-size:20px;font-weight:500}
-  .man_site .groups-map .popup h4:first-child{margin-top:0}
-  .man_site .groups-map .popup h4:last-child{margin-bottom:0}
+
 
 
 .man_site .groups-map .group.active-group{z-index:2}
 .man_site .groups-map .group.active-group button.pin svg path{fill:#c55510}
-  .man_site .groups-map .group.active-group .popup{opacity:1;visibility:visible}
+.man_site .groups-map .group.active-group .popup{opacity:1;visibility:visible}
   .man_site .mobile-groups-popups{display:none}
-  @media (max-width:1200px){.man_site .filter{padding:50px 20px}}
-  @media (max-width:1050px){.man_site .display-filter form .layout{grid-template-columns:1fr}}
-  @media (max-width:900px){.man_site .programs-layout{display:block}
+
   .man_site .filter-toggle {
     appearance:none;-moz-appearance:none;-webkit-appearance:none;display:block;position:relative;
     padding:20px;width:100%;
