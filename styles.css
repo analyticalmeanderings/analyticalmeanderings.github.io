@@ -70,11 +70,6 @@ tr:hover {background-color: #ddd;}
     animation: marquee 30s linear infinite;
 }
 
-
-.man_site .filter-toggle{display:none}.man_site 
-.filter{position:relative;padding:50px;width:40%;background:#568bb6}
-
-
 .man_site .groups-map button.pin:focus svg path,.man_site .groups-map button.pin:hover svg path {
   fill:#c55510
 }
