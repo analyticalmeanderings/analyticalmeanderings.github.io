@@ -1,4 +1,11 @@
-body {font-family: Arial;}
+body {
+  font-family: Arial;
+  outline-style: dotted;
+  focus {outline: 1px dashed red;}
+  
+  
+
+}
 
 table {
   border-collapse: collapse;
@@ -68,7 +75,7 @@ tr:hover {background-color: #ddd;}
     animation: marquee 30s linear infinite;
 }
 
-.new-programs :focus{outline:0!important}
+.new-programs :focus{outline:0}
 .new-programs .programs-layout{display:flex;background:#f8f8f8}
 
 .new-programs .filter-toggle{display:none}.new-programs 
