@@ -70,41 +70,11 @@ tr:hover {background-color: #ddd;}
     animation: marquee 30s linear infinite;
 }
 
-.man_site :focus{outline:0}
-.man_site .programs-layout{display:flex;background:#f8f8f8}
 
 .man_site .filter-toggle{display:none}.man_site 
-.filter{position:relative;padding:50px;width:40%;background:#568bb6}.man_site 
-.results{display:flex;align-items:center;padding:50px;width:60%}
+.filter{position:relative;padding:50px;width:40%;background:#568bb6}
 
-.man_site 
-.filter-title {
-  margin:0 0 10px;
-  color:#fff}
-  
-.man_site .filter-description{margin:0 0 16px;font-size:14px;color:#fff}
-.man_site .display-toggle{margin:0 0 24px}.man_site .display-toggle .layout{display:flex}
-.man_site .display-toggle button {
-    display:flex;
-    align-items:center;
-    position:relative;
-    margin:0 20px 0 0;
-    padding:0;
-    border:none;
-    background:0 0;
-    color:#fff;font-weight:700;
-    font-size:18px;
-    text-transform:uppercase;
-    cursor:pointer;
-    opacity:.7;
-    transition:.2s}
-  
-.man_site .display-toggle button.active-display{opacity:1}
- .man_site .display-toggle button:hover{opacity:1}
 
-.man_site .groups-map .group:hover{z-index:3}
-
-.man_site .groups-map button.pin:focus,.man_site .groups-map button.pin:hover{z-index:2}
 .man_site .groups-map button.pin:focus svg path,.man_site .groups-map button.pin:hover svg path {
   fill:#c55510
 }
