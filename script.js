@@ -100,20 +100,16 @@ function build_alerts(){
   //       article_titles+='</p>';
   //       document.getElementById('alert_content').innerHTML += article_titles;
   //     })
-  import axios from 'axios';
 
-  var options = {
-    method: 'GET',
-    url: 'https://api.newscatcherapi.com/v2/search',
-    params: {q: 'Bitcoin', lang: 'en', sort_by: 'relevancy', page: '1'},
-    headers: {
-      'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'
-    }
-  };
-
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
+  fetch("https://api.newscatcherapi.com/v2/search", {
+    "method": "GET",
+    params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
+    "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    console.error(err);
   });
 }
