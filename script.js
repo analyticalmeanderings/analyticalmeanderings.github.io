@@ -45,10 +45,11 @@ function build_table(input_location, new_table_id) {
   
   var table_data = fetch(location, {credentials: 'include'})
   
-  /*
+  
     .then(function(response) {
       return response.text.trim().split(/\r?\n|\r/);
     })
+    /*
     .then(function(resText) {
       console.log(resText);
     });
