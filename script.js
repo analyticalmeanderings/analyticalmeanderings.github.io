@@ -100,8 +100,7 @@ function build_alerts(){
   //       article_titles+='</p>';
   //       document.getElementById('alert_content').innerHTML += article_titles;
   //     })
-
-  var axios = require("axios").default;
+  import axios from 'axios';
 
   var options = {
     method: 'GET',
