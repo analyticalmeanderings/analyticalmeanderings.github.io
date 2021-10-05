@@ -47,9 +47,9 @@ function build_table(input_location, new_table_id) {
   
   
     .then(function(response) {
-      return response.text().trim().split(/\r?\n|\r/);
+      return response.text();
     })
-    /*
+    
     .then(function(resText) {
       console.log(resText);
     });
@@ -57,7 +57,7 @@ function build_table(input_location, new_table_id) {
   var table = '';
   var table_rows = '';
   var table_header = '';
-
+  /*
   table_data.forEach(function(row, row_index) {
       var table_columns = '';
       var columns = row.split(','); // split/separate the columns in a row
