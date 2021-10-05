@@ -83,15 +83,21 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
 }
 
 function build_alerts(){
-  var url = 'https://newsapi.org/v2/everything?' +
-  'q=Pharma&' +
-  'from=2021-09-05&' +
-  'sortBy=popularity&' +
-  'apiKey=bd34a39495f647508c01f72451b4789d';
+  var url = 'http://api.mediastack.com/v1/news?'+
+    'access_key=89dcc6770900488a730bb00004d7596d'+
+    '&keywords=pharmaceutical';
 
-  fetch(new Request(url))
-    .then(function(response) {
-    console.log(response.json());
-    })
+  var req = new Request(url);
 
+  fetch(req)
+      .then(function(response) {
+        var article_data = response.json()['data'];
+        var article_titles = '<p>';
+        for (let article = 0; article < 10; i++) {
+          article_titles+=article_data[article]['title'];
+          article_titles+='         ';
+        }
+        article_titles+='</p>';
+        document.getElementById('alert_content').innerHTML += article_titles;
+      })
 }
