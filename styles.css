@@ -13,9 +13,10 @@ td, th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
   color: white;
 }
+
+th {background-color: #04AA6D;}
 
 tr:nth-child(even){background-color: #f2f2f2;}
 
