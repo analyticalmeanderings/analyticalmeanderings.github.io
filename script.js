@@ -1,3 +1,7 @@
+window.onload = function() {
+  build_table('./downstream.csv', 'downstream_table');
+}
+
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -29,12 +33,6 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
-
-  if (tabName === "Downstream Info"){
-    build_table('./downstream.csv', 'downstream_table');
-  }
-
-
 }
 
 function build_table(input_location, div_id_target) {
