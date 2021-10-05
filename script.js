@@ -2,6 +2,7 @@ window.onload = function() {
   build_table('./downstream.csv', 'downstream_table');
   build_table('./upstream.csv', 'upstream_table');
   build_table('./downstream_risk.csv', 'downstream_risk');
+  build_alerts();
 }
 
 function myFunction() {
@@ -79,4 +80,18 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
   table += '</table>';
 
   element_to_insert_table.innerHTML += table;
+}
+
+function build_alerts(){
+  var url = 'https://newsapi.org/v2/everything?' +
+  'q=Pharma&' +
+  'from=2021-09-05&' +
+  'sortBy=popularity&' +
+  'apiKey=bd34a39495f647508c01f72451b4789d';
+
+  fetch(new Request(url))
+    .then(function(response) {
+    console.log(response.json());
+    })
+
 }
