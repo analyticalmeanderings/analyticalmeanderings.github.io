@@ -7,7 +7,7 @@ table {
   width: 100%;
 }
 
-td {
+td, th {
   border: 1px solid #ddd;
   padding: 8px;
   padding-top: 12px;
@@ -21,9 +21,6 @@ tr:hover {background-color: #ddd;}
 th {
   background-color: #04AA6D;
   color: white;
-  text-align: left;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 /* Style the tab */
@@ -79,7 +76,7 @@ th {
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
