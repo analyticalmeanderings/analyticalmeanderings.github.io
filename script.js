@@ -31,15 +31,13 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 
   if (tabName === "Downstream Info"){
-    build_table('downstream.csv', 'downstream_table');
+    build_table('./downstream.csv', 'downstream_table');
   }
 
 
 }
 
 function build_table(input_location, new_table_id) {
-  
-  
   
   console.log(fetch(location, {credentials: 'include'}))
   
