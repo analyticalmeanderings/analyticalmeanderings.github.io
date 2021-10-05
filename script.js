@@ -83,21 +83,38 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
 }
 
 function build_alerts(){
-  var url = 'http://api.mediastack.com/v1/news?'+
-    'access_key=89dcc6770900488a730bb00004d7596d'+
-    '&keywords=pharmaceutical';
+  // var url = 'http://api.mediastack.com/v1/news?'+
+  //   'access_key=89dcc6770900488a730bb00004d7596d'+
+  //   '&keywords=pharmaceutical';
 
-  var req = new Request(url);
+  // var req = new Request(url);
 
-  fetch(req)
-      .then(function(response) {
-        var article_data = response.json()['data'];
-        var article_titles = '<p>';
-        for (let article = 0; article < 10; i++) {
-          article_titles+=article_data[article]['title'];
-          article_titles+='         ';
-        }
-        article_titles+='</p>';
-        document.getElementById('alert_content').innerHTML += article_titles;
-      })
+  // fetch(req)
+  //     .then(function(response) {
+  //       var article_data = response.json()['data'];
+  //       var article_titles = '<p>';
+  //       for (let article = 0; article < 10; i++) {
+  //         article_titles+=article_data[article]['title'];
+  //         article_titles+='         ';
+  //       }
+  //       article_titles+='</p>';
+  //       document.getElementById('alert_content').innerHTML += article_titles;
+  //     })
+
+  var axios = require("axios").default;
+
+  var options = {
+    method: 'GET',
+    url: 'https://api.newscatcherapi.com/v2/search',
+    params: {q: 'Bitcoin', lang: 'en', sort_by: 'relevancy', page: '1'},
+    headers: {
+      'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'
+    }
+  };
+
+  axios.request(options).then(function (response) {
+    console.log(response.data);
+  }).catch(function (error) {
+    console.error(error);
+  });
 }
