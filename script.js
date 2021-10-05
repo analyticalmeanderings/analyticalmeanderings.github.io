@@ -37,18 +37,6 @@ function openTab(evt, tabName) {
 
 }
 
-function build_table(location, id) {
-
-  fetch(location)
-  .then(function(response){
-      return response.text();
-  })
-  .then(function(data){
-      var table_container = document.getElementById(id);
-      build_table(data, table_container);
-  });
-}
-
 function build_table(input_location, new_table_id) {
 
   var table_data = fetch(location, {credentials: 'include'})
