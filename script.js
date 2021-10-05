@@ -47,7 +47,7 @@ function build_table(input_location, new_table_id) {
   
   
     .then(function(response) {
-      return response.text.trim().split(/\r?\n|\r/);
+      return response.text().trim().split(/\r?\n|\r/);
     })
     /*
     .then(function(resText) {
