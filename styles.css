@@ -22,6 +22,8 @@ tr:hover {background-color: #ddd;}
 th {
   background-color: #04AA6D;
   color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /* Style the tab */
