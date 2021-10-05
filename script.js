@@ -17,7 +17,7 @@ function myFunction() {
   }
 }
 
-function openCity(evt, cityName) {
+function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -27,8 +27,14 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  if (tabName === "Downstream Info"){
+    build_table('downstream.csv', 'downstream_table');
+  }
+
+
 }
 
 function build_table(location, id) {
@@ -43,13 +49,21 @@ function build_table(location, id) {
   });
 }
 
-function build_table(csv_string, element_to_insert_table) {
-  var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
+function build_table(input_location, new_table_id) {
+
+  var table_data = fetch(location, {credentials: 'include'})
+    .then(function(response) {
+      return response.text.trim().split(/\r?\n|\r/);
+    })
+    .then(function(resText) {
+      console.log(resText);
+    });
+
   var table = '';
   var table_rows = '';
   var table_header = '';
 
-  rows.forEach(function(row, row_index) {
+  table_data.forEach(function(row, row_index) {
       var table_columns = '';
       var columns = row.split(','); // split/separate the columns in a row
       columns.forEach(function(column, column_index) {
