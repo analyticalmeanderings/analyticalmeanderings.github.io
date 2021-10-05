@@ -71,14 +71,10 @@ function build_table(input_location, div_id_target) {
         table += '</tbody>';
     table += '</table>';
   
-    element_to_insert_table.innerHTML += table;
+    
     var div_container = document.getElementById('div_id_target');
+    div_container.innerHTML += table;
 
     });
-  
-
-  
-
-
 
 }
