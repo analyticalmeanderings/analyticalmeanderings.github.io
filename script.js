@@ -42,9 +42,6 @@ function build_table(input_location, new_table_id) {
   var table_data = fetch(location, {credentials: 'include'})  
     .then(function(response) {
       return typeof(response.text());
-    })
-    .then(function(resText) {
-      console.log(resText);
     });
   
   var table = '';
