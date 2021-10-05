@@ -1,5 +1,6 @@
 window.onload = function() {
   build_table('./downstream.csv', 'downstream_table');
+  build_table('./upstream.csv', 'upstream_table');
 }
 
 function myFunction() {
