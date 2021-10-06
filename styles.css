@@ -111,7 +111,7 @@ th {
   transform: translateX(100%);
   -moz-animation: scroll-left 2s linear infinite;
   -webkit-animation: scroll-left 2s linear infinite;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
 .man_site .groups-map button.pin:focus svg path,.man_site .groups-map button.pin:hover svg path {
