@@ -178,6 +178,7 @@
         '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
         // Sets chart options.
         var options = {
+          width: 1000,
           sankey: {
             node: {
               colors: colors
