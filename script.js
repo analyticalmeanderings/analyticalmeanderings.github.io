@@ -13,8 +13,14 @@ function build_top10_table() {
   var row = input_table.rows;
   console.log(row)
 
-  for (var i = 2; i < row[0].cells.length; i++){
+  for (var j = 2; j < row[0].cells.length; j++){
 
+
+
+    for (var i = 0; i < row.length; i++){
+      row[i].deleteCell(j);
+
+    }
   }
 
 }
