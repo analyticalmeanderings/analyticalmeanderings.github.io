@@ -118,7 +118,7 @@ th {
   fill:#c55510
 }
 
-#myInput {
+.table_filter {
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
