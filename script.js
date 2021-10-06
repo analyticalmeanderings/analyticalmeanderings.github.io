@@ -159,29 +159,48 @@ function build_alerts(){
   // });
 }
 
-anychart.onDocumentReady(function(){
-  //creating the data
-  var data = [
-  {from: "Google", to: "Facebook", weight: 20000},
-  {from: "Google", to: "Twitter", weight: 17000},
-  {from: "Google", to: "YouTube", weight: 8000},
-  {from: "Google", to: "Wikipedia", weight: 11000},
-  {from: "Bing", to: "Facebook", weight: 7500},
-  {from: "Bing", to: "Twitter", weight: 5000},
-  {from: "Bing", to: "Wikipedia", weight: 4000}
-  ];
- //calling the Sankey function
- var sankey_chart = anychart.sankey(data);
+d3.json('https://raw.githubusercontent.com/plotly/plotly.js/master/test/image/mocks/sankey_energy_dark.json', function(fig){
 
- console.log('paosdjapsodj')
- //customizing the width of the nodes
- sankey_chart.nodeWidth("20%");
- //setting the chart title
- sankey_chart.title("Simple Sankey Diagram Example");
- //customizing the vertical padding of the nodes
- sankey_chart.nodePadding(20);
- //setting the container id
- sankey_chart.container("sankey");
- //initiating drawing the Sankey diagram
- sankey_chart.draw();
- });
+var data = {
+  type: "sankey",
+  domain: {
+    x: [0,1],
+    y: [0,1]
+  },
+  orientation: "h",
+  valueformat: ".0f",
+  valuesuffix: "TWh",
+  node: {
+    pad: 15,
+    thickness: 15,
+    line: {
+      color: "black",
+      width: 0.5
+    },
+   label: fig.data[0].node.label,
+   color: fig.data[0].node.color
+      },
+  link: {
+    source: fig.data[0].link.source,
+    target: fig.data[0].link.target,
+    value: fig.data[0].link.value,
+    label: fig.data[0].link.label
+  }
+}
+
+var data = [data]
+
+var layout = {
+  title: "Energy forecast for 2050<br>Source: Department of Energy & Climate Change, Tom Counsell via <a href='https://bost.ocks.org/mike/sankey/'>Mike Bostock</a>",
+  width: 1118,
+  height: 772,
+  font: {
+    size: 10,
+    color: 'white'
+  },
+  plot_bgcolor: 'black',
+  paper_bgcolor: 'black'
+}
+
+Plotly.newPlot('sankey', data, layout)
+});
