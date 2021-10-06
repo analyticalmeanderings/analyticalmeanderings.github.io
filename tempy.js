@@ -178,11 +178,13 @@
         '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
         // Sets chart options.
         var options = {
-          width: 1000,
-          height: 1000,
+          width: 600,
+          height: 600,
           sankey: {
             node: {
-              colors: colors
+              colors: colors,
+              label: { fontName: 'Arial',
+                         fontSize: 16,}
             },
             link: {
               colorMode: 'gradient',
