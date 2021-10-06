@@ -120,11 +120,9 @@ function csv_string_to_table(csv_string, id_target) {
 
 function sortTable(n, id_target) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  console.log(id_target)
-  console.log(typeof(id_target))
 
-  table = document.getElementById(id_target);
-  console.log((table))
+  table = id_target;
+
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc"; 
