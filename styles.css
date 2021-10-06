@@ -19,9 +19,10 @@ tr:nth-child(even){background-color: #f2f2f2;}
 tr:hover {background-color: #ddd;}
 
 th {
-  background-color: #04AA6D;
+  background-color: #4ee44e;
   color: white;
 }
+tr:hover {background-color: #04AA6D;}
 
 /* Style the tab */
 .tab {

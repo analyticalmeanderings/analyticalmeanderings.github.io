@@ -7,10 +7,13 @@ window.onload = function() {
   build_alerts();
 }
 
+// TODO: build this function
 function build_top10_table() {
+  // TODO: remove the divs for build table, just build the table
   var input_table = document.getElementById('downstream_risk').getElementsByTagName("table");
-  // var output_table = document.getElementById('top10_table');
-  // output_table.innerHtml = input_table.innerHTML;
+  var output_table = document.getElementById('top10_table');
+  output_table.innerHtml = input_table.innerHTML;
+
   var row = input_table.rows;
   console.log(input_table)
   console.log(row)
