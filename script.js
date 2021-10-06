@@ -172,6 +172,8 @@ anychart.onDocumentReady(function(){
   ];
  //calling the Sankey function
  var sankey_chart = anychart.sankey(data);
+
+ console.log('paosdjapsodj')
  //customizing the width of the nodes
  sankey_chart.nodeWidth("20%");
  //setting the chart title
