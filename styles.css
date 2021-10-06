@@ -1,6 +1,5 @@
 body {
   font-family: Arial;
-  padding: 10px;
 }
 
 table {
@@ -127,7 +126,7 @@ th:hover {background-color: #ff6a39;}
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 90%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
@@ -153,7 +152,7 @@ th:hover {background-color: #ff6a39;}
 #myInput {
   box-sizing: border-box;
   background-image: url('searchicon.png');
-  background-position: 14px 12px;
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   font-size: 16px;
   padding: 14px 20px 12px 45px;
