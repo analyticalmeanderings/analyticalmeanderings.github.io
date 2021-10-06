@@ -11,18 +11,13 @@ function build_top10_table() {
   // var output_table = document.getElementById('top10_table');
   // output_table.innerHtml = input_table.innerHTML;
   var row = input_table.rows;
-  console.log(row)
+  console.log(input_table)
 
   for (var j = 2; j < row[0].cells.length; j++){
-
-
-
     for (var i = 0; i < row.length; i++){
       row[i].deleteCell(j);
-
     }
   }
-
 }
 
 function filterTable(table_name, local_input) {
