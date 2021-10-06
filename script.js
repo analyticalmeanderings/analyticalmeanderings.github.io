@@ -5,11 +5,11 @@ window.onload = function() {
   build_alerts();
 }
 
-function myFunction() {
+function filterTable(table_name) {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("downstream_table");
+  table = document.getElementById(table_name);
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
