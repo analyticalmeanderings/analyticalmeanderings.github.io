@@ -98,7 +98,6 @@ function build_table(input_location, div_id_target) {
 
 function csv_string_to_table(csv_string, element_to_insert_table) {
   var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
-  var table = '';
   var table_rows = '';
   var table_header = '';
 
@@ -116,10 +115,7 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
       }
   });
 
-  table += '<table>';
-    table += table_header;
-    table += table_rows;
-  table += '</table>';
+  table = '<table>' + table_header + table_rows + '</table>';
   console.log(table)
   element_to_insert_table.innerHTML = table;
 }
