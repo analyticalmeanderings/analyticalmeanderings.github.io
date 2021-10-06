@@ -45,7 +45,7 @@ th:hover {background-color: #ff6a39;}
 
 /* Create an active/current tablink class */
 .tab button.active button:hover{
-  background-color: #ccc;
+  background-color: #ddd;
 }
 
 /* Style the tab content */
