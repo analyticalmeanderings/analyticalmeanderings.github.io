@@ -107,7 +107,7 @@ function build_alerts(){
     "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
   })
   .then(response => {
-    console.log(response);
+    console.log(response);  
   })
   .catch(err => {
     console.error(err);
