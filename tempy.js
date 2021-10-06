@@ -174,12 +174,11 @@
           [ 'Upstream Manufacturing (India)', 'Downstream Manufacturing (Mexico)', 4 ]
         ]);
         
-        var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
-        '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+        var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
         // Sets chart options.
         var options = {
-          width: 600,
-          height: 600,
+          width: 800,
+          height: 400,
           sankey: {
             node: {
               colors: colors,
