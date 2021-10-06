@@ -141,6 +141,8 @@ function sortTable(n, id_target) {
       one from current row and one from the next:*/
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
+
+      console.log(typeof(x))
       /*check if the two rows should switch place,
       based on the direction, asc or desc:*/
       if (dir == "asc") {

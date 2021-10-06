@@ -58,6 +58,7 @@ th:hover {background-color: #ff6a39;}
 }
 
 /* Fade in tabs */
+/* TODO: Always define standard rule '@keyframes' when defining keyframes.css(vendorPrefix) */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
