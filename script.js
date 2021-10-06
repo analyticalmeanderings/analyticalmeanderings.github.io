@@ -117,15 +117,11 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
   });
 
   table += '<table>';
-      table += '<thead>';
-          table += table_header;
-      table += '</thead>';
-      table += '<tbody>';
-          table += table_rows;
-      table += '</tbody>';
+    table += table_header;
+    table += table_rows;
   table += '</table>';
 
-  element_to_insert_table.innerHTML += table;
+  element_to_insert_table.innerHTML = table;
 }
 
 function sortTable(n, element_to_insert_table) {
