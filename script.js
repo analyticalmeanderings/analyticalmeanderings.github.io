@@ -7,6 +7,29 @@ window.onload = function() {
   build_alerts();
 }
 
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
 // TODO: build this function
 function build_top10_table() {
   // TODO: remove the divs for build table, just build the table
@@ -25,6 +48,7 @@ function build_top10_table() {
   }
 }
 
+// TODO: add funtiuonality to sort table
 function filterTable(table_name, local_input) {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById(local_input);
