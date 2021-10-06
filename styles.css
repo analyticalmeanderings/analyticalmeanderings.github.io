@@ -43,13 +43,8 @@ th:hover {background-color: #ff6a39;}
   font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ff6a39;
-}
-
 /* Create an active/current tablink class */
-.tab button.active {
+.tab button.active button:hover{
   background-color: #ccc;
 }
 
@@ -139,7 +134,7 @@ th:hover {background-color: #ff6a39;}
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #01af66;
   color: white;
   padding: 16px;
   font-size: 16px;
