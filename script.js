@@ -5,9 +5,9 @@ window.onload = function() {
   build_alerts();
 }
 
-function filterTable(table_name) {
+function filterTable(table_name, local_input) {
   var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
+  input = document.getElementById(local_input);
   filter = input.value.toUpperCase();
   table = document.getElementById(table_name);
   tr = table.getElementsByTagName("tr");
