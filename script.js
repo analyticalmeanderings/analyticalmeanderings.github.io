@@ -83,20 +83,19 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-function build_table(input_location, div_id_target) {
+function build_table(input_location, id_target) {
   
   fetch(input_location)
   .then(function(response){
       return response.text();
   })
   .then(function(data){
-      var table_container = document.getElementById(div_id_target);
-      csv_string_to_table(data, table_container);
+      csv_string_to_table(data, id_target);
   });
 
 }
 
-function csv_string_to_table(csv_string, element_to_insert_table) {
+function csv_string_to_table(csv_string, id_target) {
   var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
   var table_rows = '';
   var table_header = '';
@@ -105,7 +104,7 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
       var table_columns = '';
       var columns = row.split(','); // split/separate the columns in a row
       columns.forEach(function(column, column_index) {
-          table_columns += row_index == 0 ? '<th onclick="sortTable('+column_index.toString()+','+element_to_insert_table+')">' + column + '</th>' : '<td>' + column + '</td>';
+          table_columns += row_index == 0 ? '<th onclick="sortTable('+column_index.toString()+','+id_target+')">' + column + '</th>' : '<td>' + column + '</td>';
           
       });
       if (row_index == 0) {
@@ -116,13 +115,12 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
   });
 
   table = '<table>' + table_header + table_rows + '</table>';
-  console.log(table)
-  element_to_insert_table.innerHTML = table;
+  document.getElementById(id_target).innerHTML = table;
 }
 
-function sortTable(n, element_to_insert_table) {
+function sortTable(n, id_target) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = element_to_insert_table;
+  table = document.getElementById(id_target);
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc"; 
