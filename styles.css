@@ -45,7 +45,7 @@ th:hover {background-color: #ff6a39;}
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #ff6a39;
 }
 
 /* Create an active/current tablink class */
@@ -149,7 +149,7 @@ th:hover {background-color: #ff6a39;}
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
+  background-color: #ff6a39;
 }
 
 /* The search field */
@@ -192,7 +192,7 @@ th:hover {background-color: #ff6a39;}
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #ff6a39}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
