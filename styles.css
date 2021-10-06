@@ -125,11 +125,17 @@ th:hover {background-color: #ff6a39;}
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
+}
+
+.table_filter:focus {
+  width:100%;
 }
 
 /* Dropdown Button */
@@ -150,9 +156,6 @@ th:hover {background-color: #ff6a39;}
 /* The search field */
 #myInput {
   box-sizing: border-box;
-  width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
   background-image: url('searchicon.png');
   background-position: 14px 12px;
   background-repeat: no-repeat;
@@ -165,7 +168,6 @@ th:hover {background-color: #ff6a39;}
 /* The search field when it gets focus/clicked on */
 #myInput:focus {
   outline: 3px solid #ddd;
-  width: 100%;
 }
 
 /* The container <div> - needed to position the dropdown content */
