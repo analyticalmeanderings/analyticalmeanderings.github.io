@@ -1,6 +1,6 @@
 body {
   font-family: Arial;
-  padding: 10;
+  padding: 10px;
 }
 
 table {
@@ -10,7 +10,7 @@ table {
 
 td, th {
   border: 1px solid #ddd;
-  padding: 8px;
+  /* padding: 8px; */
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
