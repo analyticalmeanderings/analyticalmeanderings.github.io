@@ -126,7 +126,7 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
 
 function sortTable(n, element_to_insert_table) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("element_to_insert_table");
+  table = document.getElementById(element_to_insert_table);
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc"; 
