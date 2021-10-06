@@ -107,6 +107,7 @@ function csv_string_to_table(csv_string, element_to_insert_table) {
       var columns = row.split(','); // split/separate the columns in a row
       columns.forEach(function(column, column_index) {
           table_columns += row_index == 0 ? '<th onclick="sortTable('+column_index.toString()+','+element_to_insert_table+')">' + column + '</th>' : '<td>' + column + '</td>';
+          console.log(table_columns)
       });
       if (row_index == 0) {
           table_header += '<tr>' + table_columns + '</tr>';
