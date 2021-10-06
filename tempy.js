@@ -179,6 +179,7 @@
         // Sets chart options.
         var options = {
           width: 1000,
+          height: 1000,
           sankey: {
             node: {
               colors: colors
