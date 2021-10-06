@@ -19,6 +19,7 @@ tr:nth-child(even){background-color: #f1f1f1;}
 tr:hover {background-color: #ddd;}
 
 th {
+  cursor: pointer;
   background-color: #01af66;
   color: white;
 }
@@ -125,17 +126,10 @@ th:hover {background-color: #ff6a39;}
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-}
-
-.table_filter:focus {
-  width:100%;
 }
 
 /* Dropdown Button */
