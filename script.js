@@ -5,6 +5,7 @@ window.onload = function() {
   build_table('./downstream_risk.csv', 'downstream_risk');
   build_top10_table();
   build_alerts();
+  // TODO: build map after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
 }
 
 
