@@ -166,17 +166,28 @@
         data.addColumn('string', 'To');
         data.addColumn('number', 'Weight');
         data.addRows([
-          [ 'A', 'X', 5 ],
-          [ 'A', 'Y', 7 ],
-          [ 'A', 'Z', 6 ],
-          [ 'B', 'X', 2 ],
-          [ 'B', 'Y', 9 ],
-          [ 'B', 'Z', 4 ]
+          [ 'Upstream Manufacturing (China)', 'Downstream Manufacturing (US)', 5 ],
+          [ 'Upstream Manufacturing (China)', 'Downstream Manufacturing (Germany)', 7 ],
+          [ 'Upstream Manufacturing (China)', 'Downstream Manufacturing (Mexico)', 6 ],
+          [ 'Upstream Manufacturing (India)', 'Downstream Manufacturing (US)', 2 ],
+          [ 'Upstream Manufacturing (India)', 'Downstream Manufacturing (Germany)', 9 ],
+          [ 'Upstream Manufacturing (India)', 'Downstream Manufacturing (Mexico)', 4 ]
         ]);
-
+        
+        var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+        '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
         // Sets chart options.
         var options = {
           width: 600,
+          sankey: {
+            node: {
+              colors: colors
+            },
+            link: {
+              colorMode: 'gradient',
+              colors: colors
+            }
+          }
         };
 
         // Instantiates and draws our chart, passing in some options.
