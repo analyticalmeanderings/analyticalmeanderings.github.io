@@ -49,7 +49,7 @@ function build_top10_table() {
   }
 }
 
-// TODO: add funtiuonality to sort table
+// TODO: add functionality to sort table
 function filterTable(table_name, local_input) {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById(local_input);
