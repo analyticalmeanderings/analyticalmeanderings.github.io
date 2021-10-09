@@ -11,16 +11,18 @@ window.onload = function() {
   build_table('./downstream_risk.csv', 'downstream_risk');
   build_top10_table();
   build_alerts();
-  // TODO: build map after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
+  // TODO: build_map() modeled after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
 }
 
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
+// TODO: rename myFunction to something meaningful
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
+// TODO: rename Function to something meaningful
 function filterFunction() {
   var input, filter, ul, li, a, i;
   input = document.getElementById("myInput");
