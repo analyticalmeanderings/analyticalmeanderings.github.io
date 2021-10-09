@@ -1,6 +1,8 @@
 # analyticalmeanderings.github.io
 
 Currently developing multiple open-source projects
+Feel free to hop in and make pull requests!
+This projects are all underdefined and lacking in domentation
 
 1) NWSL - marketing analytics, twitter API calls (Lan takes lead), build and deploy a website (Matt takes lead), forecasting "tweet impact" (Lan takes lead)
     To start, we could do a one-time scrape for tweet, then save in csv on github
