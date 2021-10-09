@@ -1,5 +1,11 @@
+table_registry = {
+    upstream_table:'./upstream.csv',
+    downstream_table:'./downstream.csv',
+    downstream_risk:'./downstream_risk.csv',
+};
+
 window.onload = function() {
-  // TODO: remove the divs for build table, just build the table
+  // TODO: implement table registry to replace build_table nonsense
   build_table('./downstream.csv', 'downstream_table');
   build_table('./upstream.csv', 'upstream_table');
   build_table('./downstream_risk.csv', 'downstream_risk');
