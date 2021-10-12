@@ -10,7 +10,7 @@ This projects are all underdefined and lacking in domentation
     Focused on nwsl folder
     
 2) Imbalanced classes for covid vaccines trial, racial and gender lenses, similar to managing risk with imbalanced classes
-3) Gendered language in job descriptions, NLP (natural language processing) ... removing "strong" might deter female applicants
+3) Gendered language in job descriptions, NLP (natural language processing) ... including "strong" might deter female applicants
 4) Interactive website design, main index.html page eventually full MERN
     TODO: build out and hide API keys
 5) Garmin chat bot for triathlon races
