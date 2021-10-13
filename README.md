@@ -1,16 +1,17 @@
-# Memories
+# analyticalmeanderings.github.io
 
-![Memories](https://i.ibb.co/Z8Y0CJv/Screenshot-2020-10-30-at-11-10-04.png)
+Currently developing multiple open-source projects
+Feel free to hop in and make pull requests!
+This projects are all underdefined and lacking in domentation
 
-## Introduction
-This is a code repository for the corresponding video tutorial - https://youtube.com/playlist?list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu.
-
-Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called "Memories" and it is a simple social media app that allows users to post interesting events that happened in their lives.
-
-By the end of this video, you will have a strong understanding of how the MERN Stack works.
-
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://javascriptmastery.eo.page/mailing-list.
-
-Setup:
-- run ```npm i && npm start``` for both client and server side to start the app
+1) NWSL - marketing analytics, twitter API calls (Lan takes lead), build and deploy a website (Matt takes lead), forecasting "tweet impact" (Lan takes lead)
+    To start, we could do a one-time scrape for tweet, then save in csv on github
+    Once we have csv, you could build a model
+    Focused on nwsl folder
+    
+2) Imbalanced classes for covid vaccines trial, racial and gender lenses, similar to managing risk with imbalanced classes
+3) Gendered language in job descriptions, NLP (natural language processing) ... including "strong" might deter female applicants
+4) Interactive website design, main index.html page eventually full MERN
+    TODO: build out and hide API keys
+5) Garmin chat bot for triathlon races
+6) github auto push hack
