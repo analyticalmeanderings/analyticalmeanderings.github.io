@@ -9,7 +9,7 @@
 
   },
   "keywords": [],
-  "author": "",
+  "author": "Matt Christian",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
