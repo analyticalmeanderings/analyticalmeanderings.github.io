@@ -8,7 +8,7 @@ This projects are all underdefined and lacking in domentation
     TODO: To start, we could do a one-time scrape for tweets, then save in csv on github
     TODO: Once we have csv, we can build sentiment models
     TODO: Eventually, we need dynamic API pulls off a heroku server
-    Focused on nwsl folder
+    // Focused on nwsl folder
     
 2) Imbalanced classes for covid vaccines trial, racial and gender lenses, similar to managing risk with imbalanced classes
     TODO: find data
