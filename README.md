@@ -27,3 +27,7 @@ This projects are all underdefined and lacking in domentation
 6) Github auto push hack
     TODO: leverage heroku server
     TODO: build a bot that autopushes periodic commits to github to inflate our github history
+
+7) Memories App
+    Download node.js from https://nodejs.org/en/
+    
