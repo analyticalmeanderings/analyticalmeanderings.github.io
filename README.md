@@ -18,8 +18,8 @@ This projects are all underdefined and lacking in domentation
 
 4) Interactive website design, main index.html page eventually full MERN (fiverr HELP)<br />
     TODO: add node.js code to streamline development<br />
-    TODO: leverage heroku server, build out then provide user name and password to Matt<br />
-    TODO: leverage monogoDB to shield data, build out then provide user name and password to Matt<br />
+    TODO: leverage heroku server, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
+    TODO: leverage monogoDB to shield data, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
 
 5) Garmin chat bot for triathlon races<br />
     TODO: also heroku server<br />
