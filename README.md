@@ -29,16 +29,16 @@ This projects are all underdefined and lacking in domentation
     TODO: build a bot that autopushes periodic commits to github to inflate our github history
 
 7) Memories App (https://www.youtube.com/watch?v=ngc9gnGgUdA)<br />
-    Download node.js from https://nodejs.org/en/
-    cd client
-    npx create-react-app ./
-    npm install axios moment react-file-base64 redux redux-thunk
-    npm start
+    Download node.js from https://nodejs.org/en/<br />
+    cd client<br />
+    npx create-react-app ./<br />
+    npm install axios moment react-file-base64 redux redux-thunk<br />
+    npm start<br />
 
 
 
 
-    cd server
-    npm init -y
-    npm install body-parser cors express mongoose nodemon
+    cd server<br />
+    npm init -y<br />
+    npm install body-parser cors express mongoose nodemon<br />
 
