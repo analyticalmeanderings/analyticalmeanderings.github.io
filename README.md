@@ -20,6 +20,8 @@ This projects are all underdefined and lacking in domentation
     TODO: add node.js code to streamline development<br />
     TODO: leverage heroku server, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
     TODO: leverage monogoDB to shield data, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
+    TODO: move the three csv files into MongoDB
+    TODO: change data table references to pull from MongoDB (see tabs: Upstream Info, Downstream Info, Upstream Risk)
 
 5) Garmin chat bot for triathlon races<br />
     TODO: also heroku server<br />
