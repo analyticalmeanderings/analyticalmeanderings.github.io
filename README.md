@@ -34,6 +34,7 @@ This projects are all underdefined and lacking in domentation
     npx create-react-app ./<br />
     npm install axios moment react-file-base64 redux redux-thunk<br />
     npm start<br />
+    <br />
     cd server<br />
     npm init -y<br />
     npm install body-parser cors express mongoose nodemon<br />
