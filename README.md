@@ -16,7 +16,7 @@ This projects are all underdefined and lacking in domentation
 3) Gendered language in job descriptions, NLP (natural language processing) ... build out a website that scraps, scores, and flags suboptimal language in job descriptions<br />
     TODO: (SPIKE) research NLP algos<br />
 
-4) Interactive website design, main index.html page eventually full MERN<br />
+4) Interactive website design, main index.html page eventually full MERN (fiverr HELP)<br />
     TODO: add node.js code to streamline development<br />
     TODO: leverage heroku server, build out then provide user name and password to Matt<br />
     TODO: leverage monogoDB to shield data, build out then provide user name and password to Matt<br />
