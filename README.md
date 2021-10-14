@@ -28,6 +28,15 @@ This projects are all underdefined and lacking in domentation
     TODO: leverage heroku server
     TODO: build a bot that autopushes periodic commits to github to inflate our github history
 
-7) Memories App
+7) Memories App (https://www.youtube.com/watch?v=ngc9gnGgUdA)
     Download node.js from https://nodejs.org/en/
+    cd client
+    npx create-react-app ./
     
+
+
+
+    cd server
+    npm init -y
+    npm install body-parser cors express mongoose nodemon
+
