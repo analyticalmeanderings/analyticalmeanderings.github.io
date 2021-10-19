@@ -43,15 +43,9 @@ function filterFunction() {
 function build_top10_table() {
   // TODO: remove the divs for build table, just build the table
   var input_table = document.getElementById('downstream_risk');
-  console.log(input_table)
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
-
   var row = input_table.rows;
-  console.log(input_table)
-  console.log(row)
-  console.log(Array.from(row))
-  
 
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
@@ -104,8 +98,6 @@ function build_table(input_location, id_target) {
       csv_string_to_table(data, id_target);
   });
 }
-
-// TODO: after second promise from third table, THEN top 10
 
 function csv_string_to_table(csv_string, id_target) {
   var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
