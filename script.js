@@ -46,6 +46,7 @@ function build_top10_table() {
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
   var row = output_table.rows;
+  console.log(row)
 
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
