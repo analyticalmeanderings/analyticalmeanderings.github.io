@@ -51,11 +51,12 @@ function build_top10_table() {
   var row = output_table.rows;
   console.log(row)
 
-  // for (var j = 2; j < row[0].cells.length; j++){
-  //   for (var i = 0; i < row.length; i++){
-  //     row[i].deleteCell(j);
-  //   }
-  // }
+  for (var j = 2; j < row[0].cells.length; j++){
+    // for (var i = 0; i < row.length; i++){
+    for (var i = 0; i < 1; i++){
+      row[i].deleteCell(j);
+    }
+  }
 }
 
 // TODO: add functionality to sort table
