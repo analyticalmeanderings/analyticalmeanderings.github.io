@@ -43,19 +43,15 @@ function filterFunction() {
 function build_top10_table() {
 
   var input_table = document.getElementById('downstream_risk');
-  console.log(input_table);
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
-  console.log(output_table);
 
   var row = output_table.rows;
-  console.log(row)
 
+  // TODO: why is this running so long
   for (var j = 0; j < row[0].cells.length+1; j++){
     for (var i = 0; i < row.length; i++){
-      console.log(row[i])
       row[i].deleteCell(-1);
-      console.log(row[i])
     }
   }
 }
