@@ -195,8 +195,8 @@ function build_alerts(){
       .then(function(response){
         return response.json();
       })
-      .then(function(response) {
-        var article_data = response.json()['data'];
+      .then(function(data) {
+        var article_data = data['data'];
         var article_titles = '<p>';
         for (let article = 0; article < 10; i++) {
           article_titles+=article_data[article]['title'];
