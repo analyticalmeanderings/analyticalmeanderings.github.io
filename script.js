@@ -41,11 +41,11 @@ function filterFunction() {
 
 // TODO: build this function
 function build_top10_table() {
-  // TODO: remove the divs for build table, just build the table
+
   var input_table = document.getElementById('downstream_risk');
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
-  var row = input_table.rows;
+  var row = output_table.rows;
 
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
