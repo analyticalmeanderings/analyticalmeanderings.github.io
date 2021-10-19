@@ -50,6 +50,7 @@ function build_top10_table() {
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
       row[i].deleteCell(j);
+      console.log(row[i]);
     }
   }
 }
