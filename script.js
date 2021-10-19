@@ -191,6 +191,10 @@ function build_alerts(){
   var req = new Request(url);
 
   fetch(req)
+      // TODO
+      .then(function(response){
+        return response.json();
+      })
       .then(function(response) {
         var article_data = response.json()['data'];
         var article_titles = '<p>';
