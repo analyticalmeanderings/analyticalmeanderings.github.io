@@ -42,7 +42,7 @@ function filterFunction() {
 // TODO: build this function
 function build_top10_table() {
   // TODO: remove the divs for build table, just build the table
-  var input_table = document.getElementById('downstream_risk').getElementsByTagName("table");
+  var input_table = document.getElementById('downstream_risk');
   var output_table = document.getElementById('top10_table');
   output_table.innerHtml = input_table.innerHTML;
 
