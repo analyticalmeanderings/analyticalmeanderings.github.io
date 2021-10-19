@@ -43,6 +43,7 @@ function filterFunction() {
 function build_top10_table() {
 
   var input_table = document.getElementById('downstream_risk');
+  console.log(input_table)
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
   var row = output_table.rows;
@@ -51,7 +52,6 @@ function build_top10_table() {
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
       row[i].deleteCell(j);
-      console.log(row[i]);
     }
   }
 }
