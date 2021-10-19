@@ -205,6 +205,9 @@ function build_alerts(){
         }
         article_titles+='</p>';
         document.getElementById('alert_content').innerHTML += article_titles;
+      })
+      .catch(err => {
+        console.error(err);
       });
 
   // fetch("https://api.newscatcherapi.com/v2/search", {
