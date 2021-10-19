@@ -184,7 +184,7 @@ function sortTable(n, id_target) {
 }
 
 function build_alerts(){
-  var url = 'http://api.mediastack.com/v1/news?'+
+  var url = 'https://api.mediastack.com/v1/news?'+
     'access_key=89dcc6770900488a730bb00004d7596d'+
     '&keywords=pharmaceutical';
 
@@ -200,17 +200,17 @@ function build_alerts(){
         }
         article_titles+='</p>';
         document.getElementById('alert_content').innerHTML += article_titles;
-      })
+      });
 
-  fetch("https://api.newscatcherapi.com/v2/search", {
-    "method": "GET",
-    params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
-    "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
-  })
-  .then(response => {
-    console.log(response);  
-  })
-  .catch(err => {
-    console.error(err);
-  });
+  // fetch("https://api.newscatcherapi.com/v2/search", {
+  //   "method": "GET",
+  //   params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
+  //   "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
+  // })
+  // .then(response => {
+  //   console.log(response);  
+  // })
+  // .catch(err => {
+  //   console.error(err);
+  // });
 }
