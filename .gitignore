@@ -1,3 +1,10 @@
 node_modules
 build
 /server/.env
+# ignore everything in the following folders
+spaceflights_tutorial/data/**
+spaceflights_tutorial/logs/**
+
+# except their sub-folders
+!spaceflights_tutorial/data/**/
+!spaceflights_tutorial/logs/**/
