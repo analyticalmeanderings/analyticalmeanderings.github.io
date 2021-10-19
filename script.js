@@ -51,7 +51,7 @@ function build_top10_table() {
   var row = output_table.rows;
   console.log(row)
 
-  for (var j = 0; j < row[0].cells.length; j++){
+  for (var j = 0; j < row[0].cells.length+1; j++){
     for (var i = 0; i < row.length; i++){
       row[i].deleteCell(-1);
     }
