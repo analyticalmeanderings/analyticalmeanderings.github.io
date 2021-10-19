@@ -5,8 +5,6 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width:800px;
-
 }
 
 td, th {
@@ -26,6 +24,10 @@ th {
   color: white;
 }
 th:hover {background-color: #ff6a39;}
+
+#top10_table {
+  max-width:800px;
+}
 
 /* Style the tab */
 .tab {
