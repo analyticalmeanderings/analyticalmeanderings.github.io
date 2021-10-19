@@ -26,7 +26,7 @@ th {
 th:hover {background-color: #ff6a39;}
 
 #top10_table {
-  max-width:800px;
+  max-width:500px;
 }
 
 /* Style the tab */
