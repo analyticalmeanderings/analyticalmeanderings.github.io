@@ -43,12 +43,15 @@ function filterFunction() {
 function build_top10_table() {
   // TODO: remove the divs for build table, just build the table
   var input_table = document.getElementById('downstream_risk');
+  console.log(input_table)
   var output_table = document.getElementById('top10_table');
   output_table.innerHTML = input_table.innerHTML;
 
   var row = input_table.rows;
   console.log(input_table)
   console.log(row)
+  console.log(Array.from(row))
+  
 
   for (var j = 2; j < row[0].cells.length; j++){
     for (var i = 0; i < row.length; i++){
