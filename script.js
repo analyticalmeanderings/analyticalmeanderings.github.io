@@ -8,8 +8,8 @@ window.onload = function() {
   // TODO: implement table registry to replace build_table nonsense
   build_table('./downstream.csv', 'downstream_table');
   build_table('./upstream.csv', 'upstream_table');
-  build_table('./downstream_risk.csv', 'downstream_risk');
-  build_top10_table();
+  build_table('./downstream_risk.csv', 'downstream_risk')
+  .then(build_top10_table);
   build_alerts();
   // TODO: build_map() modeled after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
 }
@@ -96,15 +96,16 @@ function openTab(evt, tabName) {
 
 function build_table(input_location, id_target) {
   
-  fetch(input_location)
+  return fetch(input_location)
   .then(function(response){
       return response.text();
   })
   .then(function(data){
       csv_string_to_table(data, id_target);
   });
-
 }
+
+// TODO: after second promise from third table, THEN top 10
 
 function csv_string_to_table(csv_string, id_target) {
   var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
