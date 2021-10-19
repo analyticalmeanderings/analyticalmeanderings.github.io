@@ -53,7 +53,7 @@ function build_top10_table() {
 
   for (var j = 1; j < row[0].cells.length; j++){ // controls rows
     for (var i = 0; i < row.length; i++){ // controls columns
-      row[i].deleteCell(2);
+      row[i].deleteCell(-1);
     }
   }
 }
