@@ -4,7 +4,6 @@ body {
 
 table {
   border-collapse: collapse;
-  /* width: 100%; */
   margin-bottom: 25px;
 }
 
@@ -25,10 +24,6 @@ th {
   color: white;
 }
 th:hover {background-color: #ff6a39;}
-
-#top10_table {
-  max-width:500px;
-}
 
 /* Style the tab */
 .tab {
