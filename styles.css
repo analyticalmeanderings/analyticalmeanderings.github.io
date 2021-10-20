@@ -27,7 +27,7 @@ th:hover {background-color: #ff6a39;}
 
 /* Style the tab */
 .tab {
-  overflow: hidden;
+  overflow: auto;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
