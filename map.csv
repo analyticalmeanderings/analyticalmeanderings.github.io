@@ -1,0 +1,6 @@
+Product,Manufacturer,City,Country,Application,Activeness,Volume,Product Codes
+Crude Oil,Exxon,Fairfax,United States,Yes,Yes,50 kg/year,[123-123 3242-3454]
+Asphalt,Chevron,Clifton,United States,Yes,Yes,50 kg/year,[]
+Wax,Exxon,Beijing,China,No,Yes,50 kg/year,[123-124 3242-3454 123-1230 322-3454]
+Diesel,BP,Mumbai,India,No,No,50 kg/year,[123-125 3242-3454]
+Jet,Shell,Berlin,Germany,No,No,50 kg/year,[1233-123 3242-3454]
