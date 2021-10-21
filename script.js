@@ -209,7 +209,7 @@ function build_alerts(){
   //       console.error(err);
   //     });
 
-  fetch("http://api.newscatcherapi.com/v2/search", {
+  fetch("https://api.newscatcherapi.com/v2/search", {
     "method": "GET",
     params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
     "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
