@@ -10,3 +10,6 @@ spaceflights_tutorial/logs/**
 !spaceflights_tutorial/logs/**/
 
 !spaceflights_tutorial/data/01_raw/
+
+# ignore any weird temp office suite files
+*/~$*
