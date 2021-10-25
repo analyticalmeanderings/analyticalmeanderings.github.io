@@ -18,8 +18,8 @@ td, th {
 }
 
 tr:nth-child(even){background-color: #BEBEBE;}
-tr:nth-child(odd){background-color: #D0D0D0;}
-tr:hover {background-color: #696969;}
+tr:nth-child(odd){background-color: #696969;}
+tr:hover {background-color: #404040;}
 
 th {
   cursor: pointer;
