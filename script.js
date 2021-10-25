@@ -1,19 +1,22 @@
-fetch("https://api.newscatcherapi.com/v2/search")
-.then(function(){
-    var prop_data = 1;
-})
-.catch(function(){
+fetch('https://www.google.com')
+  .then(function() {
     var prop_data = 0;
+  }).catch(function() {
+    var prop_data = 1;
     console.log(prop_data);
-});
-
+  });
 
 
 table_registry = {
-    upstream_table:'./upstream.csv',
-    downstream_table:'./downstream.csv',
-    downstream_risk:'./downstream_risk.csv',
+    upstream_table:['./PROP_upstream.csv','./upstream.csv'],
+    downstream_table:['./PROP_downstream.csv','./downstream.csv'],
+    downstream_risk:['./PROP_downstream_risk.csv','./downstream_risk.csv'],
 };
+
+
+for (const [key,value] of Object.entries(table_registry)) {
+
+}
 
 window.onload = function() {
   // TODO: implement table registry to replace build_table nonsense

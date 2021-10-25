@@ -13,3 +13,6 @@ spaceflights_tutorial/logs/**
 
 # ignore any weird temp office suite files
 */~$*
+
+# Ignore the prop files
+*PROP*
