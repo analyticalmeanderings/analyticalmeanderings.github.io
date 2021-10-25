@@ -4,9 +4,10 @@ fetch("https://api.newscatcherapi.com/v2/search")
 })
 .catch(function(){
     var prop_data = 0;
+    console.log(prop_data);
 });
 
-console.log(prop_data);
+
 
 table_registry = {
     upstream_table:'./upstream.csv',
