@@ -1,4 +1,4 @@
-fetch('https://www.google.com')
+fetch('PROP_upstream.csv')
   .then(function() {
     var prop_data = 0;
   }).catch(function() {
@@ -15,7 +15,7 @@ table_registry = {
 
 
 for (const [key,value] of Object.entries(table_registry)) {
-
+  console.log(table_registry[key][prop_data]);
 }
 
 window.onload = function() {
