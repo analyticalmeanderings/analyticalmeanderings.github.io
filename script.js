@@ -1,5 +1,12 @@
-console.log(fetch('sdasdasd'));
+fetch("https://api.newscatcherapi.com/v2/search")
+.then(function(){
+    var prop_data = 1;
+})
+.catch(function(){
+    var prop_data = 0;
+});
 
+console.log(prop_data);
 
 table_registry = {
     upstream_table:'./upstream.csv',
