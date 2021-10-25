@@ -1,3 +1,6 @@
+console.log(fetch('sdasdasd'));
+
+
 table_registry = {
     upstream_table:'./upstream.csv',
     downstream_table:'./downstream.csv',
