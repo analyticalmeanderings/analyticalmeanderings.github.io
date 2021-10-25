@@ -29,11 +29,12 @@ th {
 th:hover {background-color: #ff6a39;}
 
 /* Style the tab */
+/* TODO: make sticky */
 .tab {
-  /* overflow-y: auto;*/
+  overflow-y: auto;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  position: sticky;
+
 }
 
 /* Style the buttons inside the tab */
