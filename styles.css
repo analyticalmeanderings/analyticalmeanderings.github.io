@@ -17,8 +17,8 @@ td, th {
   text-align: center;
 }
 
-tr:nth-child(even){background-color: #BEBEBE;}
-tr:nth-child(odd){background-color: #696969;}
+tr:nth-child(even){background-color: #A8A8A8;}
+tr:nth-child(odd){background-color: #787878;}
 tr:hover {background-color: #404040;}
 
 th {
