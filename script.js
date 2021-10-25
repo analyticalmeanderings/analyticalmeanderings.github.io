@@ -1,11 +1,13 @@
-fetch('PROP_upstream.csv')
-  .then(function() {
-    var prop_data = 0;
-  }).catch(function() {
-    var prop_data = 1;
-    console.log(prop_data);
-  });
-
+// TODO: this doesn't work for prop files
+function public_or_private() {
+  fetch('PROP_upstream.csv')
+    .then(function() {
+      var prop_data = 0;
+    }).catch(function() {
+      var prop_data = 1;
+    })
+  return prop_data;
+}
 
 table_registry = {
     upstream_table:['./PROP_upstream.csv','./upstream.csv'],
@@ -13,18 +15,21 @@ table_registry = {
     downstream_risk:['./PROP_downstream_risk.csv','./downstream_risk.csv'],
 };
 
-
-for (const [key,value] of Object.entries(table_registry)) {
-  console.log(table_registry[key][prop_data]);
-}
-
 window.onload = function() {
   // TODO: implement table registry to replace build_table nonsense
-  build_table('./downstream.csv', 'downstream_table');
-  build_table('./upstream.csv', 'upstream_table');
-  build_table('./downstream_risk.csv', 'downstream_risk')
-  .then(build_top10_table);
+  for (const [key,value] of Object.entries(table_registry)) {
+    console.log(table_registry[key][1]);
+    build_table(value[1], key);
+  }
+  // TODO: build top 10 table
+  // .then(build_top10_table);
+
+  // build_table('./downstream.csv', 'downstream_table');
+  // build_table('./upstream.csv', 'upstream_table');
+  // build_table('./downstream_risk.csv', 'downstream_risk')
+  
   build_alerts();
+  build_top10_table();
   // TODO: build_map() modeled after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
 }
 
