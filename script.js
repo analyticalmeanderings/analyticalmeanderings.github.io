@@ -1,13 +1,16 @@
-
-// TODO: this doesn't work for prop files
-function public_or_private() {
-  fetch('PROP_upstream.csv')
-    .then(function() {
-      var prop_data = 0;
-    }).catch(function() {
-      var prop_data = 1;
-    })
-  return prop_data;
+async function public_private() {
+  try {
+    const response = await fetch('PROP_upstream.csv');
+    if (response.ok) {
+      return 0;
+    }
+    else {
+      return 1;
+    }
+  }
+  catch {
+    return 1;
+  }
 }
 
 table_registry = {
@@ -17,11 +20,14 @@ table_registry = {
 };
 
 window.onload = function() {
-  // TODO: implement table registry to replace build_table nonsense
-  for (const [key,value] of Object.entries(table_registry)) {
-    console.log(table_registry[key][1]);
-    build_table(value[1], key);
-  }
+  
+  public_private()
+  .then((prop_or_not)=> {
+    for (const [key,value] of Object.entries(table_registry)) {
+      build_table(value[prop_or_not], key);
+    }
+  });
+
   // TODO: build top 10 table
   // .then(build_top10_table);
 
@@ -206,38 +212,38 @@ function sortTable(n, id_target) {
 }
 
 function build_alerts(){
-  // var url = 'https://api.mediastack.com/v1/news?access_key=9dcc6770900488a730bb00004d7596d&keywords=pharmaceutical';
+  // TODO: create a backend that caches alerts
+  var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical';
+  var req = new Request(url);
 
-  // var req = new Request(url);
+  fetch(req)
+      // TODO
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data) {
+        var article_data = data['data'];
+        var article_titles = '<p>';
+        for (let article = 0; article < 10; article++) {
+          article_titles+=article_data[article]['title'];
+          article_titles+='         ';
+        }
+        article_titles+='</p>';
+        document.getElementById('alert_content').innerHTML += article_titles;
+      })
+      .catch(err => {
+        console.error(err);
+      });
 
-  // fetch(req)
-  //     // TODO
-  //     .then(function(response){
-  //       return response.json();
-  //     })
-  //     .then(function(data) {
-  //       var article_data = data['data'];
-  //       var article_titles = '<p>';
-  //       for (let article = 0; article < 10; i++) {
-  //         article_titles+=article_data[article]['title'];
-  //         article_titles+='         ';
-  //       }
-  //       article_titles+='</p>';
-  //       document.getElementById('alert_content').innerHTML += article_titles;
-  //     })
-  //     .catch(err => {
-  //       console.error(err);
-  //     });
-
-  fetch("https://api.newscatcherapi.com/v2/search", {
-    "method": "GET",
-    params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
-    "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
-  })
-  .then(response => {
-    console.log(response);  
-  })
-  .catch(err => {
-    console.error(err);
-  });
+  // fetch("https://api.newscatcherapi.com/v2/search", {
+  //   "method": "GET",
+  //   params: {q: 'pharmaceutical', lang: 'en', sort_by: 'date', page: '1'},
+  //   "headers": {'x-api-key': 'lmuF_8rsnpOUx-jiITFC3jWBhmhXlSPtx4I4VbH_3bc'}
+  // })
+  // .then(response => {
+  //   console.log(response);  
+  // })
+  // .catch(err => {
+  //   console.error(err);  
+  // });
 }

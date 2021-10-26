@@ -21,8 +21,11 @@
         header: true,
       })
     )
-    .then((jsonObj) =>
-      jsonObj.data.map((element) => {
+    .then((jsonObj)=>{return jsonObj.data.filter((element)=>{
+      return element.hasOwnProperty("Lat") && element.hasOwnProperty("Long");
+    })})
+    .then((points) =>
+      points.map((element) => {
         const circle = L.circle([element.Lat, element.Long], {
           color: element.Activeness === "Yes" ? "red" : "blue",
           radius: 50000,
