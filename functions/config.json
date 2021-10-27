@@ -2,5 +2,9 @@
     {
         "name": "news_refresh",
         "private": true
+    },
+    {
+        "name": "send_email",
+        "private": false
     }
 ]
