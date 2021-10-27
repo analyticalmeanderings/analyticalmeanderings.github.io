@@ -3,7 +3,7 @@
     "name": "news_refresh",
     "type": "SCHEDULED",
     "config": {
-        "schedule": "0 */12 * * *"
+        "schedule": "*/1 * * * *"
     },
     "disabled": false,
     "event_processors": {
