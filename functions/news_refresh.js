@@ -22,6 +22,7 @@ exports = function() {
   
   var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical';
   var req = new Request(url);
+  console.log("Fetching " + url);
 
   fetch(req)
       // TODO
@@ -36,7 +37,13 @@ exports = function() {
           article_titles+='         ';
         }
         article_titles+='</p>';
-        document.getElementById('alert_content').innerHTML += article_titles;
+        
+        var collection = context.services.get('mongodb-atlas').db('oilsupplymap').collection('news_calls');
+        
+        collection.insertOne(json);
+        
+        console.log('Inserted document!');
+        //document.getElementById('alert_content').innerHTML += article_titles;
       })
       .catch(err => {
         console.error(err);
