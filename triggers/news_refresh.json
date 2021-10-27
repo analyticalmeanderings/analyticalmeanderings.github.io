@@ -1,0 +1,16 @@
+{
+    "id": "6179839754272ad58a76fd58",
+    "name": "news_refresh",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "0 */12 * * *"
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "news_refresh"
+            }
+        }
+    }
+}
