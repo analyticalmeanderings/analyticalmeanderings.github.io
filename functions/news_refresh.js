@@ -1,51 +1,66 @@
-exports = function() {
-  /*
-    A Scheduled Trigger will always call a function without arguments.
-    Documentation on Triggers: https://docs.mongodb.com/realm/triggers/overview/
 
-    Functions run by Triggers are run as System users and have full access to Services, Functions, and MongoDB Data.
+// exports = function() {
+//   /*
+//     A Scheduled Trigger will always call a function without arguments.
+//     Documentation on Triggers: https://docs.mongodb.com/realm/triggers/overview/
 
-    Access a mongodb service:
-    const collection = context.services.get(<SERVICE_NAME>).db("<DB_NAME>").collection("<COLL_NAME>");
-    const doc = collection.findOne({ name: "mongodb" });
+//     Functions run by Triggers are run as System users and have full access to Services, Functions, and MongoDB Data.
 
-    Note: In Atlas Triggers, the service name is defaulted to the cluster name.
+//     Access a mongodb service:
+//     const collection = context.services.get(<SERVICE_NAME>).db("<DB_NAME>").collection("<COLL_NAME>");
+//     const doc = collection.findOne({ name: "mongodb" });
 
-    Call other named functions if they are defined in your application:
-    const result = context.functions.execute("function_name", arg1, arg2);
+//     Note: In Atlas Triggers, the service name is defaulted to the cluster name.
 
-    Access the default http client and execute a GET request:
-    const response = context.http.get({ url: <URL> })
+//     Call other named functions if they are defined in your application:
+//     const result = context.functions.execute("function_name", arg1, arg2);
 
-    Learn more about http client here: https://docs.mongodb.com/realm/functions/context/#context-http
-  */
+//     Access the default http client and execute a GET request:
+//     const response = context.http.get({ url: <URL> })
+
+//     Learn more about http client here: https://docs.mongodb.com/realm/functions/context/#context-http
+//   */
   
-  var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical';
-  var req = new Request(url);
-  console.log("Fetching " + url);
+//   var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical';
+//   var req = new Request(url);
+//   console.log("Fetching " + url);
 
-  fetch(req)
-      // TODO
-      .then(function(response){
-        return response.json();
-      })
-      .then(function(data) {
-        var article_data = data['data'];
-        var article_titles = '<p>';
-        for (let article = 0; article < 10; article++) {
-          article_titles+=article_data[article]['title'];
-          article_titles+='         ';
-        }
-        article_titles+='</p>';
+//   fetch(req)
+//       // TODO
+//       .then(function(response){
+//         return response.json();
+//       })
+//       .then(function(data) {
+//         var article_data = data['data'];
+//         var article_titles = '<p>';
+//         for (let article = 0; article < 10; article++) {
+//           article_titles+=article_data[article]['title'];
+//           article_titles+='         ';
+//         }
+//         article_titles+='</p>';
         
-        var collection = context.services.get('mongodb-atlas').db('news_articles').collection('news');
+//         var collection = context.services.get('mongodb-atlas').db('news_articles').collection('news');
         
-        collection.insertOne(json);
+//         collection.insertOne(json);
         
-        console.log('Inserted document!');
-        //document.getElementById('alert_content').innerHTML += article_titles;
-      })
-      .catch(err => {
-        console.error(err);
-      });
+//         console.log('Inserted document!');
+//         //document.getElementById('alert_content').innerHTML += article_titles;
+//       })
+//       .catch(err => {
+//         console.error(err);
+//       });
+// };
+
+exports = function(payload) {
+  const httpService = context.services.get('http');
+  let url = `http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical`;
+  console.log("Fetching " + url);
+  return httpService.get( {url: url}).then(response => {
+    
+    let json = JSON.parse(response.body.text());
+    
+    var collection = context.services.get('mongodb-atlas').db('news_articles').collection('news');
+    collection.insertOne(json);
+    console.log('Inserted document!');
+  });
 };
