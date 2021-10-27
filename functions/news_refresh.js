@@ -52,10 +52,10 @@
 // };
 
 exports = function(payload) {
-  const httpService = context.services.get('http');
+
   let url = `http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical`;
   console.log("Fetching " + url);
-  return httpService.get( {url: url}).then(response => {
+  return context.http.get( {url: url}).then(response => {
     
     let json = JSON.parse(response.body.text());
     
