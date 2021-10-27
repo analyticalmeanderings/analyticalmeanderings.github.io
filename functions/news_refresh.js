@@ -38,7 +38,7 @@ exports = function() {
         }
         article_titles+='</p>';
         
-        var collection = context.services.get('mongodb-atlas').db('oilsupplymap').collection('news_calls');
+        var collection = context.services.get('mongodb-atlas').db('news_articles').collection('news');
         
         collection.insertOne(json);
         
