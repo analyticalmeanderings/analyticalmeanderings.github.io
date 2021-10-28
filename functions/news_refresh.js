@@ -53,7 +53,7 @@
 
 exports = function(payload) {
 
-  let url = `http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical`;
+  let url = `http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical&sources=-americanbankingnews`;
   console.log("Fetching " + url);
   return context.http.get( {url: url}).then(response => {
     
