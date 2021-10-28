@@ -213,8 +213,10 @@ function sortTable(n, id_target) {
 
 function build_alerts(){
   // TODO: create a backend that caches alerts
-  // var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical&sources=-americanbankingnews';
-  var url = 'http://api.mediastack.com/v1/news?access_key=${{secret.API_MEDIASTACK}}&keywords=pharmaceutical&sources=-americanbankingnews';
+
+  // TODO: leverage secrets
+  var url = 'http://api.mediastack.com/v1/news?access_key=89dcc6770900488a730bb00004d7596d&keywords=pharmaceutical&sources=-americanbankingnews';
+  // var url = 'http://api.mediastack.com/v1/news?access_key=${{secret.API_MEDIASTACK}}&keywords=pharmaceutical&sources=-americanbankingnews';
 
   
   var req = new Request(url);
