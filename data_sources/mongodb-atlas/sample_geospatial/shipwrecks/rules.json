@@ -1,0 +1,14 @@
+{
+    "collection": "shipwrecks",
+    "database": "sample_geospatial",
+    "roles": [
+        {
+            "name": "default",
+            "apply_when": {},
+            "insert": true,
+            "delete": true,
+            "search": true,
+            "additional_fields": {}
+        }
+    ]
+}
