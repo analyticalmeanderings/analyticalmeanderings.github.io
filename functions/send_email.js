@@ -17,7 +17,7 @@ exports = function(arg){
   return {arg: arg};
 //   curl --request POST \
 // --url https://api.sendgrid.com/v3/mail/send \
-// --header 'Authorization: Bearer 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' \
+// --header 'Authorization: Bearer *****' \
 // --header 'Content-Type: application/json' \
 // --data '{"personalizations":[{"to":[{"email":"john.doe@example.com","name":"John Doe"}],"subject":"Hello, World!"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"sam.smith@example.com","name":"Sam Smith"},"reply_to":{"email":"sam.smith@example.com","name":"Sam Smith"}}'
   
