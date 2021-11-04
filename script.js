@@ -22,39 +22,7 @@ window.onload = function() {
       build_table(value[prop_or_not], key);
     }
   })
-  .then(()=>{
-    
 
-    fetch(data_registry['risk'][1])
-    .then(response => response.json())
-    .then(data => {
-
-      data = data.sort(function(a, b){return a.Base - b.Base});
-
-      
-
-      var table = '<table><tr><th>Top 10 At Risk Downstream Products</th></tr>';
-      console.log(table)
-      for (var i = 0; i < 10; i++) {
-        table += '<tr><td>'+data[i].drug+'</td></tr>';           
-      }
-      table +='</table>';
-
-      var divContainer = document.getElementById("top10_list");
-      divContainer.innerHTML = table;
-    })
-  
-
-
-
-  });
-
-  // TODO: build top 10 table
-  // .then(build_top10_table);
-
-  // build_table('./downstream.csv', 'downstream_table');
-  // build_table('./upstream.csv', 'upstream_table');
-  // build_table('./downstream_risk.csv', 'downstream_risk')
   
   // build_alerts();
   // build_top10_table();
@@ -86,22 +54,6 @@ function filterFunction() {
   }
 }
 
-// TODO: build this function
-function build_top10_table() {
-
-  var input_table = document.getElementById('downstream_risk');
-  var output_table = document.getElementById('top10_table');
-  output_table.innerHTML = input_table.innerHTML;
-
-  var row = output_table.rows;
-
-  // TODO: why is this running so long
-  for (var j = 0; j < row[0].cells.length+1; j++){
-    for (var i = 0; i < row.length; i++){
-      row[i].deleteCell(-1);
-    }
-  }
-}
 
 // TODO: add functionality to sort table
 function filterTable(table_name, local_input) {
@@ -162,8 +114,21 @@ function build_table(input_location, id_target) {
 
       var divContainer = document.getElementById(id_target);
       divContainer.innerHTML = table;
-    })
 
+      if (id_target==='risk') {
+        data = data.sort(function(a, b){return a.Base - b.Base});
+
+        var table = '<table><tr><th>Top 10 At Risk Downstream Products</th></tr>';
+
+        for (var i = 0; i < 10; i++) {
+          table += '<tr><td>'+data[i].Drug+'</td></tr>';
+        }
+        table +='</table>';
+  
+        var divContainer = document.getElementById("top10_list");
+        divContainer.innerHTML = table;
+      }
+    })
 }
 
 // function csv_string_to_table(csv_string, id_target) {
