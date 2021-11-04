@@ -21,15 +21,20 @@ window.onload = function() {
     for (const [key,value] of Object.entries(data_registry)) {
       build_table(value[prop_or_not], key);
     }
+  })
+  .then(()=>{
+    
 
-    fetch(data_registry['risk'][prop_or_not])
+    fetch(data_registry['risk'][1])
     .then(response => response.json())
     .then(data => {
-      data = data.filter(obj=> obj.features == "base");
-      data = data.sort(function(a, b){return a.resilience_score - b.resilience_score});
+
+      data = data.sort(function(a, b){return a.Base - b.Base});
+
+      
 
       var table = '<table><tr><th>Top 10 At Risk Downstream Products</th></tr>';
-
+      console.log(table)
       for (var i = 0; i < 10; i++) {
         table += '<tr><td>'+data[i].drug+'</td></tr>';           
       }
@@ -38,6 +43,7 @@ window.onload = function() {
       var divContainer = document.getElementById("top10_list");
       divContainer.innerHTML = table;
     })
+  
 
 
 
