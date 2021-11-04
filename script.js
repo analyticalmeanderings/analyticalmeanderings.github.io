@@ -1,6 +1,6 @@
 async function public_private() {
   try {
-    const response = await fetch('PROP_upstream.csv');
+    const response = await fetch('PROP_risk.json');
     if (response.ok) {
       return 0;
     }
@@ -14,18 +14,22 @@ async function public_private() {
 }
 
 table_registry = {
-    upstream_table:['./PROP_upstream.csv','./upstream.csv'],
-    downstream_table:['./PROP_downstream.csv','./downstream.csv'],
-    downstream_risk:['./PROP_downstream_risk.csv','./downstream_risk.csv'],
+    risk:['./PROP_risk.json','./risk.json'],
+    locations:['./PROP_locations.json','./locations.json'],
+    products:['./PROP_products.json','./products.json'],
 };
 
 window.onload = function() {
-  
+
   public_private()
   .then((prop_or_not)=> {
-    for (const [key,value] of Object.entries(table_registry)) {
-      build_table(value[prop_or_not], key);
-    }
+
+    for table_instance in table_registry
+
+    build_table(table_registry['risk'][prop_or_not], key);
+    
+    
+
   });
 
   // TODO: build top 10 table
@@ -35,12 +39,12 @@ window.onload = function() {
   // build_table('./upstream.csv', 'upstream_table');
   // build_table('./downstream_risk.csv', 'downstream_risk')
   
-  build_alerts();
-  build_top10_table();
+  // build_alerts();
+  // build_top10_table();
   // TODO: build_map() modeled after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
+
+
 }
-
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 // TODO: rename myFunction to something meaningful
