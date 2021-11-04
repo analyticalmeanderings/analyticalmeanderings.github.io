@@ -22,6 +22,24 @@ window.onload = function() {
       build_table(value[prop_or_not], key);
     }
 
+    fetch(data_registry['risk'][prop_or_not])
+    .then(response => response.json())
+    .then(data => {
+      data = data.filter(obj=> obj.features == "base");
+      data = data.sort(function(a, b){return a.resilience_score - b.resilience_score});
+
+      var table = '<table><tr><th>Top 10 At Risk Downstream Products</th></tr>';
+
+      for (var i = 0; i < 10; i++) {
+        table += '<tr><td>'+data[i].drug+'</td></tr>';           
+      }
+      table +='</table>';
+
+      var divContainer = document.getElementById("top10_list");
+      divContainer.innerHTML = table;
+    })
+
+
 
   });
 
