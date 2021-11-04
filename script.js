@@ -11,6 +11,7 @@ data_registry = {
     risk:['./PROP_risk.json','./risk.json'],
     locations:['./PROP_locations.json','./locations.json'],
     products:['./PROP_products.json','./products.json'],
+    scenario:['./PROP_scenario.json','./scenario.json'],
 };
 
 window.onload = function() {
