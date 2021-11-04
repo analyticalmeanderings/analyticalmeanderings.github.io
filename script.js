@@ -235,20 +235,3 @@ function build_alerts(){
 
 
 }
-
-
-var params = {
-  Body: Buffer.from('...') || 'STRING_VALUE' /* Strings will be Base-64 encoded on your behalf */, /* required */
-  EndpointName: 'STRING_VALUE', /* required */
-  Accept: 'STRING_VALUE',
-  ContentType: 'STRING_VALUE',
-  CustomAttributes: 'STRING_VALUE',
-  InferenceId: 'STRING_VALUE',
-  TargetContainerHostname: 'STRING_VALUE',
-  TargetModel: 'STRING_VALUE',
-  TargetVariant: 'STRING_VALUE'
-};
-sagemakerruntime.invokeEndpoint(params, function(err, data) {
-  if (err) console.log(err, err.stack); // an error occurred
-  else     console.log(data);           // successful response
-});
