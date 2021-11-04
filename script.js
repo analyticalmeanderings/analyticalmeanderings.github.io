@@ -1,19 +1,13 @@
 async function public_private() {
   try {
     const response = await fetch('PROP_risk.json');
-    if (response.ok) {
-      return 0;
-    }
-    else {
-      return 1;
-    }
+    if (response.ok) {return 0;}
+    else {return 1;}
   }
-  catch {
-    return 1;
-  }
+  catch {return 1;}
 }
 
-table_registry = {
+data_registry = {
     risk:['./PROP_risk.json','./risk.json'],
     locations:['./PROP_locations.json','./locations.json'],
     products:['./PROP_products.json','./products.json'],
@@ -24,11 +18,10 @@ window.onload = function() {
   public_private()
   .then((prop_or_not)=> {
 
-    for table_instance in table_registry
+    for (const [key,value] of Object.entries(data_registry)) {
+      build_table(value[prop_or_not], key);
+    }
 
-    build_table(table_registry['risk'][prop_or_not], key);
-    
-    
 
   });
 
@@ -121,38 +114,56 @@ function openTab(evt, tabName) {
 }
 
 function build_table(input_location, id_target) {
-  
-  return fetch(input_location)
-  .then(function(response){
-      return response.text();
-  })
-  .then(function(data){
-      csv_string_to_table(data, id_target);
-  });
-}
 
-function csv_string_to_table(csv_string, id_target) {
-  var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
-  var table_rows = '';
-  var table_header = '';
+  fetch(input_location)
+    .then(response => response.json())
+    .then(data => {
 
-  rows.forEach(function(row, row_index) {
-      var table_columns = '';
-      var columns = row.split(','); // split/separate the columns in a row
-      columns.forEach(function(column, column_index) {
-          table_columns += row_index == 0 ? '<th onclick="sortTable('+column_index.toString()+','+id_target+')">' + column + '</th>' : '<td>' + column + '</td>';
-          
-      });
-      if (row_index == 0) {
-          table_header += '<tr>' + table_columns + '</tr>';
-      } else {
-          table_rows += '<tr>' + table_columns + '</tr>';
+      cols = Object.keys(data[0]);
+      var table = '<table><tr>'
+
+      for (var i = 0; i < cols.length; i++) {
+        table += '<th>'+cols[i]+'</th>';
       }
-  });
+      for (var i = 0; i < data.length; i++) {
+        table += '<tr>'
 
-  table = '<table>' + table_header + table_rows + '</table>';
-  document.getElementById(id_target).innerHTML = table;
+        for (var j = 0; j < cols.length; j++) {
+
+          table += '<td>'+data[i][cols[j]]+'</td>';
+        }
+        table += '</tr>'
+      }
+      table += '</table>';
+
+      var divContainer = document.getElementById(id_target);
+      divContainer.innerHTML = table;
+    })
+
 }
+
+// function csv_string_to_table(csv_string, id_target) {
+//   var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
+//   var table_rows = '';
+//   var table_header = '';
+
+//   rows.forEach(function(row, row_index) {
+//       var table_columns = '';
+//       var columns = row.split(','); // split/separate the columns in a row
+//       columns.forEach(function(column, column_index) {
+//           table_columns += row_index == 0 ? '<th onclick="sortTable('+column_index.toString()+','+id_target+')">' + column + '</th>' : '<td>' + column + '</td>';
+          
+//       });
+//       if (row_index == 0) {
+//           table_header += '<tr>' + table_columns + '</tr>';
+//       } else {
+//           table_rows += '<tr>' + table_columns + '</tr>';
+//       }
+//   });
+
+//   table = '<table>' + table_header + table_rows + '</table>';
+//   document.getElementById(id_target).innerHTML = table;
+// }
 
 function sortTable(n, id_target) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
