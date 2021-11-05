@@ -97,6 +97,11 @@ function build_table(input_location, id_target) {
     .then(data => {
 
       cols = Object.keys(data[0]);
+      
+      console.log(cols);
+
+
+
       var table = '<table><tr>'
 
       for (var i = 0; i < cols.length; i++) {
