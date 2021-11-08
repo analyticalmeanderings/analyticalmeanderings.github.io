@@ -124,7 +124,7 @@ function build_table(input_location, id_target) {
       if (id_target==='risk') {
         data = data.sort(function(a, b){return a.Base - b.Base});
 
-        var table = '<table><tr><th>Top 10 At Risk Downstream Products</th></tr>';
+        var table = '<table><tr><th>Top 10 At Risk Drug Products</th></tr>';
 
         for (var i = 0; i < 10; i++) {
           table += '<tr><td>'+data[i].Drug+'</td></tr>';
