@@ -26,7 +26,6 @@ window.onload = function() {
 
   
   // build_alerts();
-  // build_top10_table();
   // TODO: build_map() modeled after https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/
 
 

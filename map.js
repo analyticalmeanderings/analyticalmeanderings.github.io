@@ -14,9 +14,9 @@
     }
   ).addTo(myMap);
 
-  fetch("/map.csv")
-    .then((res) => res.text())
-    .then((csvText) =>
+  fetch("/locations.json")
+    .then(response => response.json())
+    .then((data) =>
       Papa.parse(csvText, {
         header: true,
       })
