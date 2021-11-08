@@ -95,11 +95,9 @@ function build_table(input_location, id_target) {
     .then(response => response.json())
     .then(data => {
 
+      console.log(input_location);
+      console.log(data);
       cols = Object.keys(data[0]);
-      
-      console.log(cols);
-
-
 
       var table = '<table><tr>'
 
@@ -162,7 +160,7 @@ function sortTable(n, id_target) {
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
 
-      console.log(typeof(x))
+
       /*check if the two rows should switch place,
       based on the direction, asc or desc:*/
       if (dir == "asc") {
