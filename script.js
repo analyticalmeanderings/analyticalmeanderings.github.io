@@ -105,15 +105,17 @@ function build_table(input_location, id_target) {
       var table = '<table><tr>'
 
       for (var i = 0; i < cols.length; i++) {
+        if(!(cols[i].startsWith('lat')||cols[i].startsWith('long'))){
         table += '<th>'+cols[i]+'</th>';
-      }
+      }}
       for (var i = 0; i < data.length; i++) {
         table += '<tr>'
 
         for (var j = 0; j < cols.length; j++) {
+          if(!(cols[j].startsWith('lat')||cols[j].startsWith('long'))){
 
           table += '<td>'+data[i][cols[j]]+'</td>';
-        }
+        }}
         table += '</tr>'
       }
       table += '</table>';
