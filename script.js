@@ -95,8 +95,6 @@ function build_table(input_location, id_target) {
     .then(response => response.json())
     .then(data => {
 
-      console.log(input_location);
-      console.log(data);
       cols = Object.keys(data[0]);
 
       var table = '<table><tr>'
