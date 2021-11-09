@@ -164,7 +164,13 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'From');
         data.addColumn('string', 'To');
-        data.addColumn('number', 'Weight');
+        data.addColumn('number', 'Count of Manufacturing Sites');
+        // TODO: Make a for loop after you aggregate, to "add rows"
+        // sankey data is hidden here
+        // probably going to cap the number of entries
+        // groupby (Country_API, and Country_FDF)
+        // agg count of records
+        
         data.addRows([
           [ 'Upstream Manufacturing (China)', 'Downstream Manufacturing (US)', 5 ],
           [ 'Upstream Manufacturing (China)', 'Downstream Manufacturing (Germany)', 7 ],

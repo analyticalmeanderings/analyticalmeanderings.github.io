@@ -90,6 +90,7 @@ function openTab(evt, tabName) {
 }
 
 function build_table(input_location, id_target) {
+  // Builds all the tables, including scenario analysis
 
   fetch(input_location)
     .then(response => response.json())
