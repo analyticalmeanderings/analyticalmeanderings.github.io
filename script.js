@@ -1,4 +1,5 @@
-// TODO: don't polluate the global name space, working now
+// TODO: filter module, get filtered data() uses a module that uses filtered set ... applies current filters return filtered
+// TODO: addEventListener
 
 const dataRegistry = (function () {
   async function public_private() {
@@ -26,8 +27,11 @@ const dataRegistry = (function () {
     const realDataRegistry = {};
 
     for (const key in dataRegistryUniverse){
-      realDataRegistry[key] = dataRegistryUniverse[key][isPublicPrivate];
+      realDataRegistry[key] = await fetch(dataRegistryUniverse[key][isPublicPrivate]);
     }
+
+// refactor
+
     return realDataRegistry;
   }
 
