@@ -1,6 +1,0 @@
-Product,Manufacturer,City,Country,Application,Activeness,Volume
-Crude Oil,Exxon,Fairfax,United States,Yes,Yes,50 kg/year
-Asphalt,Chevron,Clifton,United States,Yes,Yes,50 kg/year
-Wax,Exxon,Beijing,China,No,Yes,50 kg/year
-Diesel,BP,Mumbai,India,No,No,50 kg/year
-Jet,Shell,Berlin,Germany,No,No,50 kg/year
