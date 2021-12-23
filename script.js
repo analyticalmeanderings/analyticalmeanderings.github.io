@@ -141,8 +141,8 @@ const dataRegistry = (function () {
           var divContainer = document.getElementById("top10_list");
           divContainer.innerHTML = table;
         }
-      });
-  }
+      };
+
 
   function sortTable(n, id_target) {
     var table,
