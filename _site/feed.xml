@@ -84,8 +84,8 @@
 &lt;p&gt;If you’d like to use this code to do your own object localization, you need only download the &lt;a href=&quot;https://github.com/analyticalmeanderings/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Apr 2021 06:39:23 -0500</pubDate>
-        <link>http://localhost:4000/2021/eye-exercise/</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/eye-exercise/</guid>
+        <link>http://localhost:4000/eye_exercise/index.html</link>
+        <guid isPermaLink="true">http://localhost:4000/eye_exercise/index.html</guid>
         
         <category>keras</category>
         
@@ -156,8 +156,8 @@
 &lt;p&gt;Can you do better with other architectures?  Feel free to download the &lt;a href=&quot;https://github.com/analyticalmeanderings/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; on GitHub and try your own hand at transfer learning!&lt;/p&gt;
 </description>
         <pubDate>Sat, 08 Apr 2021 06:39:23 -0500</pubDate>
-        <link>http://localhost:4000/2021/pacmen-exercise/</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/pacmen-exercise/</guid>
+        <link>http://localhost:4000/pacmen_exercise/index.html</link>
+        <guid isPermaLink="true">http://localhost:4000/pacmen_exercise/index.html</guid>
         
         <category>keras</category>
         
