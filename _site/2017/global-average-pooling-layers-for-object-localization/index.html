@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>Global Average Pooling Layers for Object Localization</title>
+  <meta name="description" content="For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.
+
+">
+  <meta name="author" content="Alexis Cook">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Global Average Pooling Layers for Object Localization">
+  <meta name="twitter:description" content="For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.
+
+">
+  
+  <meta name="twitter:creator" content="alexis_b_cook">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Global Average Pooling Layers for Object Localization">
+  <meta property="og:description" content="For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1513320667569926000">
+  <link rel="canonical" href="http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/">
+  <link rel="alternate" type="application/rss+xml" title="Alexis Cook" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Alexis Cook">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Alexis Cook</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Deep Learning Professional</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Alexis Cook blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/alexis_b_cook" title="@alexis_b_cook on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/alexis.cook" title="alexis.cook on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/alexis-cook-a6127753" title="alexis-cook-a6127753 on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/alexisbcook" title="alexisbcook on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:alexis.cook@gmail.com" title="Email alexis.cook@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="9 Apr 2017" class="post-meta__date date">9 Apr 2017</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#keras">keras</a> <a href="/tags/#localization">localization</a> </span>
+      
+    </div>
+    <h1 class="post-title">Global Average Pooling Layers for Object Localization</h1>
+  </header>
+
+  <section class="post">
+    <p>For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.</p>
+
+<p>As an example, consider the VGG-16 model architecture, depicted in the figure below.</p>
+
+<p><img src="http://localhost:4000/assets/vgg16.png" alt="vgg-16 model" /></p>
+
+<p>We can summarize the layers of the VGG-16 model by executing the following line of code in the terminal:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">'from keras.applications.vgg16 import VGG16; VGG16().summary()'</span>
+</code></pre>
+</div>
+
+<p>Your output should appear as follows:</p>
+
+<p><img src="http://localhost:4000/assets/vgg16_keras.png" alt="vgg-16 layers in Keras" /></p>
+
+<p>You will notice five blocks of (two to three) convolutional layers followed by a max pooling layer.  The final max pooling layer is then flattened and followed by three densely connected layers.  Notice that most of the parameters in the model belong to the fully connected layers!</p>
+
+<p>As you can probably imagine, an architecture like this has the risk of overfitting to the training dataset.  In practice, dropout layers are used to avoid overfitting.</p>
+
+<h4 id="global-average-pooling">Global Average Pooling</h4>
+
+<p>In the last few years, experts have turned to global average pooling (GAP) layers to minimize overfitting by reducing the total number of parameters in the model.  Similar to max pooling layers, GAP layers are used to reduce the spatial dimensions of a three-dimensional tensor.  However, GAP layers perform a more extreme type of dimensionality reduction, where a tensor with dimensions <script type="math/tex">h \times w \times d</script> is reduced in size to have dimensions <script type="math/tex">1 \times 1 \times d</script>.  GAP layers reduce each <script type="math/tex">h \times w</script> feature map to a single number by simply taking the average of all <script type="math/tex">hw</script> values.</p>
+
+<p><img src="http://localhost:4000/assets/global_average_pooling.png" alt="global average pooling" /></p>
+
+<p>The <a href="https://arxiv.org/pdf/1312.4400.pdf">first paper</a> to propose GAP layers designed an architecture where the final max pooling layer contained one activation map for each image category in the dataset.  The max pooling layer was then fed to a GAP layer, which yielded a vector with a single entry for each possible object in the classification task.  The authors then applied a softmax activation function to yield the predicted probability of each class.  If you peek at the <a href="https://arxiv.org/pdf/1312.4400.pdf">original paper</a>, I especially recommend checking out Section 3.2, titled “Global Average Pooling”.</p>
+
+<p>The <a href="http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006">ResNet-50 model</a> takes a less extreme approach; instead of getting rid of dense layers altogether, the GAP layer is followed by one densely connected layer with a softmax activation function that yields the predicted object classes.</p>
+
+<h4 id="object-localization">Object Localization</h4>
+
+<p>In mid-2016, <a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">researchers at MIT</a> demonstrated that CNNs with GAP layers (a.k.a. GAP-CNNs) that have been trained for a classification task can also be used for <a href="https://www.youtube.com/watch?v=fZvOy0VXWAI">object localization</a>.  That is, a GAP-CNN not only tells us <em>what</em> object is contained in the image - it also tells us <em>where</em> the object is in the image, and through no additional work on our part!  The localization is expressed as a heat map (referred to as a <strong>class activation map</strong>), where the color-coding scheme identifies regions that are relatively important for the GAP-CNN to perform the object identification task.  Please check out the YouTube video below for an <em>awesome</em> demo!</p>
+
+<iframe width="560" height="315" style="padding:0px 0px 20px 0px;" src="https://www.youtube.com/embed/fZvOy0VXWAI?rel=0" frameborder="0" allowfullscreen=""></iframe>
+
+<p>In the <a href="https://github.com/alexisbcook/ResNetCAM-keras">repository</a>, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from <a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">this paper</a>.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.</p>
+
+<p>This transformation is done by noticing each node in the GAP layer corresponds to a different activation map, and that the weights connecting the GAP layer to the final dense layer encode each activation map’s contribution to the predicted object class.  To obtain the class activation map, we sum the contributions of each of the detected patterns in the activation maps, where detected patterns that are more important to the predicted object class are given more weight.</p>
+
+<h4 id="how-the-code-operates">How the Code Operates</h4>
+
+<p>Let’s examine the ResNet-50 architecture by executing the following line of code in the terminal:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">'from keras.applications.resnet50 import ResNet50; ResNet50().summary()'</span>
+</code></pre>
+</div>
+
+<p>The final few lines of output should appear as follows (<em>Notice that unlike the VGG-16 model, the majority of the trainable parameters are not located in the fully connected layers at the top of the network!</em>):</p>
+
+<p><img src="http://localhost:4000/assets/resnet50_keras.png" alt="resnet-50 layers in Keras" /></p>
+
+<p>The <code class="highlighter-rouge">Activation</code>, <code class="highlighter-rouge">AveragePooling2D</code>, and <code class="highlighter-rouge">Dense</code> layers towards the end of the network are of the most interest to us.  Note that the <code class="highlighter-rouge">AveragePooling2D</code> layer is in fact a GAP layer!</p>
+
+<p>We’ll begin with the <code class="highlighter-rouge">Activation</code> layer.  This layer contains 2048 activation maps, each with dimensions <script type="math/tex">7\times7</script>.  Let <script type="math/tex">f_k</script> represent the <script type="math/tex">k</script>-th activation map, where <script type="math/tex">k \in \{1, \ldots, 2048\}</script>.</p>
+
+<p>The following <code class="highlighter-rouge">AveragePooling2D</code> GAP layer reduces the size of the preceding layer to <script type="math/tex">(1,1,2048)</script> by taking the average of each feature map.  The next <code class="highlighter-rouge">Flatten</code> layer merely flattens the input, without resulting in any change to the information contained in the previous GAP layer.</p>
+
+<p>The object category predicted by ResNet-50 corresponds to a single node in the final <code class="highlighter-rouge">Dense</code> layer; and, this single node is connected to every node in the preceding <code class="highlighter-rouge">Flatten</code> layer.  Let <script type="math/tex">w_k</script> represent the weight connecting the <script type="math/tex">k</script>-th node in the <code class="highlighter-rouge">Flatten</code> layer to the output node corresponding to the predicted image category.</p>
+
+<p><img src="http://localhost:4000/assets/class_activation_mapping.png" alt="class activation mapping" /></p>
+
+<p>Then, in order to obtain the class activation map, we need only compute the sum</p>
+
+<p><script type="math/tex">w_1 \cdot f_1 + w_2 \cdot f_2 + \ldots + w_{2048} \cdot f_{2048}</script>.</p>
+
+<p>You can plot these class activation maps for any image of your choosing, to explore the localization ability of ResNet-50.  Note that in order to permit comparison to the original image, <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.ndimage.zoom.html#scipy.ndimage.zoom">bilinear upsampling</a> is used to resize each activation map to <script type="math/tex">224 \times 224</script>.  (This results in a class activation map with size <script type="math/tex">224 \times 224</script>.)</p>
+
+<p><img src="http://localhost:4000/assets/dog_localization.png" alt="Dog Localization" /></p>
+
+<p>If you’d like to use this code to do your own object localization, you need only download the <a href="https://github.com/alexisbcook/ResNetCAM-keras">repository</a>.</p>
+
+  </section>
+  <section id="disqus_thread"></section><!-- /#disqus_thread -->
+</article>
+
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '/2017/global-average-pooling-layers-for-object-localization'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//alexisbcook-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+       })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2017 Alexis Cook. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1513320667569926000"></script>
+
+
+    </div>
+
+<!-- load mathjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </body>
+</html>

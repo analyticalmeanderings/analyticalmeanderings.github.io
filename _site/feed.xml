@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexis Cook</title>
+    <description>Deep Learning Professional</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 15 Dec 2017 00:51:07 -0600</pubDate>
+    <lastBuildDate>Fri, 15 Dec 2017 00:51:07 -0600</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Global Average Pooling Layers for Object Localization</title>
+        <description>&lt;p&gt;For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.&lt;/p&gt;
+
+&lt;p&gt;As an example, consider the VGG-16 model architecture, depicted in the figure below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/vgg16.png&quot; alt=&quot;vgg-16 model&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can summarize the layers of the VGG-16 model by executing the following line of code in the terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'from keras.applications.vgg16 import VGG16; VGG16().summary()'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Your output should appear as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/vgg16_keras.png&quot; alt=&quot;vgg-16 layers in Keras&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You will notice five blocks of (two to three) convolutional layers followed by a max pooling layer.  The final max pooling layer is then flattened and followed by three densely connected layers.  Notice that most of the parameters in the model belong to the fully connected layers!&lt;/p&gt;
+
+&lt;p&gt;As you can probably imagine, an architecture like this has the risk of overfitting to the training dataset.  In practice, dropout layers are used to avoid overfitting.&lt;/p&gt;
+
+&lt;h4 id=&quot;global-average-pooling&quot;&gt;Global Average Pooling&lt;/h4&gt;
+
+&lt;p&gt;In the last few years, experts have turned to global average pooling (GAP) layers to minimize overfitting by reducing the total number of parameters in the model.  Similar to max pooling layers, GAP layers are used to reduce the spatial dimensions of a three-dimensional tensor.  However, GAP layers perform a more extreme type of dimensionality reduction, where a tensor with dimensions &lt;script type=&quot;math/tex&quot;&gt;h \times w \times d&lt;/script&gt; is reduced in size to have dimensions &lt;script type=&quot;math/tex&quot;&gt;1 \times 1 \times d&lt;/script&gt;.  GAP layers reduce each &lt;script type=&quot;math/tex&quot;&gt;h \times w&lt;/script&gt; feature map to a single number by simply taking the average of all &lt;script type=&quot;math/tex&quot;&gt;hw&lt;/script&gt; values.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/global_average_pooling.png&quot; alt=&quot;global average pooling&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://arxiv.org/pdf/1312.4400.pdf&quot;&gt;first paper&lt;/a&gt; to propose GAP layers designed an architecture where the final max pooling layer contained one activation map for each image category in the dataset.  The max pooling layer was then fed to a GAP layer, which yielded a vector with a single entry for each possible object in the classification task.  The authors then applied a softmax activation function to yield the predicted probability of each class.  If you peek at the &lt;a href=&quot;https://arxiv.org/pdf/1312.4400.pdf&quot;&gt;original paper&lt;/a&gt;, I especially recommend checking out Section 3.2, titled “Global Average Pooling”.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006&quot;&gt;ResNet-50 model&lt;/a&gt; takes a less extreme approach; instead of getting rid of dense layers altogether, the GAP layer is followed by one densely connected layer with a softmax activation function that yields the predicted object classes.&lt;/p&gt;
+
+&lt;h4 id=&quot;object-localization&quot;&gt;Object Localization&lt;/h4&gt;
+
+&lt;p&gt;In mid-2016, &lt;a href=&quot;http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;researchers at MIT&lt;/a&gt; demonstrated that CNNs with GAP layers (a.k.a. GAP-CNNs) that have been trained for a classification task can also be used for &lt;a href=&quot;https://www.youtube.com/watch?v=fZvOy0VXWAI&quot;&gt;object localization&lt;/a&gt;.  That is, a GAP-CNN not only tells us &lt;em&gt;what&lt;/em&gt; object is contained in the image - it also tells us &lt;em&gt;where&lt;/em&gt; the object is in the image, and through no additional work on our part!  The localization is expressed as a heat map (referred to as a &lt;strong&gt;class activation map&lt;/strong&gt;), where the color-coding scheme identifies regions that are relatively important for the GAP-CNN to perform the object identification task.  Please check out the YouTube video below for an &lt;em&gt;awesome&lt;/em&gt; demo!&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; style=&quot;padding:0px 0px 20px 0px;&quot; src=&quot;https://www.youtube.com/embed/fZvOy0VXWAI?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/alexisbcook/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from &lt;a href=&quot;http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;this paper&lt;/a&gt;.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.&lt;/p&gt;
+
+&lt;p&gt;This transformation is done by noticing each node in the GAP layer corresponds to a different activation map, and that the weights connecting the GAP layer to the final dense layer encode each activation map’s contribution to the predicted object class.  To obtain the class activation map, we sum the contributions of each of the detected patterns in the activation maps, where detected patterns that are more important to the predicted object class are given more weight.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-the-code-operates&quot;&gt;How the Code Operates&lt;/h4&gt;
+
+&lt;p&gt;Let’s examine the ResNet-50 architecture by executing the following line of code in the terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'from keras.applications.resnet50 import ResNet50; ResNet50().summary()'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The final few lines of output should appear as follows (&lt;em&gt;Notice that unlike the VGG-16 model, the majority of the trainable parameters are not located in the fully connected layers at the top of the network!&lt;/em&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/resnet50_keras.png&quot; alt=&quot;resnet-50 layers in Keras&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Activation&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;AveragePooling2D&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Dense&lt;/code&gt; layers towards the end of the network are of the most interest to us.  Note that the &lt;code class=&quot;highlighter-rouge&quot;&gt;AveragePooling2D&lt;/code&gt; layer is in fact a GAP layer!&lt;/p&gt;
+
+&lt;p&gt;We’ll begin with the &lt;code class=&quot;highlighter-rouge&quot;&gt;Activation&lt;/code&gt; layer.  This layer contains 2048 activation maps, each with dimensions &lt;script type=&quot;math/tex&quot;&gt;7\times7&lt;/script&gt;.  Let &lt;script type=&quot;math/tex&quot;&gt;f_k&lt;/script&gt; represent the &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-th activation map, where &lt;script type=&quot;math/tex&quot;&gt;k \in \{1, \ldots, 2048\}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following &lt;code class=&quot;highlighter-rouge&quot;&gt;AveragePooling2D&lt;/code&gt; GAP layer reduces the size of the preceding layer to &lt;script type=&quot;math/tex&quot;&gt;(1,1,2048)&lt;/script&gt; by taking the average of each feature map.  The next &lt;code class=&quot;highlighter-rouge&quot;&gt;Flatten&lt;/code&gt; layer merely flattens the input, without resulting in any change to the information contained in the previous GAP layer.&lt;/p&gt;
+
+&lt;p&gt;The object category predicted by ResNet-50 corresponds to a single node in the final &lt;code class=&quot;highlighter-rouge&quot;&gt;Dense&lt;/code&gt; layer; and, this single node is connected to every node in the preceding &lt;code class=&quot;highlighter-rouge&quot;&gt;Flatten&lt;/code&gt; layer.  Let &lt;script type=&quot;math/tex&quot;&gt;w_k&lt;/script&gt; represent the weight connecting the &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-th node in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Flatten&lt;/code&gt; layer to the output node corresponding to the predicted image category.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/class_activation_mapping.png&quot; alt=&quot;class activation mapping&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, in order to obtain the class activation map, we need only compute the sum&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;w_1 \cdot f_1 + w_2 \cdot f_2 + \ldots + w_{2048} \cdot f_{2048}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can plot these class activation maps for any image of your choosing, to explore the localization ability of ResNet-50.  Note that in order to permit comparison to the original image, &lt;a href=&quot;https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.ndimage.zoom.html#scipy.ndimage.zoom&quot;&gt;bilinear upsampling&lt;/a&gt; is used to resize each activation map to &lt;script type=&quot;math/tex&quot;&gt;224 \times 224&lt;/script&gt;.  (This results in a class activation map with size &lt;script type=&quot;math/tex&quot;&gt;224 \times 224&lt;/script&gt;.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/dog_localization.png&quot; alt=&quot;Dog Localization&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’d like to use this code to do your own object localization, you need only download the &lt;a href=&quot;https://github.com/alexisbcook/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Apr 2017 06:39:23 -0500</pubDate>
+        <link>http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/</guid>
+        
+        <category>keras</category>
+        
+        <category>localization</category>
+        
+        
+        <category>keras</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Transfer Learning to Classify Images with Keras</title>
+        <description>&lt;p&gt;In this blog post, I will detail my &lt;a href=&quot;https://github.com/alexisbcook/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; that performs object classification with transfer learning.  This blog post is inspired by a &lt;a href=&quot;https://medium.com/@st553/using-transfer-learning-to-classify-images-with-tensorflow-b0f3142b9366&quot;&gt;Medium post&lt;/a&gt; that made use of Tensorflow.  The code is written in Keras (version 2.0.2) and Python 3.5.&lt;/p&gt;
+
+&lt;p&gt;If you need to learn more about CNNs, I recommend reading the notes for the &lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot;&gt;CS231n&lt;/a&gt; course at Stanford.  All lectures are also available &lt;a href=&quot;https://www.youtube.com/watch?v=LxfUGhug-iQ&amp;amp;list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC&amp;amp;index=7&quot;&gt;online&lt;/a&gt;.  You are also encouraged to check out Term 2 of Udacity’s &lt;a href=&quot;https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889&quot;&gt;Artificial Intelligence Nanodegree&lt;/a&gt;, where you can find a comprehensive introduction to neural networks (NNs), CNNs (including transfer learning), and recurrent neural networks (RNNs).&lt;/p&gt;
+
+&lt;h4 id=&quot;the-dataset&quot;&gt;The Dataset&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cs.toronto.edu/~kriz/cifar.html&quot;&gt;CIFAR-10&lt;/a&gt; is a popular dataset composed of 60,000 tiny color images that each depict an object from one of ten different categories.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/cifar10.png&quot; alt=&quot;cifar-10 dataset&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://keras.io/datasets/&quot;&gt;dataset&lt;/a&gt; is simple to load in Keras.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.datasets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cifar10&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cifar10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;extracting-the-inceptionv3-bottleneck-features&quot;&gt;Extracting the InceptionV3 Bottleneck Features&lt;/h4&gt;
+
+&lt;p&gt;Instead of building a CNN from scratch, I used &lt;strong&gt;transfer learning&lt;/strong&gt; to leverage a pre-trained CNN that has demonstrated state-of-the-art performance in object classification tasks.&lt;/p&gt;
+
+&lt;p&gt;Keras makes it very easy to access several pre-trained &lt;a href=&quot;https://keras.io/applications/&quot;&gt;CNN architectures&lt;/a&gt;.  I decided to use the InceptionV3 architecture.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/inception.png&quot; alt=&quot;inception architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After importing the necessary Python class, it’s only one line of code to get the model, along with the pre-trained weights.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.applications.inception_v3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InceptionV3&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;base_model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InceptionV3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weights&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'imagenet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include_top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The pre-trained InceptionV3 architecture is stored in the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;base_model&lt;/code&gt;.  The final layer of the network is a fully connected layer designed to distinguish between the &lt;a href=&quot;https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a&quot;&gt;1000 different object categories&lt;/a&gt; in the ImageNet database.  Using the line of code below, I remove this final layer and save the resultant network in a new model.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'avg_pool'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This new model will no longer return a predicted image class, since the classification layer has been removed; however, the CNN now stored in &lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt; still provides us with a useful way to extract features from images.  By passing each of the CIFAR-10 images through this model, we can convert each image from its 32x32x3 array of raw image pixels to a vector with 2048 entries.  In practice, we refer to this dataset of 2048-dimensional points as InceptionV3 bottleneck features.&lt;/p&gt;
+
+&lt;h4 id=&quot;using-t-sne-to-visualize-bottleneck-features&quot;&gt;Using t-SNE to Visualize Bottleneck Features&lt;/h4&gt;
+
+&lt;p&gt;Towards visualizing the bottleneck features, I used a dimensionality reduction technique called &lt;a href=&quot;http://distill.pub/2016/misread-tsne/&quot;&gt;t-SNE&lt;/a&gt; (aka t-Distributed Stochastic Neighbor Embedding).  t-SNE reduces the dimensionality of each point, in a way where the points in the lower-dimensional space preserve the pointwise distances from the original, higher-dimensional space.  Scikit-learn &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html&quot;&gt;has an implementation&lt;/a&gt; of t-SNE, but it does not scale well to large datasets.  Instead, I worked with an implementation that can be found &lt;a href=&quot;https://github.com/alexisbcook/tsne&quot;&gt;on github&lt;/a&gt;; it can be installed by running &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install git+https://github.com/alexisbcook/tsne.git&lt;/code&gt; in the terminal.&lt;/p&gt;
+
+&lt;p&gt;Visualizing the resulting 2-dimensional points yields the plot below, where points are color-coded according to the object class contained in the corresponding image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/tsne.png&quot; alt=&quot;t-sne plot for transfer learning on cifar-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;InceptionV3 does an amazing job with teasing out the content in the image, where points containing objects from the same class are mostly confined to nearby regions in the 2D plot.  Thus, training a classifier on the bottleneck features should yield good performance.&lt;/p&gt;
+
+&lt;h4 id=&quot;performing-classification-with-transfer-learning&quot;&gt;Performing Classification with Transfer Learning&lt;/h4&gt;
+
+&lt;p&gt;In the Jupyter notebook in the repository, I trained a very shallow CNN on the bottleneck features.  It yields a test accuracy of 82.68%! :)&lt;/p&gt;
+
+&lt;h4 id=&quot;play-with-the-code&quot;&gt;Play with the Code!&lt;/h4&gt;
+
+&lt;p&gt;Can you do better with other architectures?  Feel free to download the &lt;a href=&quot;https://github.com/alexisbcook/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; on GitHub and try your own hand at transfer learning!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 08 Apr 2017 06:39:23 -0500</pubDate>
+        <link>http://localhost:4000/2017/using-transfer-learning-to-classify-images-with-keras/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/using-transfer-learning-to-classify-images-with-keras/</guid>
+        
+        <category>keras</category>
+        
+        <category>classification</category>
+        
+        <category>transfer-learning</category>
+        
+        
+        <category>keras</category>
+        
+      </item>
+    
+  </channel>
+</rss>
