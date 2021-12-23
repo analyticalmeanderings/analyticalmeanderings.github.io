@@ -42,7 +42,7 @@ In mid-2016, [researchers at MIT](http://cnnlocalization.csail.mit.edu/Zhou_Lear
 
 <iframe width="560" height="315" style="padding:0px 0px 20px 0px;" src="https://www.youtube.com/embed/fZvOy0VXWAI?rel=0" frameborder="0" allowfullscreen></iframe>
 
-In the [repository](https://github.com/alexisbcook/ResNetCAM-keras), I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from [this paper](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf).  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.   
+In the [repository](https://github.com/analyticalmeanderings/ResNetCAM-keras), I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from [this paper](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf).  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.   
 
 
 This transformation is done by noticing each node in the GAP layer corresponds to a different activation map, and that the weights connecting the GAP layer to the final dense layer encode each activation map's contribution to the predicted object class.  To obtain the class activation map, we sum the contributions of each of the detected patterns in the activation maps, where detected patterns that are more important to the predicted object class are given more weight.  
@@ -77,4 +77,4 @@ You can plot these class activation maps for any image of your choosing, to expl
 
 ![Dog Localization]({{ site.url }}/assets/dog_localization.png)
 
-If you'd like to use this code to do your own object localization, you need only download the [repository](https://github.com/alexisbcook/ResNetCAM-keras).
+If you'd like to use this code to do your own object localization, you need only download the [repository](https://github.com/analyticalmeanderings/ResNetCAM-keras).

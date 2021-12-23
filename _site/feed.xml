@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alexis Cook</title>
+    <title>Matt Christian</title>
     <description>Deep Learning Professional</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
@@ -47,7 +47,7 @@
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; style=&quot;padding:0px 0px 20px 0px;&quot; src=&quot;https://www.youtube.com/embed/fZvOy0VXWAI?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;In the &lt;a href=&quot;https://github.com/alexisbcook/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from &lt;a href=&quot;http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;this paper&lt;/a&gt;.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/analyticalmeanderings/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from &lt;a href=&quot;http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;this paper&lt;/a&gt;.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.&lt;/p&gt;
 
 &lt;p&gt;This transformation is done by noticing each node in the GAP layer corresponds to a different activation map, and that the weights connecting the GAP layer to the final dense layer encode each activation map’s contribution to the predicted object class.  To obtain the class activation map, we sum the contributions of each of the detected patterns in the activation maps, where detected patterns that are more important to the predicted object class are given more weight.&lt;/p&gt;
 
@@ -81,7 +81,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/dog_localization.png&quot; alt=&quot;Dog Localization&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you’d like to use this code to do your own object localization, you need only download the &lt;a href=&quot;https://github.com/alexisbcook/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you’d like to use this code to do your own object localization, you need only download the &lt;a href=&quot;https://github.com/analyticalmeanderings/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Apr 2017 06:39:23 -0500</pubDate>
         <link>http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/</link>
@@ -98,7 +98,7 @@
     
       <item>
         <title>Using Transfer Learning to Classify Images with Keras</title>
-        <description>&lt;p&gt;In this blog post, I will detail my &lt;a href=&quot;https://github.com/alexisbcook/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; that performs object classification with transfer learning.  This blog post is inspired by a &lt;a href=&quot;https://medium.com/@st553/using-transfer-learning-to-classify-images-with-tensorflow-b0f3142b9366&quot;&gt;Medium post&lt;/a&gt; that made use of Tensorflow.  The code is written in Keras (version 2.0.2) and Python 3.5.&lt;/p&gt;
+        <description>&lt;p&gt;In this blog post, I will detail my &lt;a href=&quot;https://github.com/analyticalmeanderings/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; that performs object classification with transfer learning.  This blog post is inspired by a &lt;a href=&quot;https://medium.com/@st553/using-transfer-learning-to-classify-images-with-tensorflow-b0f3142b9366&quot;&gt;Medium post&lt;/a&gt; that made use of Tensorflow.  The code is written in Keras (version 2.0.2) and Python 3.5.&lt;/p&gt;
 
 &lt;p&gt;If you need to learn more about CNNs, I recommend reading the notes for the &lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot;&gt;CS231n&lt;/a&gt; course at Stanford.  All lectures are also available &lt;a href=&quot;https://www.youtube.com/watch?v=LxfUGhug-iQ&amp;amp;list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC&amp;amp;index=7&quot;&gt;online&lt;/a&gt;.  You are also encouraged to check out Term 2 of Udacity’s &lt;a href=&quot;https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889&quot;&gt;Artificial Intelligence Nanodegree&lt;/a&gt;, where you can find a comprehensive introduction to neural networks (NNs), CNNs (including transfer learning), and recurrent neural networks (RNNs).&lt;/p&gt;
 
@@ -139,7 +139,7 @@
 
 &lt;h4 id=&quot;using-t-sne-to-visualize-bottleneck-features&quot;&gt;Using t-SNE to Visualize Bottleneck Features&lt;/h4&gt;
 
-&lt;p&gt;Towards visualizing the bottleneck features, I used a dimensionality reduction technique called &lt;a href=&quot;http://distill.pub/2016/misread-tsne/&quot;&gt;t-SNE&lt;/a&gt; (aka t-Distributed Stochastic Neighbor Embedding).  t-SNE reduces the dimensionality of each point, in a way where the points in the lower-dimensional space preserve the pointwise distances from the original, higher-dimensional space.  Scikit-learn &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html&quot;&gt;has an implementation&lt;/a&gt; of t-SNE, but it does not scale well to large datasets.  Instead, I worked with an implementation that can be found &lt;a href=&quot;https://github.com/alexisbcook/tsne&quot;&gt;on github&lt;/a&gt;; it can be installed by running &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install git+https://github.com/alexisbcook/tsne.git&lt;/code&gt; in the terminal.&lt;/p&gt;
+&lt;p&gt;Towards visualizing the bottleneck features, I used a dimensionality reduction technique called &lt;a href=&quot;http://distill.pub/2016/misread-tsne/&quot;&gt;t-SNE&lt;/a&gt; (aka t-Distributed Stochastic Neighbor Embedding).  t-SNE reduces the dimensionality of each point, in a way where the points in the lower-dimensional space preserve the pointwise distances from the original, higher-dimensional space.  Scikit-learn &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html&quot;&gt;has an implementation&lt;/a&gt; of t-SNE, but it does not scale well to large datasets.  Instead, I worked with an implementation that can be found &lt;a href=&quot;https://github.com/analyticalmeanderings/tsne&quot;&gt;on github&lt;/a&gt;; it can be installed by running &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install git+https://github.com/analyticalmeanderings/tsne.git&lt;/code&gt; in the terminal.&lt;/p&gt;
 
 &lt;p&gt;Visualizing the resulting 2-dimensional points yields the plot below, where points are color-coded according to the object class contained in the corresponding image.&lt;/p&gt;
 
@@ -153,7 +153,7 @@
 
 &lt;h4 id=&quot;play-with-the-code&quot;&gt;Play with the Code!&lt;/h4&gt;
 
-&lt;p&gt;Can you do better with other architectures?  Feel free to download the &lt;a href=&quot;https://github.com/alexisbcook/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; on GitHub and try your own hand at transfer learning!&lt;/p&gt;
+&lt;p&gt;Can you do better with other architectures?  Feel free to download the &lt;a href=&quot;https://github.com/analyticalmeanderings/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; on GitHub and try your own hand at transfer learning!&lt;/p&gt;
 </description>
         <pubDate>Sat, 08 Apr 2017 06:39:23 -0500</pubDate>
         <link>http://localhost:4000/2017/using-transfer-learning-to-classify-images-with-keras/</link>

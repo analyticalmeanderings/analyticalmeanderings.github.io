@@ -10,22 +10,12 @@
   <meta name="description" content="For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.
 
 ">
-  <meta name="author" content="Alexis Cook">
+  <meta name="author" content="Matt Christian">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Global Average Pooling Layers for Object Localization">
-  <meta name="twitter:description" content="For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.
-
-">
-  
-  <meta name="twitter:creator" content="alexis_b_cook">
-  
-  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Global Average Pooling Layers for Object Localization">
@@ -56,7 +46,7 @@
   
   <link rel="stylesheet" href="/css/main.css?1513320667569926000">
   <link rel="canonical" href="http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/">
-  <link rel="alternate" type="application/rss+xml" title="Alexis Cook" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Matt Christian" href="/feed.xml">
 </head>
 
 
@@ -71,9 +61,9 @@
 
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
-        <a href="/" title="link to home of Alexis Cook">
+        <a href="/" title="link to home of Matt Christian">
           <img src="/images/profile.png" class="user-image" alt="My Profile Photo">
-          <h1 class="panel-cover__title panel-title">Alexis Cook</h1>
+          <h1 class="panel-cover__title panel-title">Matt Christian</h1>
         </a>
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">Deep Learning Professional</p>
@@ -83,37 +73,18 @@
 
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="link to Alexis Cook blog" class="blog-button">Blog</a></li>
+              <li class="navigation__item"><a href="/#blog" title="link to Matt Christian blog" class="blog-button">Blog</a></li>
             </ul>
           </nav>
 
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
-            
-              <!-- Twitter -->
-              <li class="navigation__item">
-                <a href="http://twitter.com/alexis_b_cook" title="@alexis_b_cook on Twitter" target="_blank">
-                  <i class="icon icon-social-twitter"></i>
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-            
-
-            
-              <!-- Facebook -->
-              <li class="navigation__item">
-                <a href="http://fb.me/alexis.cook" title="alexis.cook on Facebook" target="_blank">
-                  <i class="icon icon-social-facebook"></i>
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-            
 
             
               <!-- LinkedIn -->
               <li class="navigation__item">
-                <a href="https://www.linkedin.com/in/alexis-cook-a6127753" title="alexis-cook-a6127753 on LinkedIn" target="_blank">
+                <a href="https://www.linkedin.com/in/matthew-christian-17577641/" title="matthew-christian-17577641 on LinkedIn" target="_blank">
                   <i class="icon icon-social-linkedin"></i>
                   <span class="label">LinkedIn</span>
                 </a>
@@ -123,7 +94,7 @@
             
               <!-- GitHub -->
               <li class="navigation__item">
-                <a href="https://www.github.com/alexisbcook" title="alexisbcook on GitHub" target="_blank">
+                <a href="https://www.github.com/analyticalmeanderings" title="analyticalmeanderings on GitHub" target="_blank">
                   <i class="icon icon-social-github"></i>
                   <span class="label">GitHub</span>
                 </a>
@@ -133,7 +104,7 @@
             
               <!-- Email -->
               <li class="navigation__item">
-                <a href="mailto:alexis.cook@gmail.com" title="Email alexis.cook@gmail.com" target="_blank">
+                <a href="mailto:matthew.bryan.christian@gmail.com" title="Email matthew.bryan.christian@gmail.com" target="_blank">
                   <i class="icon icon-mail"></i>
                   <span class="label">Email</span>
                 </a>
@@ -212,7 +183,7 @@
 
 <iframe width="560" height="315" style="padding:0px 0px 20px 0px;" src="https://www.youtube.com/embed/fZvOy0VXWAI?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-<p>In the <a href="https://github.com/alexisbcook/ResNetCAM-keras">repository</a>, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from <a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">this paper</a>.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.</p>
+<p>In the <a href="https://github.com/analyticalmeanderings/ResNetCAM-keras">repository</a>, I have explored the localization ability of the pre-trained ResNet-50 model, using the technique from <a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">this paper</a>.  The main idea is that each of the activation maps in the final layer preceding the GAP layer acts as a detector for a different pattern in the image, localized in space.  To get the class activation map corresponding to an image, we need only to transform these detected patterns to detected objects.</p>
 
 <p>This transformation is done by noticing each node in the GAP layer corresponds to a different activation map, and that the weights connecting the GAP layer to the final dense layer encode each activation map’s contribution to the predicted object class.  To obtain the class activation map, we sum the contributions of each of the detected patterns in the activation maps, where detected patterns that are more important to the predicted object class are given more weight.</p>
 
@@ -246,7 +217,7 @@
 
 <p><img src="http://localhost:4000/assets/dog_localization.png" alt="Dog Localization" /></p>
 
-<p>If you’d like to use this code to do your own object localization, you need only download the <a href="https://github.com/alexisbcook/ResNetCAM-keras">repository</a>.</p>
+<p>If you’d like to use this code to do your own object localization, you need only download the <a href="https://github.com/analyticalmeanderings/ResNetCAM-keras">repository</a>.</p>
 
   </section>
   <section id="disqus_thread"></section><!-- /#disqus_thread -->
@@ -260,7 +231,7 @@
 
       (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        s.src = '//alexisbcook-github-io.disqus.com/embed.js';
+        s.src = '//analyticalmeanderings-github-io.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
        })();
@@ -273,7 +244,7 @@
       </div>
 
       <footer class="footer">
-  <span class="footer__copyright">&copy; 2017 Alexis Cook. All rights reserved.</span>
+  <span class="footer__copyright">&copy; 2017 Matt Christian. All rights reserved.</span>
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
