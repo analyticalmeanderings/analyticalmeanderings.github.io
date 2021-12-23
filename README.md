@@ -1,45 +1,45 @@
-# analyticalmeanderings.github.io
+# jekyll-uno
 
-Currently developing multiple open-source projects
-Feel free to hop in and make pull requests!
-This projects are all underdefined and lacking in domentation
+Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
 
-1) National Women's Soccer League (NWSL) - marketing analytics, forecasting tweet impact<br />
-    TODO: To start, we could do a one-time scrape for tweets, then save in csv on github<br />
-    TODO: Once we have csv, we can build sentiment models<br />
-    TODO: Eventually, we need dynamic API pulls off a heroku server<br />
-    // Focused on nwsl folder<br />
-    <br />
-2) Imbalanced classes for covid vaccines trial, racial and gender lenses, similar to managing risk with imbalanced classes<br />
-    TODO: find data<br />
+> :warning:
+  This theme requires ruby and rubygems installed
 
-3) Gendered language in job descriptions, NLP (natural language processing) ... build out a website that scraps, scores, and flags suboptimal language in job descriptions<br />
-    TODO: (SPIKE) research NLP algos<br />
+### Features
 
-4) Interactive website design, main index.html page eventually full MERN (fiverr HELP)<br />
-    TODO: add node.js code to streamline development<br />
-    TODO: leverage heroku server, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
-    TODO: leverage monogoDB to shield data, build out then provide user name and password to Matt, afterwards Matt to change account email to 2010.mbc@gmail.com<br />
-    TODO: move the three csv files into MongoDB ()<br />
-    TODO: change data table references to pull from MongoDB (see tabs: Upstream Info, Downstream Info, Upstream Risk)<br />
+* Clean layout
+* Resposive layout
+* Pagination
+* Syntax highlighting
+* Social links
+* Tags listing page
+* Categories listing page
+* Google Analytics integration
+* Disqus integration
 
-5) Garmin chat bot for triathlon races<br />
-    TODO: also heroku server<br />
-    TODO: current interface is terrible<br />
+---
 
-6) Github auto push hack<br />
-    TODO: leverage heroku server<br />
-    TODO: build a bot that autopushes periodic commits to github to inflate our github history<br />
+### Install and Test
 
-7) Memories App (https://www.youtube.com/watch?v=ngc9gnGgUdA)<br />
-    Download node.js from https://nodejs.org/en/<br />
-    cd client<br />
-    npx create-react-app ./<br />
-    npm install axios moment react-file-base64 redux redux-thunk<br />
-    npm start<br />
-    <br />
-    cd server<br />
-    npm init -y<br />
-    npm install body-parser cors express mongoose nodemon<br />
-    npm start
+1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
+2. Enter the folder: `cd jekyll-uno/`
+3. If you don't have bundler installed: `gem install bundler`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `bundle exec jekyll serve --watch`
 
+Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno/)
+
+---
+
+### Demo and Download
+
+[Demo](http://joshgerdes.com/jekyll-uno/)
+[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
+
+![jekyll-uno - free Jekyll theme](/screenshot.png)
+
+---
+
+### Copyright and license
+
+It is under [the MIT license](/LICENSE).
