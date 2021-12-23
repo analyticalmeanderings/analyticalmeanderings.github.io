@@ -1,18 +1,18 @@
 # Site settings
-title: Alexis Cook
-description: 'Deep Learning Professional'
-url: 'https://alexisbcook.github.io'
+title: Matt Christian
+description: 'Data Scientist'
+url: 'https://analyticalmeanderings.github.io'
 baseurl: ''
 google_analytics: 'UA-83225772-1'
-disqus_shortname: 'alexisbcook-github-io'
+disqus_shortname: 'analyticalmeanderings-github-io'
 
 author:
-  name: 'Alexis Cook'
-  email: alexis.cook@gmail.com
+  name: 'Matt Christian'
+  email: matthew.bryan.christian@gmail.com
   twitter_username: alexis_b_cook
   facebook_username: alexis.cook
-  github_username:  alexisbcook
-  linkedin_username:  alexis-cook-a6127753
+  github_username:  analyticalmeanderings
+  linkedin_username:  matthew-christian-17577641
 
 defaults:
   -
