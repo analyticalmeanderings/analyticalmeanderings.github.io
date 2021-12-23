@@ -1,5 +1,5 @@
 ---
-title:  "Global Average Pooling Layers for Object Localization"
+title:  "Eye Exercise"
 date:   2021-04-09 11:39:23
 categories: [keras] 
 tags: [keras, localization]

@@ -10,7 +10,7 @@
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>Global Average Pooling Layers for Object Localization</title>
+        <title>Eye Exercise</title>
         <description>&lt;p&gt;For image classification tasks, a common choice for convolutional neural network (CNN) architecture is repeated blocks of convolution and max pooling layers, followed by two or more densely connected layers.  The final dense layer has a softmax activation function and a node for each potential object category.&lt;/p&gt;
 
 &lt;p&gt;As an example, consider the VGG-16 model architecture, depicted in the figure below.&lt;/p&gt;
