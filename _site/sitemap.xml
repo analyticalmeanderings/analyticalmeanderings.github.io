@@ -4,13 +4,8 @@
     
     <url>
       <loc>http://localhost:4000/eye_exercise/index.html</loc>
-      
         <lastmod>2021-04-09T06:39:23-05:00</lastmod>
-      
-      
         <changefreq>monthly</changefreq>
-      
-      
         <priority>0.5</priority>
       
     </url>
@@ -19,31 +14,16 @@
     
     <url>
       <loc>http://localhost:4000/pacmen_exercise/index.html</loc>
-      
         <lastmod>2021-04-08T06:39:23-05:00</lastmod>
-      
-      
         <changefreq>monthly</changefreq>
-      
-      
         <priority>0.5</priority>
-      
     </url>
-    
-  
-  
-    
-  
+
     
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
-      
         <lastmod>2021-12-15T00:51:07-06:00</lastmod>
-      
-      
         <changefreq>monthly</changefreq>
-      
-      
         <priority>0.3</priority>
       
     </url>
