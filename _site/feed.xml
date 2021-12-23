@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matt Christian</title>
-    <description>Deep Learning Professional</description>
+    <description>Data Scientist</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 15 Dec 2017 00:51:07 -0600</pubDate>
-    <lastBuildDate>Fri, 15 Dec 2017 00:51:07 -0600</lastBuildDate>
+    <pubDate>Fri, 15 Dec 2021 00:51:07 -0600</pubDate>
+    <lastBuildDate>Fri, 15 Dec 2021 00:51:07 -0600</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -83,9 +83,9 @@
 
 &lt;p&gt;If you’d like to use this code to do your own object localization, you need only download the &lt;a href=&quot;https://github.com/analyticalmeanderings/ResNetCAM-keras&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 09 Apr 2017 06:39:23 -0500</pubDate>
-        <link>http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/global-average-pooling-layers-for-object-localization/</guid>
+        <pubDate>Sun, 09 Apr 2021 06:39:23 -0500</pubDate>
+        <link>http://localhost:4000/2021/global-average-pooling-layers-for-object-localization/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/global-average-pooling-layers-for-object-localization/</guid>
         
         <category>keras</category>
         
@@ -155,9 +155,9 @@
 
 &lt;p&gt;Can you do better with other architectures?  Feel free to download the &lt;a href=&quot;https://github.com/analyticalmeanderings/keras_transfer_cifar10&quot;&gt;repository&lt;/a&gt; on GitHub and try your own hand at transfer learning!&lt;/p&gt;
 </description>
-        <pubDate>Sat, 08 Apr 2017 06:39:23 -0500</pubDate>
-        <link>http://localhost:4000/2017/using-transfer-learning-to-classify-images-with-keras/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/using-transfer-learning-to-classify-images-with-keras/</guid>
+        <pubDate>Sat, 08 Apr 2021 06:39:23 -0500</pubDate>
+        <link>http://localhost:4000/2021/using-transfer-learning-to-classify-images-with-keras/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/using-transfer-learning-to-classify-images-with-keras/</guid>
         
         <category>keras</category>
         
