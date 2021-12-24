@@ -20,8 +20,12 @@ robots: noindex
     if (document.getElementById("panel-cover").classList.contains('panel-cover--collapsed')) {
       document.getElementById("panel-cover").removeClass('panel-cover--collapsed')
     }
+
+
+    document.getElementById("content-wrapper").classList.add('animated slideInRight')
     document.getElementById("panel-cover").classList.add('panel-cover--collapsed')
     console.log(document.getElementById("panel-cover"))
+    console.log(document.getElementById("content-wrapper"))
 }
 
 </script>
