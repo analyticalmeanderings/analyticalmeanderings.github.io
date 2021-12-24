@@ -4,10 +4,9 @@
   grid-gap: 100px;
   background-color: inherit;
   padding: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    'user-image p'
-    'p p';
+    'user-image nav p'
 }
 
 .exercise_grid {
