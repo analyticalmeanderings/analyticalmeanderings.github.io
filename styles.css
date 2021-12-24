@@ -28,27 +28,6 @@
   margin: 0 auto;
 }
 
-
-.sidebar {
-  grid-area: sidebar
-}
-
-.content {
-  grid-area: content
-}
-
-.footer {
-  grid-area: footer
-}
-
-.box {
-  background-color: #0000ff;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 150%;
-}
-
 body {
   font-family: Arial;
   background-color: #101010;
