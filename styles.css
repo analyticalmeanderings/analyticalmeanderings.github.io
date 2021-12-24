@@ -5,8 +5,8 @@
   padding: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    'user-image content'
-    'footer  footer';
+    'user-image p'
+    'p p';
 }
 
 .exercise_grid {
@@ -16,8 +16,8 @@
   padding: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    'sidebar content'
-    'footer  footer';
+    'p p'
+    'p p';
 }
 
 .user-image {
