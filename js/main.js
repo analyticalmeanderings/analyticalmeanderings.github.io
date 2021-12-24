@@ -6,10 +6,10 @@ sitemap:
 
 $(document).ready(function () {
   $('a.blog-button').click(function (e) {
-    // if ($('.panel-cover').hasClass('panel-cover--collapsed')) {
-    //   console.log('already collapsosed')
-    //   return
-    // }
+    if ($('.panel-cover').hasClass('panel-cover--collapsed')) {
+      console.log('already collapsosed')
+      $('.panel-cover').removeClass('panel-cover--collapsed')
+    }
     currentWidth = $('.panel-cover').width()
     if (currentWidth < 960) {
       // $('.panel-cover').addClass('panel-cover--collapsed')
