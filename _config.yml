@@ -27,9 +27,11 @@ permalink: /:title/index.html
 markdown: kramdown
 highlighter: rouge
 
-sass:
-    sass_dir: _sass
-    style: compressed
+# sass:
+#     sass_dir: _sass
+#     style: compressed
+
+pattern_styles: css/main.css
 
 kramdown:
   # use Github Flavored Markdown
