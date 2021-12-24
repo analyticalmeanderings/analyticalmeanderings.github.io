@@ -17,7 +17,7 @@ $(document).ready(function () {
     }
   })
 
-  if (window.location.hash && window.location.hash == '#project') {
+  if (window.location.hash && (window.location.hash == '#project' || window.location.hash =='home.html')) {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
