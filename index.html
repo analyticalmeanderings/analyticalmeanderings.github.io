@@ -15,18 +15,7 @@
 
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-      <button class="tablinks" onclick="openTab(event, 'PacMen Exercise')">
-        PacMen Exercise
-      </button>
-      <button class="tablinks" onclick="openTab(event, 'Eye Exercise')">
-        Eye Exercise
-      </button>
-      <button
-        class="tablinks"
-        onclick="openTab(event, 'Real Time Bus Tracking')"
-      >
-        Real Time Bus Tracking
-      </button>
+      <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
     </div>
 
     <div id="Home" class="tabcontent">
@@ -101,55 +90,11 @@
       </h3>
     </div>
 
-    <div id="PacMen Exercise" class="tabcontent">
+    <div id="Projects" class="tabcontent">
       <h2>PacMen Exercise</h2>
       <p>
 asdasdasdasd
       </p>
-    </div>
-
-    <div id="Eye Exercise" class="tabcontent">
-      <h2>Eye Exercise</h2>
-
-      <input
-        type="text"
-        class="table_filter"
-        id="downstream_filter_input"
-        onkeyup="filterTable('downstream_table', 'downstream_filter_input')"
-        placeholder="Search for downstream Eye Exercise.."
-        title="Type in a name"
-      />
-      <div id="Eye Exercise"></div>
-    </div>
-
-    <div id="KRM Synthesis Routes" class="tabcontent">
-      <h2>KRM Synthesis Routes</h2>
-      <input
-        type="text"
-        class="table_filter"
-        id="downstream_filter_input"
-        onkeyup="filterTable('downstream_table', 'downstream_filter_input')"
-        placeholder="Search for downstream Eye Exercise.."
-        title="Type in a name"
-      />
-      <img src="raw_materials.png" alt="materials knowledge graph" />
-      <script
-        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""
-      ></script>
-      <script type="text/javascript" src="map.js"></script>
-      <div id="map" style="height: 100vh; width: 100vw"></div>
-      <script src="https://rawgit.com/neo4j-contrib/neoviz.js/master/dist/neovis.js"></script>
-    </div>
-
-    <div id="Real Time Bus Tracking" class="tabcontent">
-      <h2>Real Time Bus Tracking</h2>
-      <script type="text/javascript" src="map.js"></script>
-      <img src="waterfall.png" alt="waterfall chart for selected product" />
-      <div id="risk"></div>
-
-      <p>#TODO: risk score over time, low pri</p>
     </div>
   </body>
 </html>
