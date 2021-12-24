@@ -11,6 +11,7 @@ $(document).ready(function () {
       $('.panel-cover').removeClass('panel-cover--collapsed')
     }
     currentWidth = $('.panel-cover').width()
+    console.log(currentWidth)
     if (currentWidth < 960) {
       // $('.panel-cover').addClass('panel-cover--collapsed')
       $('.content-wrapper').addClass('animated slideInRight')
