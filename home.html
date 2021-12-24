@@ -15,6 +15,7 @@ robots: noindex
   document.getElementById("myFrame").onload = function() {myFunction()};
 
   function myFunction() {
+    console.log('function fired')
     if (document.getElementById("panel-cover").classList.contains('panel-cover--collapsed')) {
       document.getElementById("panel-cover").removeClass('panel-cover--collapsed')
     }
