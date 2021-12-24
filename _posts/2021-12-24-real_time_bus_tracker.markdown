@@ -1,6 +1,6 @@
 ---
-title:  "Eye Exercise"
-date:   2021-04-09 11:39:23
+title:  "Real Time Bus Tracker"
+date:   2021-12-24 11:39:23
 categories: [keras] 
 tags: [keras, localization]
 use_math: true
