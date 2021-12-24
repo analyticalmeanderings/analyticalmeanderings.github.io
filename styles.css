@@ -6,7 +6,7 @@
   padding: 20px;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas:
-    'img-circle nav p'
+    'user-image nav p'
 }
 
 .exercise_grid {
