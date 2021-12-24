@@ -20,13 +20,11 @@
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
-
-  /* TODO: Define the grid-template-columns and grid-template-areas values here. */
-  grid-template-columns: 120px 120px 120px;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    '....... header header'
-    'sidebar content content'
-    'footer  footer  footer';
+    '....... header'
+    'sidebar content'
+    'footer  footer';
 }
 
 .box {
