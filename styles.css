@@ -25,6 +25,7 @@
   border-radius: 50%;
   width: 150px;
   height:auto;
+  margin: 0 auto;
 }
 
 
@@ -83,7 +84,8 @@ h2 {color: #ff6a39;}
 /* TODO: make sticky */
 .tab {
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 20px solid #ccc;
+  padding: 20px;
   background-color: #f1f1f1;
 
 }
