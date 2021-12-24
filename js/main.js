@@ -5,7 +5,8 @@ sitemap:
 ---
 
 $(document).ready(function () {
-  $('a.blog-button').click(function (e) {
+  // $('a.blog-button').click(function (e) {
+  $('blog-button').click(function (e) {
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) {
       console.log('already collapsosed')
       $('.panel-cover').removeClass('panel-cover--collapsed')
