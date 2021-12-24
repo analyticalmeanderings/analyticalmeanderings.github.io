@@ -28,6 +28,13 @@
   margin: 0 auto;
 }
 
+.navigation__item {
+  width: 100%;
+  margin: 0 0 .4em 0; 
+  display: inline-block;
+	line-height: 1em;
+}
+
 body {
   font-family: Arial;
   background-color: #101010;
