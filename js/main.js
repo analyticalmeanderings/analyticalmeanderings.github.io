@@ -13,9 +13,9 @@ $(document).ready(function () {
     currentWidth = $('.panel-cover').width()
     console.log(currentWidth)
     if (currentWidth < 960) {
-      // $('.panel-cover').addClass('panel-cover--collapsed')
+      $('.panel-cover').addClass('panel-cover--collapsed')
       $('.content-wrapper').addClass('animated slideInRight')
-      // console.log($('.content-wrapper'))
+      console.log($('.content-wrapper'))
     } else {
       $('.panel-cover').css('max-width', currentWidth)
       $('.panel-cover').animate({'max-width': '530px', 'width': '40%'}, 400, swing = 'swing', function () {})
