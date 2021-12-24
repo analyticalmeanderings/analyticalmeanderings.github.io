@@ -15,12 +15,13 @@ robots: noindex
   document.getElementById("myFrame").onload = function() {myFunction()};
 
   function myFunction() {
-    console.log(document.getElementById("panel-cover"))
-    console.log(document.getElementById("panel-cover").classList)
+    // console.log(document.getElementById("panel-cover"))
+    // console.log(document.getElementById("panel-cover").classList)
     if (document.getElementById("panel-cover").classList.contains('panel-cover--collapsed')) {
       document.getElementById("panel-cover").removeClass('panel-cover--collapsed')
     }
     document.getElementById("panel-cover").addClass('panel-cover--collapsed')
+    console.log(document.getElementById("panel-cover"))
 }
 
 </script>
