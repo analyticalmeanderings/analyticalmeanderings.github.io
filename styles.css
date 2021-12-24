@@ -1,3 +1,13 @@
+.home_grid {
+  display: grid;
+  grid-gap: 100px;
+  background-color: inherit;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'sidebar content'
+    'footer  footer';
+}
+
 
 .sidebar {
   grid-area: sidebar
@@ -9,17 +19,6 @@
 
 .footer {
   grid-area: footer
-}
-
-.home_grid {
-  display: grid;
-  grid-gap: 10px;
-  background-color: #fff;
-  color: #444;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    'sidebar content'
-    'footer  footer';
 }
 
 .box {
