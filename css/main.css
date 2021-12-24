@@ -1,8 +1,6 @@
----
----
-@import "uno";
-@import "tables";
-@import "monokai";
+@import "_sass/uno.scss";
+@import "_sass/tables.scss";
+@import "_sass/monokai.scss";
 
 /* Modifications */
 
