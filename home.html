@@ -9,23 +9,16 @@ robots: noindex
   B.S. in Chemical Engineering from the University of Virginia.
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cjWrRRjy-ck?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="myFrame" width="560" height="315" src="https://www.youtube.com/embed/cjWrRRjy-ck?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <script>
-  $(document).ready(function () {
-    if ($('.panel-cover').hasClass('panel-cover--collapsed')) {
-      console.log('already collapsosed')
-      $('.panel-cover').removeClass('panel-cover--collapsed')
+  document.getElementById("myFrame").onload = function() {myFunction()};
+
+  function myFunction() {
+    if (document.getElementById("panel-cover").classList.contains('panel-cover--collapsed')) {
+      document.getElementById("panel-cover").removeClass('panel-cover--collapsed')
     }
-    currentWidth = $('.panel-cover').width()
-    console.log(currentWidth)
-    if (currentWidth < 960) {
-      $('.panel-cover').addClass('panel-cover--collapsed')
-      $('.content-wrapper').addClass('animated slideInRight')
-      console.log($('.content-wrapper'))
-    } else {
-      $('.panel-cover').css('max-width', currentWidth)
-      $('.panel-cover').animate({'max-width': '530px', 'width': '40%'}, 400, swing = 'swing', function () {})
-    }
-  }
+    document.getElementById("panel-cover").addClass('panel-cover--collapsed')
+}
+
 </script>
