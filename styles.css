@@ -9,6 +9,17 @@
     'footer  footer';
 }
 
+.exercise_grid {
+  display: grid;
+  grid-gap: 100px;
+  background-color: inherit;
+  padding: 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'sidebar content'
+    'footer  footer';
+}
+
 
 .sidebar {
   grid-area: sidebar
