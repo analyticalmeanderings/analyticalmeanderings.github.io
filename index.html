@@ -1,82 +1,123 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="keywords" content="Medicine, Supply Chain">
-    <meta name="description" content="Mapping pharmaceutical supply">
-    <meta name="author" content="Matt Christian">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-type" content="text/html; charset=UTF8">
-    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <meta name="keywords" content="Medicine, Supply Chain" />
+    <meta name="description" content="Mapping pharmaceutical supply" />
+    <meta name="author" content="Matt Christian" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF8" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
     <script type="text/javascript" src="./script.js"></script>
   </head>
-<body>
+  <body>
+    <h1>Matt Christian's Portfolio</h1>
+    <div class="wrapper">
+      <div class="box header">Header</div>
+      <div class="box sidebar">Sidebar</div>
+      <div class="box content">
+        Content <br />
+        This is the main area for content
+      </div>
+      <div class="box footer">Footer</div>
+    </div>
 
-<h1>Matt Christian's Portfolio</h1>
-<div class="wrapper">
-  <div class="box header">Header</div>
-  <div class="box sidebar">Sidebar</div>
-  <div class="box content">Content
-      <br /> This is the main area for content</div>
-  <div class="box footer">Footer</div>
-</div>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+      <button class="tablinks" onclick="openTab(event, 'PacMen Exercise')">
+        PacMen Exercise
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Eye Exercise')">
+        Eye Exercise
+      </button>
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'Real Time Bus Tracking')"
+      >
+        Real Time Bus Tracking
+      </button>
+    </div>
 
+    <div id="Home" class="tabcontent">
+      <h2>Home</h2>
+      <h3>Home</h3>
+      <p>
+        Data Scientist with 10+ years of experience turning data into actionable
+        insights for complex business problems. Currently working on uncover the
+        upstream manufacturing sites for pharmaceuticals. Domain expertise
+        includes logistics, pharmaceuticals, oil & gas, renewable energy, and
+        federal government consulting. Education: M.S. in Financial Mathematics
+        from Johns Hopkins University, B.S. in Chemical Engineering from the
+        University of Virginia. If you are interested in colloborating, please
+        reach out to me on GitHub. My username is analyticalmeanderings.
+      </p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-  <button class="tablinks" onclick="openTab(event, 'PacMen Exercise')">PacMen Exercise</button>
-  <button class="tablinks" onclick="openTab(event, 'Eye Exercise')">Eye Exercise</button>
-  <button class="tablinks" onclick="openTab(event, 'Real Time Bus Tracking')">Real Time Bus Tracking</button>
-</div> 
+      <a href="https://www.linkedin.com/in/matthew-christian-17577641"></a>
+      <iframe
+        id="myFrame"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/cjWrRRjy-ck?start=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
 
-<div id="Home" class="tabcontent">
-  <h2>Home</h2>
-  <h3>Home</h3>
-  <p>Data Scientist with 10+ years of experience turning data into actionable insights for complex business problems. 
-    Currently working on uncover the upstream manufacturing sites for pharmaceuticals. 
-    Domain expertise includes logistics, pharmaceuticals, oil & gas, renewable energy, and federal government consulting. 
-    Education: M.S. in Financial Mathematics from Johns Hopkins University, 
-    B.S. in Chemical Engineering from the University of Virginia.
+      <h3>
+        To learn more, visit our
+        <a href="https://www.usp.org/supply-chain/medicine-supply-map">website</a>
+      </h3>
+    </div>
 
-    If you are interested in colloborating, please reach out to me on GitHub. My username is analyticalmeanderings.
+    <div id="PacMen Exercise" class="tabcontent">
+      <h2>PacMen Exercise</h2>
+      <p>
+asdasdasdasd
+      </p>
+    </div>
 
-  </p>
+    <div id="Eye Exercise" class="tabcontent">
+      <h2>Eye Exercise</h2>
 
-  <a href="https://www.linkedin.com/in/matthew-christian-17577641"></a>
-  <iframe id="myFrame" width="560" height="315" src="https://www.youtube.com/embed/cjWrRRjy-ck?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <input
+        type="text"
+        class="table_filter"
+        id="downstream_filter_input"
+        onkeyup="filterTable('downstream_table', 'downstream_filter_input')"
+        placeholder="Search for downstream Eye Exercise.."
+        title="Type in a name"
+      />
+      <div id="Eye Exercise"></div>
+    </div>
 
-  <h3>To learn more, visit our <a href="https://www.usp.org/supply-chain/medicine-supply-map">website</a></h3>
+    <div id="KRM Synthesis Routes" class="tabcontent">
+      <h2>KRM Synthesis Routes</h2>
+      <input
+        type="text"
+        class="table_filter"
+        id="downstream_filter_input"
+        onkeyup="filterTable('downstream_table', 'downstream_filter_input')"
+        placeholder="Search for downstream Eye Exercise.."
+        title="Type in a name"
+      />
+      <img src="raw_materials.png" alt="materials knowledge graph" />
+      <script
+        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""
+      ></script>
+      <script type="text/javascript" src="map.js"></script>
+      <div id="map" style="height: 100vh; width: 100vw"></div>
+      <script src="https://rawgit.com/neo4j-contrib/neoviz.js/master/dist/neovis.js"></script>
+    </div>
 
-</div>
+    <div id="Real Time Bus Tracking" class="tabcontent">
+      <h2>Real Time Bus Tracking</h2>
+      <script type="text/javascript" src="map.js"></script>
+      <img src="waterfall.png" alt="waterfall chart for selected product" />
+      <div id="risk"></div>
 
-<div id="PacMen Exercise" class="tabcontent">
-  <h2>PacMen Exercise</h2>
-  <p>Inspiration https://www.kenan-flagler.unc.edu/programs/undergraduate-business/global-programs/ and http://d3.artzub.com/wbca/</p>
-</div>
-
-<div id="Eye Exercise" class="tabcontent">
-  <h2>Eye Exercise</h2>
-
-  <input type="text" class='table_filter' id="downstream_filter_input" onkeyup="filterTable('downstream_table', 'downstream_filter_input')" placeholder="Search for downstream Eye Exercise.." title="Type in a name">
-  <div id='Eye Exercise'></div>
-</div>
-
-<div id="KRM Synthesis Routes" class="tabcontent">
-  <h2>KRM Synthesis Routes</h2>
-  <input type="text" class='table_filter' id="downstream_filter_input" onkeyup="filterTable('downstream_table', 'downstream_filter_input')" placeholder="Search for downstream Eye Exercise.." title="Type in a name">
-  <img src="raw_materials.png" alt="materials knowledge graph">
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-  <script type="text/javascript" src="map.js"></script>
-  <div id="map" style="height: 100vh;width: 100vw;"></div>
-  <script src="https://rawgit.com/neo4j-contrib/neoviz.js/master/dist/neovis.js"></script>
-</div>
-
-<div id="Real Time Bus Tracking" class="tabcontent">
-  <h2>Real Time Bus Tracking</h2>
-  <script type="text/javascript" src="map.js"></script>
-  <img src="waterfall.png" alt="waterfall chart for selected product">
-  <div id='risk'></div>
-  
-  <p>#TODO: risk score over time, low pri</p>
-</div>
-</body>
-</html> 
+      <p>#TODO: risk score over time, low pri</p>
+    </div>
+  </body>
+</html>
