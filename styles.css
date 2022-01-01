@@ -71,7 +71,7 @@ h2 {color: #ff6a39;}
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-color: #ff6a39;
   float: left;
   border: none;
   outline: none;
