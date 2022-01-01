@@ -71,7 +71,7 @@ h2 {color: #ff6a39;}
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: #ff6a39;
+  background-color: #808080;
   float: left;
   border: none;
   outline: none;
@@ -83,7 +83,7 @@ h2 {color: #ff6a39;}
 
 /* Create an active/current tablink class */
 .tab button.active, .tab button:hover{
-  background-color: #ddd;
+  background-color: #ff6a39;
 }
 
 /* Style the tab content */
