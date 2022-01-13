@@ -6,6 +6,8 @@ author:     "Matt Christian"
 header-img: "img/epilepsy.jpg"
 ---
 The [Part D](http://www.kaggle.com/c/seizure-prediction) is expensive
+<a href="https://openreview.net/forum?id=1-j1aJfCKa9" class="w3-button btn-primary btn-xs">openreview</a>
+<a href="https://irakorshunova.github.io/poster_plr.pdf" class="w3-button btn-danger btn-xs">poster</a>
 
 <!--more-->
 
