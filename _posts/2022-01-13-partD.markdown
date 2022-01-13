@@ -5,8 +5,7 @@ date:       2022-01-13 12:00:00
 author:     "Matt Christian"
 header-img: "img/epilepsy.jpg"
 ---
-The [American Epilepsy Society Seizure Prediction Challenge](http://www.kaggle.com/c/seizure-prediction) ended a few days ago, and I finished 10th out of 504 teams.
-In this post I will briefly outline the problem and my solution.
+The [Part D](http://www.kaggle.com/c/seizure-prediction) ended a few days ago, and I finished 10th out of 504 teams.
 
 <!--more-->
 
