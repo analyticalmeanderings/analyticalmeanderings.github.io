@@ -5,18 +5,16 @@ date:       2022-01-13 12:00:00
 author:     "Matt Christian"
 header-img: "img/bruno.png"
 ---
-
+This post gives a short overview of our recent paper: 
+<a href="https://openreview.net/forum?id=1-j1aJfCKa9" class="w3-button btn-primary btn-xs">openreview</a>
+<a href="https://irakorshunova.github.io/poster_plr.pdf" class="w3-button btn-danger btn-xs">poster</a>
 <!--more-->
 
-This post gives a short overview of our recent paper: 
+
 
 [BRUNO: A Deep Recurrent Model for Exchangeable Data](https://arxiv.org/abs/1802.07535) <br>
 
-where we presented a *provably exchangeable* model whose:
-
-* predictive distribution $$p(x_n \mid x_{1:n-1})$$ is tractable to evaluate and can be sampled from with a linear complexity in the number of data points we condition on
-* training does not require variational approximations
-* memory complexity is constant thanks to its recurrent nature, i.e. after an observation $$x_i$$ is processed, it can be discarded from memory.
+processed, it can be discarded from memory.
 
 ## Motivation
 
