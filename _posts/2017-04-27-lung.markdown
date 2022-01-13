@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Lung Cancer Detection"
-date:       2017-04-27 12:00:00
-author:     "Ira Korshunova"
+date:       2022-01-13 12:00:00
+author:     "Matt Christian"
 header-img: "img/lung.jpg"
 ---
 Our team has finished 9th in the third [Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2017) competition on Kaggle.

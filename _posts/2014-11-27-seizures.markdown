@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Predicting epileptic seizures"
-date:       2014-11-27 12:00:00
-author:     "Ira Korshunova"
+date:       2022-01-13 12:00:00
+author:     "Matt Christian"
 header-img: "img/epilepsy.jpg"
 ---
 The [American Epilepsy Society Seizure Prediction Challenge](http://www.kaggle.com/c/seizure-prediction) ended a few days ago, and I finished 10th out of 504 teams.

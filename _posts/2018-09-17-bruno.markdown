@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "BRUNO: A Deep Recurrent Model for Exchangeable Data"
-date:       2018-09-17 12:00:00
-author:     "Ira Korshunova"
+date:       2022-01-13 12:00:00
+author:     "Matt Christian"
 header-img: "img/bruno.png"
 ---
 
