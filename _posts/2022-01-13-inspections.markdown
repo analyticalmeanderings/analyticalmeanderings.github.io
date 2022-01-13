@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "BRUNO: A Deep Recurrent Model for Exchangeable Data"
+title:      "Inspections"
 date:       2022-01-13 12:00:00
 author:     "Matt Christian"
 header-img: "img/bruno.png"
@@ -10,7 +10,7 @@ header-img: "img/bruno.png"
 
 This post gives a short overview of our recent paper: 
 
-[BRUNO: A Deep Recurrent Model for Exchangeable Data](https://arxiv.org/abs/1802.07535) <br>by I. Korshunova, J. Degrave, F. Huszár, Y. Gal, A. Gretton, and J. Dambre
+[BRUNO: A Deep Recurrent Model for Exchangeable Data](https://arxiv.org/abs/1802.07535) <br>
 
 where we presented a *provably exchangeable* model whose:
 
