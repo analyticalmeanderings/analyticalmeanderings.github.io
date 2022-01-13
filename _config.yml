@@ -1,6 +1,6 @@
 # Site settings
 title: Matt Christian
-header-img: img/cover.JPEG
+header-img: ./img/cover.JPEG
 email: matthew.bryan.christian@gmail.com
 
 url: "http://analyticalmeanderings.github.io"
