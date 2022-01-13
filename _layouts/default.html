@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html>
-  {% include head.html %}
+<html lang="en">
 
-  <body>
-    {% include header.html %}
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-    <div id="content-wrapper" class="content-wrapper">
-      <div class="content-wrapper__inner">
-        {{ content }}
-      </div>
+{% include head.html %}
 
-      {% include footer.html %}
-    </div>
+<body>
 
-<!-- load mathjax -->
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    {% include nav.html %}
 
-  </body>
+    {{ content }}
+
+    {% include footer.html %}
+
+</body>
+
 </html>

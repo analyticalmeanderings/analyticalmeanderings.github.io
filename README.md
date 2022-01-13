@@ -1,45 +1,24 @@
-# jekyll-uno
+#Clean Blog by Start Bootstrap - Jekyll Version
 
-Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
+The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
-> :warning:
-  This theme requires ruby and rubygems installed
+###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
 
-### Features
+## Before You Begin
 
-* Clean layout
-* Resposive layout
-* Pagination
-* Syntax highlighting
-* Social links
-* Tags listing page
-* Categories listing page
-* Google Analytics integration
-* Disqus integration
+In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
 
----
+It should look like this:
+`baseurl: ""`
 
-### Install and Test
+## What's Included
 
-1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
-2. Enter the folder: `cd jekyll-uno/`
-3. If you don't have bundler installed: `gem install bundler`
-3. Install Ruby gems: `bundle install`
-4. Start Jekyll server: `bundle exec jekyll serve --watch`
+A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
 
-Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno/)
+A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
 
----
+You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
 
-### Demo and Download
+## Support
 
-[Demo](http://joshgerdes.com/jekyll-uno/)
-[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
-
-![jekyll-uno - free Jekyll theme](/screenshot.png)
-
----
-
-### Copyright and license
-
-It is under [the MIT license](/LICENSE).
+Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.
