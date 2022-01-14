@@ -11,6 +11,7 @@ Managing risk for rare events.
 <!--more-->
 
 ## Predicting rare events
+<div id="inspections"></div>
 <script>
 async function getJSON(filename) {
   const response = await fetch(filename)
