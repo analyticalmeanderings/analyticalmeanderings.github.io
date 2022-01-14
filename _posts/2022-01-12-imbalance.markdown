@@ -1,11 +1,11 @@
 ---
 layout:     post
 title:      "Managing Risk within Imbalanced Classes"
-date:       2022-01-13 12:00:00
+date:       2022-01-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-How effectively does the US Government negotiate drug costs? It depends on the drug.
+Predicting rare events
 <!-- <span class="label label-danger">Market Factors</span> -->
 
 <!--more-->
