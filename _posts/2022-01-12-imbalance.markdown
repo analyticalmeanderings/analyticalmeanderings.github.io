@@ -5,14 +5,18 @@ date:       2022-01-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-Predicting rare events
+Managing risk for rare events.
 <!-- <span class="label label-danger">Market Factors</span> -->
 
 <!--more-->
 
-## Gathering the data
-"Rational people don’t risk what they have and need for what they don’t have and don’t need"
-- Warren Buffett
+## Predicting rare events
+
+When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:
+1. What’s the upside, if events turn out well?
+2. What’s the downside, if events go very badly?
+3. Can you live with the downside? Truly?
+Jim Collins (How the Might Fall, 2009)
 
 
 Certain datasets suffer from class imbalance, the situation where one outcome is rare. Imbalanced data presents a challenge from a modeling perspective. Namely, the majority class outweighs the minority class and the model can over predict the majority outcome. In this analysis, we analyze three algorithms to overcome barriers on imbalanced data. 
@@ -56,11 +60,11 @@ Our base case precision is 84.5%; out of the 452 positive (default) predictions,
 
 The first part of this analysis is going to seek to improve the model's recall. We used three algorithms to improve recall and overcome class imbalance.
 
-1) Undersampling the majority class
+1. Undersampling the majority class
 
-2) Oversampling the minority class
+2. Oversampling the minority class
 
-3) The Synthetic Minority Over-sampling TEchnique (SMOTE)
+3. The Synthetic Minority Over-sampling TEchnique (SMOTE)
 
 
 Across all methods, it is critical to split the test and train data prior to analysis. We want to ensure the test data reflects the original dataset. We also set a random state to improve the consistency of our analysis.
@@ -105,9 +109,10 @@ This analysis relies heavily on the base case (random_state = 42). We assume tha
 
 
 To quantify and evaluate the precision-recall tradeoff, we develop indifference curves. Indifference curves show points of equal 'profit'. Specifically goal is to minimize our objective function, losses due to false_positives and false_negatives within the test set. The blue dots in the chart below show model runs for the undersampling algorithm. The black line is a quadratic regression through those model runs. The yellow to orange colored lines are our isoprofit curves. Yellow indicates the lowest losses from the model. The $5,000,000 isoprofit curve lies roughly tangential to the black line around recall = 0.7 and precision = 0.8. This means that "improvements" in recall do not result in more profitable models.
+## Quantifying the tradeoffs
+## Principle-agent problem
 
-
-Conclusions and Potential Next Steps
+# Conclusions and Potential Next Steps
 
 The undersampling and oversampling algorithms show the tradeoff between precision and recall. Balancing the classes improves the likelihood that bad loans are identified, however there is a significant increase in the number good loans that are mistakenly identified as bad loans.
 
@@ -115,13 +120,10 @@ The undersampling and oversampling algorithms show the tradeoff between precisio
 In this analysis, there was little to no financial benefit for balancing these classes.
 
 
-Additional research ideas:
+# Additional research ideas:
 
-1) Other class balancing algorithms including SMoteBoosting, borderline SMOTE, and ADASYN (Adaptive Synthetic Sampling Method for Imbalanced Data).
-
-2) Evaluating the computational speed vs the precision/recall metrics for each algorithm. The undersampled model ends up training on 1,600 data points, while the oversampled model and the SMOTE model train on more than 165,000 points.
-
-3) Incorporating the objective function directly into the neural network. MLPClassifier does not support custom log functions, but other neural networks would enable us to input the loan losses directly into the model.
-
-4) Autoencoders are commonly used in fraud detection applications and imbalance classes.
+1. Other class balancing algorithms including SMoteBoosting, borderline SMOTE, and ADASYN (Adaptive Synthetic Sampling Method for Imbalanced Data).
+2. Evaluating the computational speed vs the precision/recall metrics for each algorithm. The undersampled model ends up training on 1,600 data points, while the oversampled model and the SMOTE model train on more than 165,000 points.
+3. Incorporating the objective function directly into the neural network. MLPClassifier does not support custom log functions, but other neural networks would enable us to input the loan losses directly into the model.
+4. Autoencoders are commonly used in fraud detection applications and imbalance classes.
 
