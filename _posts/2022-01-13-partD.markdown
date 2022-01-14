@@ -5,7 +5,9 @@ date:       2022-01-13 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-The [Part D](http://www.kaggle.com/c/seizure-prediction) is expensive
+How effectively does the US Government negotiate drug costs? It depends on the drug.
+
+ [Part D](http://www.kaggle.com/c/seizure-prediction)
 <span class="label label-danger">Market Factors</span>
 
 <!--more-->
@@ -26,5 +28,9 @@ To compare the relative prices between datasets, we can focus on overlapping NDC
 The "markup" of Part D drug prices, compared to NADAC, is most extreme for lower priced medicines. The figure below shows the average Part D markup for a drug costing more than $10/unit is 8%. As drugs become less expensive, the average Part D markup increases significantly. Drugs costing less than $1/unit show the greatest pricing inequality. Part D prices for these drugs are 3x more expensive than NADAC on average.
 
 {% include image.html url="/img/markup.PNG" description="Histogram of prices" %}
+
+## Useful background material
+1. https://www.kff.org/medicare/issue-brief/whats-the-latest-on-medicare-drug-price-negotiations/
+
 
 To learn more about how drug pricing impacts shortage risk, please visit our website
