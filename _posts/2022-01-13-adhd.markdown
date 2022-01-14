@@ -6,6 +6,6 @@ author:     "Matt Christian, Noah"
 header-img: "img/plankton3.jpg"
 ---
 How can USP's Medicine Supply Map (MSM) Help ADHD Medication Shortages [Internal Article](https://uspc.sharepoint.com/sites/USPAffinityNetwork/SitePages/ADHD-Medication-Shortages.aspx?OR=Teams-HL&CT=1642131126195&sourceId=&params=%7B%22AppName%22%3A%22Teams-Desktop%22%2C%22AppVersion%22%3A%2227%2F21110108720%22%7D)
-<img data-is-pre-allocated="true" src="https://media.akamai.odsp.cdn.office.net/eastus1-mediap.svc.ms/transform/thumbnail?provider=url&amp;inputFormat=jpg&amp;docid=https%3A%2F%2Fcdn.hubblecontent.osi.office.net%2Fm365content%2Fpublish%2F6c67c846-bc64-4e00-b6e7-9700c1db6a76%2F1160663083.jpg&amp;w=2560&amp;h=228&amp;cm=fill" title="ADHD Medication Shortages" width="2495" class="cl_r_9f38462c" alt="This is the background image of title area." role="img" style="left: -324.43px; top: 0px; position: absolute; height: 280px; width: 3143.86px;">
+<img data-is-pre-allocated="true" src="https://media.akamai.odsp.cdn.office.net/eastus1-mediap.svc.ms/transform/thumbnail?provider=url&amp;inputFormat=jpg&amp;docid=https%3A%2F%2Fcdn.hubblecontent.osi.office.net%2Fm365content%2Fpublish%2F6c67c846-bc64-4e00-b6e7-9700c1db6a76%2F1160663083.jpg&amp;w=2560&amp;h=228&amp;cm=fill" title="ADHD Medication Shortages" alt="This is the background image of title area." role="img">
 
 
