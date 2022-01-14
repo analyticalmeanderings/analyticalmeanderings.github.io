@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Managing Risk within Imbalanced Classes"
+title:      "Finding predictors of drug shortages"
 date:       2022-01-10 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
