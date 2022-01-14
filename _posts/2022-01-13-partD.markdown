@@ -13,7 +13,7 @@ How effectively does the US Government negotiate drug costs? It depends on the d
 <!--more-->
 
 ## Gathering the data
-Benmarking is needed. 
+First, we need data to benchmark against. 
 
 Three publicly available datasets provide pricing information on more than 42% of drug products sold in the United States.
 1. National Average Drug Acquisition Cost (NADAC). Based on a weekly survey of pharmacies, this dataset covers over 29% of all drug products sold in the United States. While AWP (Average Wholesale Price) represents a published price for the drug based on data from manufacturers, NADAC reflects actual monthly purchasing trends from transacted data.
@@ -31,6 +31,7 @@ The "markup" of Part D drug prices, compared to NADAC, is most extreme for lower
 
 ## Useful background material
 1. https://www.kff.org/medicare/issue-brief/whats-the-latest-on-medicare-drug-price-negotiations/
+2. https://www.whitehouse.gov/briefing-room/statements-releases/2021/11/02/president-biden-announces-prescription-drug-pricing-plan-in-build-back-better-framework/
 
 
 To learn more about how drug pricing impacts shortage risk, please visit our website
