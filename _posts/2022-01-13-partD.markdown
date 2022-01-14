@@ -33,27 +33,27 @@ First, we need data to benchmark against.
 <script src="../assets/lastfm.jsonp"></script>
 
 <script>
-var chart = venn.VennDiagram().width(500).height(500);
+    var chart = venn.VennDiagram().width(500).height(500);
 
-var div = d3.select("#venn");
-div.datum(sets).call(chart);
+    var div = d3.select("#venn");
+    div.datum(sets).call(chart);
 
-var tooltip = d3
-    .select("body")
-    .append("div")
-    .attr("class", "venntooltip");
+    var tooltip = d3
+        .select("body")
+        .append("div")
+        .attr("class", "venntooltip");
 
-div
-    .selectAll("path")
-    .style("stroke-opacity", 0)
-    .style("stroke", "#fff")
-    .style("stroke-width", 3);
+    div
+        .selectAll("path")
+        .style("stroke-opacity", 0)
+        .style("stroke", "#fff")
+        .style("stroke-width", 3);
 
-div
-    .selectAll("g")
-    .on("mouseover", function (d, i) {
-    // sort all the areas relative to the current item
-    venn.sortAreas(div, d);
+    div
+        .selectAll("g")
+        .on("mouseover", function (d, i) {
+        // sort all the areas relative to the current item
+        venn.sortAreas(div, d);
 
     // Display a tooltip with the current size
     tooltip.transition().duration(400).style("opacity", 0.9);
@@ -101,21 +101,21 @@ div
 // }
 // )
 </script>
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-<div class="toast" id="livetoast">
-    <div class="toast-header">
-    <strong class="me-auto">Toast Header</strong>
-    <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="toast"
-    ></button>
+<!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div class="toast" id="livetoast">
+        <div class="toast-header">
+            <strong class="me-auto">Toast Header</strong>
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+            ></button>
+        </div>
+        <div class="toast-body">
+            <p>Some text inside the toast body</p>
+        </div>
     </div>
-    <div class="toast-body">
-    <p>Some text inside the toast body</p>
-    </div>
-</div>
-</div>
+</div> -->
 Three publicly available datasets provide pricing information on more than 42% of drug products sold in the United States.
 1. National Average Drug Acquisition Cost (NADAC). Based on a weekly survey of pharmacies, this dataset covers over 29% of all drug products sold in the United States. While AWP (Average Wholesale Price) represents a published price for the drug based on data from manufacturers, NADAC reflects actual monthly purchasing trends from transacted data.
 2. Medicare Part B. The smallest of the three datasets covers certain outpatient medications.
