@@ -6,8 +6,11 @@ author:     "Matt Christian"
 header-img: "img/bruno.png"
 ---
 This post gives a short overview of our recent paper: 
-<a href="https://openreview.net/forum?id=1-j1aJfCKa9" class="w3-button btn-primary btn-xs">openreview</a>
-<a href="https://irakorshunova.github.io/poster_plr.pdf" class="w3-button btn-danger btn-xs">poster</a>
+<span class="label label-primary">Quality</span>
+<!-- <span class="label label-success">Success Label</span>
+<span class="label label-info">Info Label</span>
+<span class="label label-warning">Warning Label</span> -->
+
 <!--more-->
 
 
