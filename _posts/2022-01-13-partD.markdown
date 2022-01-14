@@ -23,10 +23,10 @@ Three publicly available datasets provide pricing information on more than 42% o
 ## Benchmarking other datasets
 To compare the relative prices between datasets, we can focus on overlapping NDC groups. NADAC and Part D have 2,751 NDC groups in common. The scatter plot below shows the subset of NDC groups below $10/unit. The iso-cost line in red represents equal pricing between NADAC and Part D. As we can see, more drugs fall above the red line, meaning Part D generally has higher unit prices for the same NDC groups.
 
-{% include image.html url="./img/compare.PNG" description="Isocost curve" %}
+{% include image.html url="/img/compare.PNG" description="Isocost curve" %}
 
 The "markup" of Part D drug prices, compared to NADAC, is most extreme for lower priced medicines. The figure below shows the average Part D markup for a drug costing more than $10/unit is 8%. As drugs become less expensive, the average Part D markup increases significantly. Drugs costing less than $1/unit show the greatest pricing inequality. Part D prices for these drugs are 3x more expensive than NADAC on average.
 
-{% include image.html url="./img/markup.PNG" description="Histogram of prices" %}
+{% include image.html url="/img/markup.PNG" description="Histogram of prices" %}
 
 To learn more about how drug pricing impacts shortage risk, please visit our website
