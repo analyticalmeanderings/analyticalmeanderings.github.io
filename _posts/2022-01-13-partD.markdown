@@ -32,90 +32,90 @@ First, we need data to benchmark against.
 <script src="./venn/venn.min.js"></script>
 <script src="./assets/lastfm.jsonp"></script>
 
-          <script>
-            var chart = venn.VennDiagram().width(500).height(500);
+<script>
+var chart = venn.VennDiagram().width(500).height(500);
 
-            var div = d3.select("#venn");
-            div.datum(sets).call(chart);
+var div = d3.select("#venn");
+div.datum(sets).call(chart);
 
-            var tooltip = d3
-              .select("body")
-              .append("div")
-              .attr("class", "venntooltip");
+var tooltip = d3
+    .select("body")
+    .append("div")
+    .attr("class", "venntooltip");
 
-            div
-              .selectAll("path")
-              .style("stroke-opacity", 0)
-              .style("stroke", "#fff")
-              .style("stroke-width", 3);
+div
+    .selectAll("path")
+    .style("stroke-opacity", 0)
+    .style("stroke", "#fff")
+    .style("stroke-width", 3);
 
-            div
-              .selectAll("g")
-              .on("mouseover", function (d, i) {
-                // sort all the areas relative to the current item
-                venn.sortAreas(div, d);
+div
+    .selectAll("g")
+    .on("mouseover", function (d, i) {
+    // sort all the areas relative to the current item
+    venn.sortAreas(div, d);
 
-                // Display a tooltip with the current size
-                tooltip.transition().duration(400).style("opacity", 0.9);
-                tooltip.text(
-                  new Intl.NumberFormat("en-US").format(d.size) + " NDC groups"
-                );
+    // Display a tooltip with the current size
+    tooltip.transition().duration(400).style("opacity", 0.9);
+    tooltip.text(
+        new Intl.NumberFormat("en-US").format(d.size) + " NDC groups"
+    );
 
-                // highlight the current path
-                var selection = d3
-                  .select(this)
-                  .transition("tooltip")
-                  .duration(400);
-                selection
-                  .select("path")
-                  .style("fill-opacity", d.sets.length == 1 ? 0.4 : 0.1)
-                  .style("stroke-opacity", 1);
-              })
+    // highlight the current path
+    var selection = d3
+        .select(this)
+        .transition("tooltip")
+        .duration(400);
+    selection
+        .select("path")
+        .style("fill-opacity", d.sets.length == 1 ? 0.4 : 0.1)
+        .style("stroke-opacity", 1);
+    })
 
-              .on("mousemove", function () {
-                tooltip
-                  .style("left", d3.event.pageX + 10 + "px")
-                  .style("top", d3.event.pageY - 28 + "px");
-              })
+    .on("mousemove", function () {
+    tooltip
+        .style("left", d3.event.pageX + 10 + "px")
+        .style("top", d3.event.pageY - 28 + "px");
+    })
 
-              .on("mouseout", function (d, i) {
-                tooltip.transition().duration(400).style("opacity", 0);
-                var selection = d3
-                  .select(this)
-                  .transition("tooltip")
-                  .duration(400);
-                selection
-                  .select("path")
-                  .style("fill-opacity", d.sets.length == 1 ? 0.25 : 0.0)
-                  .style("stroke-opacity", 0);
-              });
-            // .on("click", function (d, i) {
-            //   if (d.sets.length!=2) {
-            //     var toast = new bootstrap.Toast(
-            //       document.getElementById("livetoast")
-            //     )
-            //     toast.show()
-            //   }
-            //   console.log(d)
-            //   console.log(i)
-            // }
-            // )
-          </script>
-          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-            <div class="toast" id="livetoast">
-              <div class="toast-header">
-                <strong class="me-auto">Toast Header</strong>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="toast"
-                ></button>
-              </div>
-              <div class="toast-body">
-                <p>Some text inside the toast body</p>
-              </div>
-            </div>
-          </div>
+    .on("mouseout", function (d, i) {
+    tooltip.transition().duration(400).style("opacity", 0);
+    var selection = d3
+        .select(this)
+        .transition("tooltip")
+        .duration(400);
+    selection
+        .select("path")
+        .style("fill-opacity", d.sets.length == 1 ? 0.25 : 0.0)
+        .style("stroke-opacity", 0);
+    });
+// .on("click", function (d, i) {
+//   if (d.sets.length!=2) {
+//     var toast = new bootstrap.Toast(
+//       document.getElementById("livetoast")
+//     )
+//     toast.show()
+//   }
+//   console.log(d)
+//   console.log(i)
+// }
+// )
+</script>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div class="toast" id="livetoast">
+    <div class="toast-header">
+    <strong class="me-auto">Toast Header</strong>
+    <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+    ></button>
+    </div>
+    <div class="toast-body">
+    <p>Some text inside the toast body</p>
+    </div>
+</div>
+</div>
 Three publicly available datasets provide pricing information on more than 42% of drug products sold in the United States.
 1. National Average Drug Acquisition Cost (NADAC). Based on a weekly survey of pharmacies, this dataset covers over 29% of all drug products sold in the United States. While AWP (Average Wholesale Price) represents a published price for the drug based on data from manufacturers, NADAC reflects actual monthly purchasing trends from transacted data.
 2. Medicare Part B. The smallest of the three datasets covers certain outpatient medications.
