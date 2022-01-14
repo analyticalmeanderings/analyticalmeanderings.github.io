@@ -3,7 +3,7 @@ layout:     post
 title:      "Inspections"
 date:       2022-01-13 12:00:00
 author:     "Matt Christian"
-header-img: "img/bruno.png"
+header-img: "img/cover.jpeg"
 ---
 This post gives a short overview of our recent paper: 
 <span class="label label-primary">Quality</span>

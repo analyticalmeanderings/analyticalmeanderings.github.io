@@ -3,7 +3,7 @@ layout:     post
 title:      "Medicare Part D Markup"
 date:       2022-01-13 12:00:00
 author:     "Matt Christian"
-header-img: "img/epilepsy.jpg"
+header-img: "img/cover.jpeg"
 ---
 The [Part D](http://www.kaggle.com/c/seizure-prediction) is expensive
 <span class="label label-danger">Market Factors</span>
