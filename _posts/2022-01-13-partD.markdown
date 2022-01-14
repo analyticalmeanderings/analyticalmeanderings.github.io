@@ -6,8 +6,6 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 How effectively does the US Government negotiate drug costs? It depends on the drug.
-
- [Part D](http://www.kaggle.com/c/seizure-prediction)
 <span class="label label-danger">Market Factors</span>
 
 <!--more-->
