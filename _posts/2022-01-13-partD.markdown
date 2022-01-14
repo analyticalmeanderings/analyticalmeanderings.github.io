@@ -29,7 +29,7 @@ First, we need data to benchmark against.
 </style>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="../venn/venn.min.js"></script>
+<script src="../js/venn/venn.min.js"></script>
 <script src="../assets/lastfm.jsonp"></script>
 
 <script>
