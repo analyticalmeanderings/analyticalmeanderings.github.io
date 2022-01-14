@@ -11,13 +11,14 @@ Managing risk for rare events.
 <!--more-->
 
 ## Predicting rare events
-
+<em>
 When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:
 1. What’s the upside, if events turn out well?
 2. What’s the downside, if events go very badly?
 3. Can you live with the downside? Truly?
-Jim Collins (How the Might Fall, 2009)
 
+Jim Collins (How the Might Fall, 2009)
+<em>
 
 Certain datasets suffer from class imbalance, the situation where one outcome is rare. Imbalanced data presents a challenge from a modeling perspective. Namely, the majority class outweighs the minority class and the model can over predict the majority outcome. In this analysis, we analyze three algorithms to overcome barriers on imbalanced data. 
 
@@ -110,12 +111,14 @@ This analysis relies heavily on the base case (random_state = 42). We assume tha
 
 To quantify and evaluate the precision-recall tradeoff, we develop indifference curves. Indifference curves show points of equal 'profit'. Specifically goal is to minimize our objective function, losses due to false_positives and false_negatives within the test set. The blue dots in the chart below show model runs for the undersampling algorithm. The black line is a quadratic regression through those model runs. The yellow to orange colored lines are our isoprofit curves. Yellow indicates the lowest losses from the model. The $5,000,000 isoprofit curve lies roughly tangential to the black line around recall = 0.7 and precision = 0.8. This means that "improvements" in recall do not result in more profitable models.
 ## Quantifying the tradeoffs
-## Principle-agent problem
+
+All modeling errors have a cost
+
+## Moral hazard quotes
 
 # Conclusions and Potential Next Steps
 
 The undersampling and oversampling algorithms show the tradeoff between precision and recall. Balancing the classes improves the likelihood that bad loans are identified, however there is a significant increase in the number good loans that are mistakenly identified as bad loans.
-
 
 In this analysis, there was little to no financial benefit for balancing these classes.
 
