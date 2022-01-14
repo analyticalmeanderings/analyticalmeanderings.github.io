@@ -17,7 +17,7 @@ First, we need data to benchmark against.
             .venntooltip {
               position: absolute;
               text-align: center;
-              width: 26rem;
+              width: 20rem;
               height: 3rem;
               background: #333;
               color: #ddd;
