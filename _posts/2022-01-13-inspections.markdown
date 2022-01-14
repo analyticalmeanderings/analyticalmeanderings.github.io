@@ -12,14 +12,10 @@ The reduction was particularly acute for foreign inspections.
 <!-- <span class="label label-success">Success Label</span>
 <span class="label label-info">Info Label</span>
 <span class="label label-warning">Warning Label</span> -->
-
 <!--more-->
 
 
-
-[BRUNO: A Deep Recurrent Model for Exchangeable Data](https://arxiv.org/abs/1802.07535) <br>
-
-processed, it can be discarded from memory.
+On March 11th, 2020, I was watching ESPN when an unprecedented news alert flashed across the screen. Due to a player testing positive for COVID, the NBA was indefinitely suspending league play. I naively thought that action was drastic and unnecessary. Little did I know that COVID, with its broder reaching impacts, was here to stay. Prior to the NBA suspending all games, the FDA made a similar [announcement](https://www.fda.gov/news-events/press-announcements/coronavirus-disease-2019-covid-19-update-foreign-inspections) that temporarily postponed all domestic and foreign routine surveillance facility inspections. The impact on year end inspections total was significant. The figure below shows how the annual number of inspections dropped from a pre-pandemic 5-year average of 4,580 to 1,491 in 2020 and 1,586 in 2021.
 
 ## Motivation
 
