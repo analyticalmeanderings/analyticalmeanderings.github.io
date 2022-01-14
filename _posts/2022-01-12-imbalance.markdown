@@ -23,7 +23,7 @@ google.charts.load('current', {
 google.charts.setOnLoadCallback(loadAndDrawChart);
 
 function loadAndDrawChart() {
-  getJSON("./out_inspection_yearly.json")
+  getJSON("../assets/out_inspection_yearly.json")
   .then(drawChart)
 }
 
