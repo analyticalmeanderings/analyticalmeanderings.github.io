@@ -11,14 +11,13 @@ Managing risk for rare events.
 <!--more-->
 
 ## Predicting rare events
-<em>
-When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:
-1. What’s the upside, if events turn out well?
-2. What’s the downside, if events go very badly?
-3. Can you live with the downside? Truly?
 
-Jim Collins (How the Might Fall, 2009)
-<em>
+*When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:*
+*1. What’s the upside, if events turn out well?*
+*2. What’s the downside, if events go very badly?*
+*3. Can you live with the downside? Truly?*
+
+*Jim Collins (How the Might Fall, 2009)*
 
 Certain datasets suffer from class imbalance, the situation where one outcome is rare. Imbalanced data presents a challenge from a modeling perspective. Namely, the majority class outweighs the minority class and the model can over predict the majority outcome. In this analysis, we analyze three algorithms to overcome barriers on imbalanced data. 
 
