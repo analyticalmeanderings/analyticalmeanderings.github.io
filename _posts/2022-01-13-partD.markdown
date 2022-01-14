@@ -6,7 +6,7 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 How effectively does the US Government negotiate drug costs? It depends on the drug.
-<span class="label label-danger">Market Factors</span>
+<!-- <span class="label label-danger">Market Factors</span> -->
 
 <!--more-->
 
@@ -17,7 +17,7 @@ First, we need data to benchmark against.
             .venntooltip {
               position: absolute;
               text-align: center;
-              width: 150px;
+              width: 250px;
               height: 2rem;
               background: #333;
               color: #ddd;
