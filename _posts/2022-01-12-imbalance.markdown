@@ -11,6 +11,51 @@ Managing risk for rare events.
 <!--more-->
 
 ## Predicting rare events
+<script>
+async function getJSON(filename) {
+  const response = await fetch(filename)
+  return response.json()
+}
+
+google.charts.load('current', {
+  'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(loadAndDrawChart);
+
+function loadAndDrawChart() {
+  getJSON("./out_inspection_yearly.json")
+  .then(drawChart)
+}
+
+function drawChart(rawData) {
+  var data = google.visualization.arrayToDataTable([
+    ['Inspection Classification', 'OAI', 'VAI', 'NAI', { role: 'annotation' } ],
+    ...rawData.map(
+      ({year, NAI, OAI, VAI, oai_ratio}) => {
+        return [year, OAI, VAI, NAI, '']
+      }
+    )
+  ]);
+
+  var options = {
+    width: 600,
+    height: 400,
+    // legend: { position: 'top', maxLines: 3 },
+    // bar: { groupWidth: '75%' },
+    isStacked: true,
+    hAxis: { 
+      format:'',
+      showTextEvery: 1,
+      slantedText: true,
+      slantedTextAngle: 9,
+    },
+  };
+  var view = new google.visualization.DataView(data);
+  var chart = new google.visualization.ColumnChart(document.getElementById('inspections'));
+
+  chart.draw(view, options);
+}
+</script>
 
 *When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:*
 *1. What’s the upside, if events turn out well?*

@@ -128,4 +128,4 @@ In this analysis, there was little to no financial benefit for balancing these c
 2. Evaluating the computational speed vs the precision/recall metrics for each algorithm. The undersampled model ends up training on 1,600 data points, while the oversampled model and the SMOTE model train on more than 165,000 points.
 3. Incorporating the objective function directly into the neural network. MLPClassifier does not support custom log functions, but other neural networks would enable us to input the loan losses directly into the model.
 4. Autoencoders are commonly used in fraud detection applications and imbalance classes.
-
+5. https://stackoverflow.com/questions/61466656/how-to-use-a-mathmetical-equation-in-google-charts-instad-of-a-dataset
