@@ -5,7 +5,7 @@ date:       2022-01-31 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-Managing risk for rare events.
+GPOs, hospital systems, and manufacturers desire to control inventory carrying costs by reducing safety stock for pharmaceuticals. Patients, who don’t directly pay inventory carrying costs, need medications at the right place at the right time. All modeling errors have a “cost”, but those costs vary by stakeholder.
 <!-- <span class="label label-danger">Market Factors</span> -->
 
 <!--more-->
