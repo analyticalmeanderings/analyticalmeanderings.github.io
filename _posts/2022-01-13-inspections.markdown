@@ -7,7 +7,7 @@ header-img: "img/cover.jpeg"
 ---
 Due to COVID-19, the FDA conducted significantly fewer site inspections in 2020 and 2021.
 The reduction was particularly acute for foreign inspections.
-<!-- <span class="label label-primary">Quality</span> -->
+<span class="label label-danger">DRAFT</span>
 <!-- <span class="label label-success">Success Label</span>
 <span class="label label-info">Info Label</span>
 <span class="label label-warning">Warning Label</span> -->

@@ -1,24 +1,20 @@
 ---
 layout:     post
-title:      "Finding Predictors for Drug Shortages"
+title:      "Embracing racial bias in AI"
 date:       2022-01-10 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-Embracing gender / racial bias in AI. Obviously, one shouldn’t include race and gender as an input for a model that predicts creditworthiness. In the healthcare space, the issue is significantly more complicated as race and gender SHOULD be inputs to these AI models. There is a need to analyze the impacts of these models through gender/racial lenses, particularly for unbalanced classes.  Historically, African Americans have been underrepresented in drug trials such as the COVID vaccine. 
+Embracing racial bias in AI. Obviously, one shouldn’t include race and gender as an input for a model that predicts creditworthiness. In the healthcare space, the issue is significantly more complicated as race and gender SHOULD be inputs to these AI models. There is a need to analyze the impacts of these models through gender/racial lenses, particularly for unbalanced classes.  Historically, African Americans have been underrepresented in drug trials such as the COVID vaccine. 
 “All models are wrong, some are useful”. I think too much of the discussion in this field has centered around race-blinding data (e.g. to determine creditworthiness). Going forward, when data scientist change hyperparameters, or rebalance classes, we need to analyze the impacts through gender and racial lenses. 
-<!-- <span class="label label-danger">Market Factors</span> -->
+
+As a white male, I acknowledge my ignorance on race related topics. This post needs to be revisted.
+
+<span class="label label-danger">DRAFT</span>
 
 <!--more-->
 
 ## Predicting rare events
-
-*When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:*
-*1. What’s the upside, if events turn out well?*
-*2. What’s the downside, if events go very badly?*
-*3. Can you live with the downside? Truly?*
-
-*Jim Collins (How the Might Fall, 2009)*
 
 Certain datasets suffer from class imbalance, the situation where one outcome is rare. Imbalanced data presents a challenge from a modeling perspective. Namely, the majority class outweighs the minority class and the model can over predict the majority outcome. In this analysis, we analyze three algorithms to overcome barriers on imbalanced data. 
 

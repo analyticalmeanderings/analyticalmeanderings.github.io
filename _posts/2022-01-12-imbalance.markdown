@@ -6,7 +6,7 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 Managing risk for rare events.
-<!-- <span class="label label-danger">Market Factors</span> -->
+<span class="label label-danger">DRAFT</span>
 
 <!--more-->
 
@@ -59,8 +59,11 @@ function drawChart(rawData) {
 </script>
 
 *When making risky bets and decisions in the face of ambiguous or conflicting data, ask three questions:*
+
 *1. What’s the upside, if events turn out well?*
+
 *2. What’s the downside, if events go very badly?*
+
 *3. Can you live with the downside? Truly?*
 
 *Jim Collins (How the Might Fall, 2009)*
