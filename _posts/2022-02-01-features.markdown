@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Finding Predictors for Drug Shortages"
-date:       2022-01-10 12:00:00
+title:      "Canary in the coal mine: finding early warning signs for drug shortages"
+date:       2022-02-01 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
