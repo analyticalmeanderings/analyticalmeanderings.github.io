@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Managing Risk within Imbalanced Classes"
+title:      "Managing risk within imbalanced classes"
 date:       2022-01-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
