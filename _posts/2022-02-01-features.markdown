@@ -6,7 +6,7 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 Managing risk for rare events.
-<!-- <span class="label label-danger">Market Factors</span> -->
+<span class="label label-danger">Market Factors</span>
 
 <!--more-->
 
