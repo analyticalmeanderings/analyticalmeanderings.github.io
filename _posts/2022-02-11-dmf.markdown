@@ -6,17 +6,15 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 While COVID slowed down supply chains across the world, API manufacturers are continuing to build overseas capacity to supply US markets.
-<span class="label label-danger">DRAFT</span>
 
 <!--more-->
 
 # 20 years of offshoring
 
 Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
-In 2002, less than 3% of new Drug Master Files (DMF) were for Indian manufacturers. In 2021, that figure skyrocketed to 64%. 
+In 2002, 15% of new Drug Master Files (DMF) were for Indian manufacturers. By 2021, that figure skyrocketed to 64%. 
 
 COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs have increased each year during COVID. Italy however, had the fewest number of new DMFs in nearly 40 years.
-
 
 {% include image.html url="/img/dmf.PNG" %}
 
