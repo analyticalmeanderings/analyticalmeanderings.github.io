@@ -1,0 +1,74 @@
+---
+layout:     post
+title:      "Pharmaceutical offshoring continues despite COVID"
+date:       2022-01-12 12:00:00
+author:     "Matt Christian"
+header-img: "img/cover.jpeg"
+---
+While COVID slowed down supply chains across the world, API manufacturers are continuing to build overseas capacity to supply US markets.
+<span class="label label-danger">DRAFT</span>
+
+<!--more-->
+
+# 20 years of offshoring
+
+Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
+In 2002, less than 3% of new Drug Master Files (DMF) were for Indian manufacturers. In 2021, that figure skyrocketed to 64%. 
+
+COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs have increased each year during COVID. Italy however, had the fewest number of new DMFs in nearly 40 years.
+
+
+{% include image.html url="/img/dmf.PNG" %}
+
+<!-- <div id="inspections"></div>
+<script>
+async function getJSON(filename) {
+  const response = await fetch(filename)
+  return response.json()
+}
+
+google.charts.load('current', {
+  'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(loadAndDrawChart);
+
+function loadAndDrawChart() {
+  getJSON("../assets/out_inspection_yearly.json")
+  .then(drawChart)
+}
+
+function drawChart(rawData) {
+  var data = google.visualization.arrayToDataTable([
+    ['Inspection Classification', 'OAI', 'VAI', 'NAI', { role: 'annotation' } ],
+    ...rawData.map(
+      ({year, NAI, OAI, VAI, oai_ratio}) => {
+        return [year, OAI, VAI, NAI, '']
+      }
+    )
+  ]);
+
+  var options = {
+    width: 600,
+    height: 400,
+    // legend: { position: 'top', maxLines: 3 },
+    // bar: { groupWidth: '75%' },
+    isStacked: true,
+    hAxis: { 
+      format:'',
+      showTextEvery: 1,
+      slantedText: true,
+      slantedTextAngle: 9,
+    },
+  };
+  var view = new google.visualization.DataView(data);
+  var chart = new google.visualization.ColumnChart(document.getElementById('inspections'));
+
+  chart.draw(view, options);
+}
+</script> -->
+
+
+# Additional research ideas:
+
+1. Studying therapeutic class implications
+

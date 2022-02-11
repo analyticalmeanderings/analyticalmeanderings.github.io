@@ -1,14 +1,14 @@
 ---
 layout:     post
-title:      "Embracing racial bias in AI"
+title:      "Racial bias in AI"
 date:       2022-01-10 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-Embracing racial bias in AI. Obviously, one shouldn’t include race and gender as an input for a model that predicts creditworthiness. In the healthcare space, the issue is significantly more complicated as race and gender SHOULD be inputs to these AI models. There is a need to analyze the impacts of these models through gender/racial lenses, particularly for unbalanced classes.  Historically, African Americans have been underrepresented in drug trials such as the COVID vaccine. 
+Racial bias in AI. Obviously, one shouldn’t include race and gender as an input for a model that predicts creditworthiness. In the healthcare space, the issue is significantly more complicated as race and gender SHOULD be inputs to these AI models. There is a need to analyze the impacts of these models through gender/racial lenses, particularly for unbalanced classes.  Historically, African Americans have been underrepresented in drug trials such as the COVID vaccine. 
 “All models are wrong, some are useful”. I think too much of the discussion in this field has centered around race-blinding data (e.g. to determine creditworthiness). Going forward, when data scientist change hyperparameters, or rebalance classes, we need to analyze the impacts through gender and racial lenses. 
 
-As a white male, I acknowledge my ignorance on race related topics. This post needs to be revisted.
+<!-- As a white male, I acknowledge my ignorance on race related topics. This post needs to be revisted. -->
 
 <span class="label label-danger">DRAFT</span>
 
