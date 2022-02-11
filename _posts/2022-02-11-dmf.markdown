@@ -71,4 +71,7 @@ function drawChart(rawData) {
 # Additional research ideas:
 
 1. Studying therapeutic class implications
+2. Evaluating the offshoring impact on drug shortage risk. Prior work has shown a negative correlation between shortage risk and geographic diversity (diversifying supply points enhances supply chain resilience).
+
+To learn more about how geographic diversity impacts shortage risk, please visit our [website](https://www.usp.org/supply-chain/medicine-supply-map)
 
