@@ -38,7 +38,7 @@ background: "img/cover.jpeg"
 
   function drawSeriesChart() {
     var data = google.visualization.arrayToDataTable([
-      ["ID", "Development Phase", "Project ID", "Topic", "Importance"],
+      ["ID", "Development Phase", "Importance", "Topic", "Resource Days Spent"],
       ["Defining Essential", 1, 1, "Essential Medicines", 2],
       ["Mining the Public Pricing Data", 0, 2, "DMF Data", 1],
       ["What's on a label?", 0, 3, "DMF Data", 4],
@@ -58,6 +58,9 @@ background: "img/cover.jpeg"
         "Status of Data Journalism Projects",
       hAxis: {  
         ticks: [{v:-0.5, f:''}, {v:0, f:'Rejected'}, {v:1, f:'Prospecting'}, {v:2, f:'Under Review'}, {v:3, f:'Completed'}]  
+      },
+      vAxis: {  
+        title: 'Importance'
       },
       bubble: { textStyle: { fontSize: 11 } },
     };
