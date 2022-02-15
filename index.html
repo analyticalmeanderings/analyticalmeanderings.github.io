@@ -21,6 +21,8 @@ background: "img/cover.jpeg"
 </td>
 </table> -->
 
+<h1>Sandbox for Data Journalism</h1>
+
 <script
   type="text/javascript"
   src="https://www.gstatic.com/charts/loader.js"
@@ -39,7 +41,9 @@ background: "img/cover.jpeg"
     var options = {
       title:
         "Data journalism status",
-      hAxis: {  ticks: [{v:75, f:'thirty two'}, {v:85, f:'sixty four'}]  },
+      hAxis: {  
+        ticks: [{v:0, f:'Rejected'}, {v:1, f:'Prospecting'}, {v:2, f:'Under Review'}, {v:3, f:'Completed'}]  
+      },
       bubble: { textStyle: { fontSize: 11 } },
     };
 
