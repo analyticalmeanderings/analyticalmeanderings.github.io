@@ -81,8 +81,9 @@ background: "img/cover.jpeg"
 <script type="text/javascript">
 window.onload = function(evt) {
   // debugger;
+  console.log(evt)
   var data = evt.target.result;
-  console.log(data)
+  
   //var xlsx = XLSX.read(data, {type: 'binary'});
   var arr = String.fromCharCode.apply(null, new Uint8Array(data));
   var xlsx = XLSX.read(btoa(arr), {
