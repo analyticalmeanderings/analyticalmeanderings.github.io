@@ -81,7 +81,20 @@ background: "img/cover.jpeg"
 <script type="text/javascript">
 window.onload = function(evt) {
   // debugger;
-  console.log(XLSX.read('assets/feather_light.xlsx'))
+  
+  //Read the Excel File data in binary
+  var cfb = XLSX.CFB.read('assets/feather_light.xlsx', {type: 'binary'});
+  var workbook = XLSX.parse_xlscfb(cfb);
+
+  //get the name of First Sheet.
+  var Sheet = workbook.SheetNames[0];
+
+  //Read all rows from First Sheet into an JSON array.
+  var excelRows = XLS.utils.sheet_to_row_object_array(workbook.Sheets['backlog']);
+  console.log(excelRows)
+
+
+
   var data = evt.target.result;
   
   //var xlsx = XLSX.read(data, {type: 'binary'});
