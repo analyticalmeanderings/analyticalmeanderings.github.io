@@ -42,7 +42,7 @@ background: "img/cover.jpeg"
   function drawSeriesChart() {
     var data = google.visualization.arrayToDataTable([
       ["Project Name", "Development Phase", "Importance", "Topic", "Resource Days Spent"],
-      ["Defining Essential", 1, 1, "Essential Medicines", 1],
+      ["Defining Essential", 1, 1, "Essential Meds", 1],
       ["Mining the Public Pricing Data", 0, 2, "Pricing", 1],
       ["What's on a label?", 0, 3, "DMF Data", 1],
       ["Recalls and Refusals", 1, 4, "Shortage Analysis", 1],
@@ -65,9 +65,6 @@ background: "img/cover.jpeg"
       },
       vAxis: {  
         title: 'Importance',
-        gridlines: {
-          count:0
-        }, 
         viewWindow: {
           max: 12
         },
@@ -81,4 +78,4 @@ background: "img/cover.jpeg"
     chart.draw(data, options);
   }
 </script>
-<div id="series_chart_div" style="width: 1100px; height: 500px"></div>
+<div id="series_chart_div" style="width: 900px; height: 500px"></div>
