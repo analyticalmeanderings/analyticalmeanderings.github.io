@@ -85,39 +85,54 @@ background: "img/cover.jpeg"
 <div id="ExcelTable"></div>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <script type="text/javascript">
-window.onload = function(evt) {
+window.onload = function() {
   // debugger;
-  fetch('assets/feather_light.xlsx').then()
-  //Read the Excel File data in binary
-  var cfb = XLSX.CFB.read('assets/feather_light.xlsx', {type: 'binary'});
-  var workbook = XLSX.parse_xlscfb(cfb);
 
-  //get the name of First Sheet.
-  var Sheet = workbook.SheetNames[0];
+  fetch('assets/feather_light.xlsx').then(res => { 
+    return res.arrayBuffer();
+  }).then(res => {
+    console.log('file:', res);
+    var workbook = XLSX.read(new Uint8Array(res), {
+        type: 'array'
+    });
+    console.log(workbook)
+  });
+}
 
-  //Read all rows from First Sheet into an JSON array.
-  var excelRows = XLS.utils.sheet_to_row_object_array(workbook.Sheets['backlog']);
-  console.log(excelRows)
 
 
 
-  var data = evt.target.result;
+  // fetch('assets/feather_light.xlsx').then()
+  // //Read the Excel File data in binary
+  // var cfb = XLSX.CFB.read('assets/feather_light.xlsx', {type: 'binary'});
+  // var workbook = XLSX.parse_xlscfb(cfb);
+
+  // //get the name of First Sheet.
+  // var Sheet = workbook.SheetNames[0];
+
+  // //Read all rows from First Sheet into an JSON array.
+  // var excelRows = XLS.utils.sheet_to_row_object_array(workbook.Sheets['backlog']);
+  // console.log(excelRows)
+
+
+
+//   var data = evt.target.result;
   
-  //var xlsx = XLSX.read(data, {type: 'binary'});
-  var arr = String.fromCharCode.apply(null, new Uint8Array(data));
-  var xlsx = XLSX.read(btoa(arr), {
-    type: 'base64'
-  });
-  result = xlsx.Strings;
-  result = {};
-  xlsx.SheetNames.forEach(function(sheetName) {
-    var rObjArr = XLSX.utils.sheet_to_row_object_array(xlsx.Sheets[sheetName]);
-    if (rObjArr.length > 0) {
-      result[sheetName] = rObjArr;
-    }
-  });
-  return result;
- // that.b64toBlob(xlsx, "binary");
-};
-// window.readAsArrayBuffer('assets/feather_light.xlsx');
+//   //var xlsx = XLSX.read(data, {type: 'binary'});
+//   var arr = String.fromCharCode.apply(null, new Uint8Array(data));
+//   var xlsx = XLSX.read(btoa(arr), {
+//     type: 'base64'
+//   });
+//   result = xlsx.Strings;
+//   result = {};
+//   xlsx.SheetNames.forEach(function(sheetName) {
+//     var rObjArr = XLSX.utils.sheet_to_row_object_array(xlsx.Sheets[sheetName]);
+//     if (rObjArr.length > 0) {
+//       result[sheetName] = rObjArr;
+//     }
+//   });
+//   return result;
+//  // that.b64toBlob(xlsx, "binary");
+// };
+// // window.readAsArrayBuffer('assets/feather_light.xlsx');
 </script>
