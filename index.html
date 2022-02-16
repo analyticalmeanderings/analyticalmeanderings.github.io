@@ -41,7 +41,7 @@ background: "img/cover.jpeg"
 
   function drawSeriesChart() {
     var data = google.visualization.arrayToDataTable([
-      ["Project Name", "Development Phase", "Importance", "Topic", "Resource Days Spent"],
+      ["Project Name", "Development Phase", "Priority level", "Topic", "Resource Days Spent"],
       ["Defining Essential", 1, 1, "Essential Meds", 1],
       ["Mining the Public Pricing Data", 0, 2, "Pricing", 1],
       ["What's on a label?", 0, 3, "DMF Data", 1],
@@ -50,7 +50,7 @@ background: "img/cover.jpeg"
       ["Inspection decreases", 1, 6, "Inspections", 2],
       ["Quality records", 1, 7, "Inspections", 1],
       ["Count of approved manufacturers", 1, 8, "DMF Data", 1],
-      ["Pharmaceutical offshoring continues despite COVID", 1, 10, "DMF Data", 2],
+      ["Pharmaceutical offshoring continues despite COVID", 1, 10, "DMF Data", 3],
       ["Where are DMFs for antibio?", 1, 9, "DMF Data", 1],
       ["What happened to Italy?", 0.9, 9, "DMF Data", 1],
 
@@ -60,11 +60,11 @@ background: "img/cover.jpeg"
       title:
         "Status of Data Journalism Projects",
       hAxis: {  
-        ticks: [{v:0, f:'Rejected'}, {v:1, f:'Prospecting'}, {v:2, f:'Under Review'}, {v:3, f:'Completed'}], 
+        ticks: [{v:0, f:'Rejected'}, {v:1, f:'Prospecting'}, {v:2, f:'Manual Validation'}, {v:3, f:'Technical Review'}, {v:4, f:'Final Review'}, {v:5, f:'Completed'}], 
 
       },
       vAxis: {  
-        ticks: [{v:0, f:'Low priority'}, {v:12, f:'High priority'}], 
+        ticks: [{v:1, f:'Lowes Priority'}, {v:12, f:'Highest Priority'}], 
         viewWindow: {
           max: 12
         },
