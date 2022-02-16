@@ -64,9 +64,10 @@ background: "img/cover.jpeg"
 
       },
       vAxis: {  
-        ticks: [{v:1, f:'Lowes Priority'}, {v:12, f:'Highest Priority'}], 
+        ticks: [{v:1, f:'Lowest Priority'}, {v:12, f:'Highest Priority'}], 
         viewWindow: {
-          max: 12
+          min: 0,
+          max: 12,
         },
       },
       bubble: { textStyle: { fontSize: 11 } },
