@@ -63,7 +63,8 @@ background: "img/cover.jpeg"
         ticks: [{v:0, f:'Rejected'}, {v:1, f:'Prospecting'}, {v:2, f:'Under Review'}, {v:3, f:'Completed'}]  
       },
       vAxis: {  
-        title: 'Importance'
+        title: 'Importance',
+        viewWindowMode: 'pretty',
       },
       bubble: { textStyle: { fontSize: 11 } },
     };
@@ -81,7 +82,7 @@ background: "img/cover.jpeg"
 <script type="text/javascript">
 window.onload = function(evt) {
   // debugger;
-  
+  fetch('assets/feather_light.xlsx').then()
   //Read the Excel File data in binary
   var cfb = XLSX.CFB.read('assets/feather_light.xlsx', {type: 'binary'});
   var workbook = XLSX.parse_xlscfb(cfb);
