@@ -86,8 +86,7 @@ background: "img/cover.jpeg"
 <script src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js'></script>
 <script>
   fetch('assets/feather_light.xlsx').then((response)=>{
-    // console.log(response.blob())
-    return response.blob()
+    return response.arrayBuffer()
   }).then((data)=>{
     console.log('blob')
     console.log(data)
@@ -99,5 +98,4 @@ background: "img/cover.jpeg"
   })
 
 </script>
-
 
