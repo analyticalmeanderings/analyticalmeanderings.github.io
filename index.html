@@ -89,6 +89,7 @@ background: "img/cover.jpeg"
     return response.text()
   }).then((data)=>{
     const parsed_data = XLSX.read(data)
+    console.log(parsed_data)
     var backlog = parsed_data.Sheets['backlog'];
     var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
     console.log(sheet_data)
