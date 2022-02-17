@@ -88,9 +88,9 @@ background: "img/cover.jpeg"
   fetch('assets/feather_light.xlsx').then((response)=>{
     return response.text()
   }).then((data)=>{
-    console.log('tets')
+    console.log('string')
     console.log(data)
-    const parsed_data = XLSX.read(data)
+    const parsed_data = XLSX.read(data, {type:'string'})
     console.log(parsed_data)
     var backlog = parsed_data.Sheets['backlog'];
     var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
