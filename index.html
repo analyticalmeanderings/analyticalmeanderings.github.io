@@ -85,7 +85,7 @@ background: "img/cover.jpeg"
 
 <script>
   fetch('assets/feather_light.xlsx').then((response)=>{
-    return response.text()
+    return XLSX.read(response, {type: 'binary'})
   }).then((data)=>{
     console.log(data)
   })
