@@ -108,7 +108,7 @@ background: "img/cover.jpeg"
 <script>
   function ab_to_b(e) {
     var data = "";
-    var bytes = new Uint8Array(e.target.result);
+    var bytes = new Uint8Array(e);
     for (var i = 0; i < bytes.byteLength; i++) {
       data += String.fromCharCode(bytes[i]);
     }
@@ -117,7 +117,7 @@ background: "img/cover.jpeg"
   fetch('assets/feather_light.xlsx').then((response)=>{
     return response.arrayBuffer()
   }).then((data)=>{
-    console.log('fixed')
+    console.log('again')
     console.log(ab_to_b(data))
     const parsed_data = XLSX.read(ab_to_b(data), {type:'binary'})
     console.log(parsed_data)
