@@ -89,7 +89,7 @@ background: "img/cover.jpeg"
     // console.log(response.blob())
     return response.blob()
   }).then((data)=>{
-    console.log('string')
+    console.log('blob')
     console.log(data)
     const parsed_data = XLSX.read(data, {type:'binary'})
     console.log(parsed_data)
