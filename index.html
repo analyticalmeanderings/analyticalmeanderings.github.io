@@ -86,11 +86,12 @@ background: "img/cover.jpeg"
 <script src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js'></script>
 <script>
   fetch('assets/feather_light.xlsx').then((response)=>{
+    console.log(response.blob())
     return response.text()
   }).then((data)=>{
     console.log('string')
     console.log(data)
-    const parsed_data = XLSX.read(data, {type:'string'})
+    const parsed_data = XLSX.read(data, {type:'binary'})
     console.log(parsed_data)
     var backlog = parsed_data.Sheets['backlog'];
     var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
