@@ -88,7 +88,7 @@ background: "img/cover.jpeg"
   fetch('assets/feather_light.xlsx').then((response)=>{
     return response.arrayBuffer()
   }).then((data)=>{
-    console.log('blob')
+    console.log('araybuff')
     console.log(data)
     const parsed_data = XLSX.read(data, {type:'binary'})
     console.log(parsed_data)
