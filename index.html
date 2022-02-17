@@ -83,11 +83,15 @@ background: "img/cover.jpeg"
 </script>
 <div id="series_chart_div" style="width: 900px; height: 500px"></div>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js'></script>
 <script>
   fetch('assets/feather_light.xlsx').then((response)=>{
-    return XLSX.read(response, {type: 'binary'})
+    return response.text()
   }).then((data)=>{
-    console.log(data)
+    const parsed_data = XLSX.read(data, {type: 'binary'})
+    var backlog = parsed_data.Sheets['backlog'];
+    var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
+    console.log(sheet_data)
   })
 
 </script>
