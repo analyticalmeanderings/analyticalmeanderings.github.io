@@ -47,7 +47,7 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
           {color:'#EE1C25'},
           {color:'#001489'},
           {color:'#BF0A30'},
-          {color:'#D3D3D3'},
+          {color:'#D3D3D3', visibleInLegend: false},
         ],
         bar: { groupWidth: '50%' },
         isStacked: 'percent',
