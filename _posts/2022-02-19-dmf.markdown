@@ -36,7 +36,7 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
 
       var options = {
         title: "Evolution of new pharmaceutical manufacturing lines over time",
-        legend: { position: 'top', maxLines: 3 },
+        legend: { position: 'bottom', maxLines: 3 },
         vAxis: {
           minValue: 0,
           ticks: [0, .25, .5, .75, 1],
