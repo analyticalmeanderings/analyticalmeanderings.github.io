@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Pharmaceutical offshoring continues despite COVID"
-date:       2022-02-11 12:00:00
+date:       2022-02-21 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
@@ -27,11 +27,11 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
   function drawSeriesChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-         'Western', 'Literature', { role: 'annotation' } ],
-        ['2010', 10, 24, 20, 32, 18, 5, ''],
-        ['2020', 16, 22, 23, 30, 16, 9, ''],
-        ['2030', 28, 19, 29, 30, 12, 13, '']
+        ['Region', 'China', 'India', 'Europe', 'US',
+         'Other', { role: 'annotation' } ],
+        ['2000', 13, 34, 75, 26, 22, ''],
+        ['2010', 73, 259, 78, 28, 49, ''],
+        ['2021', 118, 307, 35, 17, 17, '']
       ]);
 
       var options = {
@@ -42,7 +42,7 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
         isStacked: true,
       };
 
-    var chart = new google.visualization.BubbleChart(
+    var chart = new google.visualization.ColumnChart(
       document.getElementById("series_chart_div")
     );
     chart.draw(data, options);
