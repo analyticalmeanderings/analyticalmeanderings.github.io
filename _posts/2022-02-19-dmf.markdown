@@ -27,11 +27,11 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
   function drawSeriesChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Region', 'China', 'India', 'Europe', 'US',
+        ['Region', 'India', 'China', 'Europe', 'US',
          'Other', { role: 'annotation' } ],
-        ['2000', 13, 34, 75, 26, 22, ''],
-        ['2010', 73, 259, 78, 28, 49, ''],
-        ['2021', 118, 307, 35, 17, 17, '']
+        ['2000', 34, 13, 75, 26, 22, 'TESTING THIS OUT'],
+        ['2010', 259, 73, 78, 28, 49, ''],
+        ['2021', 307, 118, 35, 17, 17, '']
       ]);
 
       var options = {
