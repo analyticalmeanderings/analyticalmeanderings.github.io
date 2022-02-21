@@ -26,6 +26,11 @@ async function getJSON(filename) {
   return response.json()
 }
 
+google.charts.load('current', {
+  'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(loadAndDrawChart);
+
 function loadAndDrawChart() {
   getJSON("../assets/out_dmf_yearly_active.json")
   .then(drawChart)
