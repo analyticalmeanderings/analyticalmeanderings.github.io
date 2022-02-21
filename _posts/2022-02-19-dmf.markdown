@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Pharmaceutical offshoring continues despite COVID"
-date:       2022-02-21 12:00:00
+date:       2022-02-19 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
