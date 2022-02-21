@@ -41,8 +41,8 @@ function drawChart(rawData) {
   var data = google.visualization.arrayToDataTable([
     ['Region', 'India', 'China', 'Europe', 'US', 'Other', { role: 'annotation' } ],
     ...rawData.map(
-      ({year, India, China, Europe, US, Other, oai_ratio}) => {
-        return [year, India, China, Europe, US, Other, '']
+      ({year, India, China, Europe, US, Other}) => {
+        return [year, India, China, Europe, US, Other]
       }
     )
   ]);
