@@ -19,7 +19,6 @@ India and China now account for more than 86% of new DMFs, largely at the expens
   src="https://www.gstatic.com/charts/loader.js"
 ></script>
 
-## Predicting rare events
 <div id="dmf_area"></div>
 <script>
 async function getJSON(filename) {
