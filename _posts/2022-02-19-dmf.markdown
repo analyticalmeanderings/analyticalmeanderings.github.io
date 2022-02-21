@@ -42,14 +42,14 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
           minValue: 0,
           ticks: [0, .25, .5, .75, 1]
         },
-        // series: [
-        //   {color:'#138808'},
-        //   {color:'#EE1C25'},
-        //   {color:'#001489'},
-        //   {color:'#BF0A30'},
-        //   {color:'#222'},
-        // ],
-        colors: ['#138808','#EE1C25', '#001489', '#BF0A30', '#222'],
+        series: [
+          {color:'#138808'},
+          {color:'#EE1C25'},
+          {color:'#001489'},
+          {color:'#BF0A30'},
+          {color:'#222'},
+        ],
+        // colors: ['#138808','#EE1C25', '#001489', '#BF0A30', '#222'],
         bar: { groupWidth: '75%' },
         isStacked: 'percent',
       };
