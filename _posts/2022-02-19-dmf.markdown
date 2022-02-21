@@ -43,11 +43,11 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
           ticks: [0, .25, .5, .75, 1]
         },
         series: {
-          'India': {color:'#222'},
-          'China': {color:'#222'},
-          'Europe': {color:'#222'},
-          'US': {color:'#222'},
-          'Other': {color:'#222'},
+          0: {color:'#222'},
+          1: {color:'#222'},
+          2: {color:'#222'},
+          3: {color:'#222'},
+          4: {color:'#222'},
         },
         bar: { groupWidth: '75%' },
         isStacked: 'percent',
