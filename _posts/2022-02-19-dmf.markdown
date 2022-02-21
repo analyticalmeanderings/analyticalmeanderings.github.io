@@ -14,6 +14,7 @@ Over the past two decades, India has played an increasingly important role in Ac
 In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
 India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
 
+<div id="dmf_area2" style="width: 900px; height: 500px"></div>
 <script
   type="text/javascript"
   src="https://www.gstatic.com/charts/loader.js"
@@ -64,7 +65,7 @@ function drawChart(rawData) {
     chart.draw(data, options);
 }
 </script>
-<div id="dmf_area2" style="width: 900px; height: 500px"></div>
+
 # Methodology
 
 The Medicine Supply Map team applied Natural Language Processing (NLP) and geocoding algorithms to connect DMF holders to specific manufacturing facilities. The model accurately uncovers facility information for more than 80% of active, type II, API DMFs.
