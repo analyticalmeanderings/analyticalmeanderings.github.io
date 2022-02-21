@@ -51,7 +51,7 @@ India and China now account for more than 86% of new DMFs, largely at the expens
         isStacked: 'percent',
       };
 
-    var chart = new google.visualization.ColumnChart(
+    var chart = new google.visualization.AreaChart(
       document.getElementById("series_chart_div")
     );
     chart.draw(data, options);
