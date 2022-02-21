@@ -35,12 +35,12 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
       ]);
 
       var options = {
-        width: 600,
-        height: 400,
+        title: "Evolution of new pharmaceutical manufacturing lines over time",
         legend: { position: 'top', maxLines: 3 },
         vAxis: {
           minValue: 0,
-          ticks: [0, .25, .5, .75, 1]
+          ticks: [0, .25, .5, .75, 1],
+          title: 'Portion of new DMFs by region'
         },
         series: [
           {color:'#138808'},
@@ -49,8 +49,7 @@ COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs hav
           {color:'#BF0A30'},
           {color:'#D3D3D3'},
         ],
-        // colors: ['#138808','#EE1C25', '#001489', '#BF0A30', '#D3D3D3'],
-        bar: { groupWidth: '75%' },
+        bar: { groupWidth: '50%' },
         isStacked: 'percent',
       };
 
