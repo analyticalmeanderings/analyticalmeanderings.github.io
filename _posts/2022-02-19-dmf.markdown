@@ -19,7 +19,7 @@ India and China now account for more than 86% of new DMFs, largely at the expens
   src="https://www.gstatic.com/charts/loader.js"
 ></script>
 
-<div id="dmf_area"></div>
+<div id="dmf_area" style="width: 900px; height: 500px"></div>
 <script>
 async function getJSON(filename) {
   const response = await fetch(filename)
@@ -80,51 +80,6 @@ function drawChart(rawData) {
     chart.draw(data, options);
 }
 </script>
-
-
-
-
-
-<script type="text/javascript">
-  google.charts.load("current", { packages: ["corechart"] });
-  google.charts.setOnLoadCallback(drawSeriesChart);
-
-  function drawSeriesChart() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['Region', 'India', 'China', 'Europe', 'US', 'Other'],
-        ['2000', 34, 13, 75, 26, 22],
-        ['2010', 259, 73, 78, 28, 49],
-        ['2021', 307, 118, 35, 17, 17],
-      ]);
-
-      var options = {
-        title: "Geographic evolution of new pharmaceutical manufacturing capacity",
-        legend: { position: 'bottom', maxLines: 3 },
-        vAxis: {
-          minValue: 0,
-          ticks: [0, .25, .5, .75, 1],
-          title: 'Portion of new DMFs by region', 
-          titleTextStyle: {italic: false}
-        },
-        series: [
-          {color:'#ec9332'},
-          {color:'#c44129'},
-          {color:'#3e8410'},
-          {color:'#0560bd'},
-          {color:'#D3D3D3', visibleInLegend: false},
-        ],
-        bar: { groupWidth: '50%' },
-        isStacked: 'percent',
-      };
-
-    var chart = new google.visualization.AreaChart(
-      document.getElementById("series_chart_div")
-    );
-    chart.draw(data, options);
-  }
-</script>
-<div id="series_chart_div" style="width: 900px; height: 500px"></div>
 
 # Methodology
 
