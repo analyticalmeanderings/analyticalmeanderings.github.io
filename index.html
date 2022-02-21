@@ -118,11 +118,16 @@ background: "img/cover.jpeg"
     return response.arrayBuffer()
   }).then((data)=>{
     console.log('again')
-    console.log(ab_to_b(data))
     const parsed_data = XLSX.read(ab_to_b(data), {type:'binary'})
     console.log(parsed_data)
     var backlog = parsed_data.Sheets['backlog'];
     var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
     console.log(sheet_data)
+
+    // add to chart build
+    // google.visualization.events.addEventListener(chart, "click", () => window.location.href = "yoururl")
+    
+
+
   })
 </script>

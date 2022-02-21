@@ -16,55 +16,39 @@ In 2002, 15% of new Drug Master Files (DMF) were for Indian manufacturers. By 20
 
 COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs have increased each year during COVID. Italy however, had the fewest number of new DMFs in nearly 40 years.
 
-{% include image.html url="/img/dmf.PNG" %}
+<script
+  type="text/javascript"
+  src="https://www.gstatic.com/charts/loader.js"
+></script>
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["corechart"] });
+  google.charts.setOnLoadCallback(drawSeriesChart);
 
-<!-- <div id="inspections"></div>
-<script>
-async function getJSON(filename) {
-  const response = await fetch(filename)
-  return response.json()
-}
+  function drawSeriesChart() {
 
-google.charts.load('current', {
-  'packages': ['corechart']
-});
-google.charts.setOnLoadCallback(loadAndDrawChart);
+      var data = google.visualization.arrayToDataTable([
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 10, 24, 20, 32, 18, 5, ''],
+        ['2020', 16, 22, 23, 30, 16, 9, ''],
+        ['2030', 28, 19, 29, 30, 12, 13, '']
+      ]);
 
-function loadAndDrawChart() {
-  getJSON("../assets/out_inspection_yearly.json")
-  .then(drawChart)
-}
+      var options = {
+        width: 600,
+        height: 400,
+        legend: { position: 'top', maxLines: 3 },
+        bar: { groupWidth: '75%' },
+        isStacked: true,
+      };
 
-function drawChart(rawData) {
-  var data = google.visualization.arrayToDataTable([
-    ['Inspection Classification', 'OAI', 'VAI', 'NAI', { role: 'annotation' } ],
-    ...rawData.map(
-      ({year, NAI, OAI, VAI, oai_ratio}) => {
-        return [year, OAI, VAI, NAI, '']
-      }
-    )
-  ]);
-
-  var options = {
-    width: 600,
-    height: 400,
-    // legend: { position: 'top', maxLines: 3 },
-    // bar: { groupWidth: '75%' },
-    isStacked: true,
-    hAxis: { 
-      format:'',
-      showTextEvery: 1,
-      slantedText: true,
-      slantedTextAngle: 9,
-    },
-  };
-  var view = new google.visualization.DataView(data);
-  var chart = new google.visualization.ColumnChart(document.getElementById('inspections'));
-
-  chart.draw(view, options);
-}
-</script> -->
-
+    var chart = new google.visualization.BubbleChart(
+      document.getElementById("series_chart_div")
+    );
+    chart.draw(data, options);
+  }
+</script>
+<div id="series_chart_div" style="width: 900px; height: 500px"></div>
 
 # Additional research ideas:
 
