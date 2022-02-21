@@ -13,9 +13,6 @@ For decades foreign countries have provided the majority of new Active Pharmaceu
 Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
 In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
 India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
-# Methodology
-
-The Medicine Supply Map team applied Natural Language Processing (NLP) and geocoding algorithms to connect DMF holders to specific manufacturing facilities. The model accurately uncovers facility information for more than 80% of active, type II, API DMFs.
 
 <script
   type="text/javascript"
@@ -61,6 +58,10 @@ The Medicine Supply Map team applied Natural Language Processing (NLP) and geoco
   }
 </script>
 <div id="series_chart_div" style="width: 900px; height: 500px"></div>
+
+# Methodology
+
+The Medicine Supply Map team applied Natural Language Processing (NLP) and geocoding algorithms to connect DMF holders to specific manufacturing facilities. The model accurately uncovers facility information for more than 80% of active, type II, API DMFs.
 
 # Additional research ideas:
 
