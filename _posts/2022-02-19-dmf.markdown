@@ -46,6 +46,15 @@ function drawChart(rawData) {
     )
   ]);
 
+  console.log([
+    ['Region', 'India', 'China', 'Europe', 'US', 'Other' ],
+    ...rawData.map(
+      ({year, India, China, Europe, US, Other}) => {
+        return [year, India, China, Europe, US, Other]
+      }
+    )
+  ])
+
       var options = {
         title: "Geographic evolution of new pharmaceutical manufacturing capacity",
         legend: { position: 'bottom', maxLines: 3 },
