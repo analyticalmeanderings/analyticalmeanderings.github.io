@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "Offshoring US pharmaceutical manufacturing capacity"
+title:      "Europe's declining importance for US pharmaceutical markets"
 date:       2022-02-19 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-For decades foreign countries have provided the majority of new Active Pharmaceutical Ingrideint (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while US dependence on China has been steadily growing, it is actually India with the largest growing in new API capacity.
+For decades foreign countries have provided the majority of new Active Pharmaceutical Ingredient (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while US dependence on China has been steadily growing, it is actually India with the largest growth in new API capacity.
 
 <!--more-->
 # 20 years of offshoring
@@ -15,7 +15,7 @@ In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2
 India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
 # Methodology
 
-The Medicine Supply Map team applied Natural Language Processing (NLP) and geocoding algorthims to connect DMF holders to specific manufacturing facilities. The model accurately uncovers facility information for more than 80% of active, type II, API DMFs.
+The Medicine Supply Map team applied Natural Language Processing (NLP) and geocoding algorithms to connect DMF holders to specific manufacturing facilities. The model accurately uncovers facility information for more than 80% of active, type II, API DMFs.
 
 <script
   type="text/javascript"
