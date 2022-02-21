@@ -1,20 +1,23 @@
 ---
 layout:     post
-title:      "Pharmaceutical offshoring continues despite COVID"
+title:      "Offshoring US pharmaceutical manufacturing capacity"
 date:       2022-02-19 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-While COVID slowed down supply chains across the world, API manufacturers are continuing to build overseas capacity to supply US markets.
+For decades foreign countries have provided the majority of new Active Pharmaceutical Ingrideint (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while US dependence on China has been steadily growing, it is actually India with the largest growing in new API capacity.
 
 <!--more-->
-
 # 20 years of offshoring
 
 Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
-In 2002, 15% of new Drug Master Files (DMF) were for Indian manufacturers. By 2021, that figure skyrocketed to 64%. 
+In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
+India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
+# Methodology
 
-COVID hasn't seemed to diminish the appetite for overseas capacity. New DMFs have increased each year during COVID. Italy however, had the fewest number of new DMFs in nearly 40 years.
+Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
+In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
+India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
 
 <script
   type="text/javascript"
