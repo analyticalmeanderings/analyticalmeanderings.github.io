@@ -38,16 +38,16 @@ function loadAndDrawChart() {
 
 function drawChart(rawData) {
   var data = google.visualization.arrayToDataTable([
-    ['Region', 'India', 'China', 'Europe', 'US', 'Other' ],
+    ['Region', 'India', 'China', 'Europe', 'United States', 'Other' ],
     ...rawData.map(
-      ({year, India, China, Europe, US, Other}) => {
+      ({year, India, China, Europe, 'United States', Other}) => {
         return [year, India, China, Europe, US, Other]
       }
     )
   ]);
 
   console.log([
-    ['Region', 'India', 'China', 'Europe', 'US', 'Other' ],
+    ['Region', 'India', 'China', 'Europe', 'United States', 'Other' ],
     ...rawData.map(
       ({year, India, China, Europe, US, Other}) => {
         return [year, India, China, Europe, US, Other]
