@@ -41,7 +41,7 @@ function drawChart(rawData) {
     ['Region', 'India', 'China', 'Europe', 'United States', 'Other' ],
     ...rawData.map(
       ({year, India, China, Europe, United States, Other}) => {
-        return [year, India, China, Europe, US, Other]
+        return [year, India, China, Europe, United States, Other]
       }
     )
   ]);
@@ -50,7 +50,7 @@ function drawChart(rawData) {
     ['Region', 'India', 'China', 'Europe', 'United States', 'Other' ],
     ...rawData.map(
       ({year, India, China, Europe, United States, Other}) => {
-        return [year, India, China, Europe, US, Other]
+        return [year, India, China, Europe, United States, Other]
       }
     )
   ])
