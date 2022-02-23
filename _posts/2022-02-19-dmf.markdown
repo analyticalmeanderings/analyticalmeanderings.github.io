@@ -6,6 +6,7 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 For decades foreign countries have provided the majority of new Active Pharmaceutical Ingredient (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while America's well documented dependence on China has been steadily growing, India actually has the largest growth in new API capacity.
+<span class="label label-danger">DRAFT</span>
 
 <!--more-->
 # 20 years of offshoring
@@ -83,6 +84,10 @@ The Medicine Supply Map team applied Natural Language Processing (NLP) and geoco
 
 1. Studying therapeutic class implications
 2. Evaluating the offshoring impact on drug shortage risk. Prior work has shown a negative correlation between shortage risk and geographic diversity (diversifying supply points enhances supply chain resilience).
+3. Generic vs non-generics by location
+4. Impact of competition
+5. Number of products by facility
+6. Proxy for outsourcing
 
 To learn more about how geographic diversity impacts shortage risk, please visit our [website](https://www.usp.org/supply-chain/medicine-supply-map)
 
