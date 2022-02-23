@@ -59,6 +59,11 @@ function drawChart(rawData) {
       title: 'Year of DMF Submission', 
       titleTextStyle: {italic: false}
     },
+    annotations: {
+      textStyle: {
+        color: '#871b47',
+      },
+    },
     series: [
       {color:'#ec9332'},
       {color:'#c44129'},
