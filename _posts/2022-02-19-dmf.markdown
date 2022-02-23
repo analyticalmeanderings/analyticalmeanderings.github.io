@@ -61,7 +61,7 @@ function drawChart(rawData) {
     },
     annotations: {
       textStyle: {
-        color: '#871b47',
+        color: 'black',
       },
     },
     series: [
