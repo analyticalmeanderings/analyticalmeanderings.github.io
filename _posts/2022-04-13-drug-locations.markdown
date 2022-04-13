@@ -52,7 +52,7 @@ function drawChart(rawData) {
     vAxis: {
       minValue: 0,
       ticks: [0, .25, .5, .75, 1],
-      title: 'Portion of new Type II currently active API DMFs by region', 
+      title: 'Portion of Active Type II API DMFs', 
       titleTextStyle: {italic: false}
     },
     hAxis: {
