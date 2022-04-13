@@ -1,15 +1,15 @@
 ---
 layout:     post
 title:      "Annual Report"
-date:       2022-04-12 12:00:00
+date:       2022-04-11 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-For decades foreign countries have provided the majority of new Active Pharmaceutical Ingredient (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while America's well documented dependence on China has been steadily growing, India actually has the largest growth in new API capacity.
+Placeholder for annual report. Everything is in the outputs layer.
 <span class="label label-danger">DRAFT</span>
 
 <!--more-->
-# 20 years of offshoring
+# Quality records
 
 Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
 In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
