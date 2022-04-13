@@ -1,19 +1,17 @@
 ---
 layout:     post
-title:      "Where are drugs made?"
+title:      "What types of drugs are most reliant on overseas manufacturers?"
 date:       2022-04-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-Placeholder for annual report. Everything is in the outputs layer.
+What types of drugs are most reliant on overseas manufacturers?
 <span class="label label-danger">DRAFT</span>
 
 <!--more-->
-# Quality records
+# Class analysis
 
-Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
-In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
-India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
+It's well known that signifacnt manufacturing capacity for US pharmaceutical is overseas.
 
 <div id="dmf_area2" style="width: 900px; height: 500px"></div>
 <script
