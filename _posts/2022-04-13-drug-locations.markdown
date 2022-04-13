@@ -37,7 +37,7 @@ function loadAndDrawChart() {
 
 function drawChart(rawData) {
   
-  console.log(rawData)
+  
   var data = google.visualization.arrayToDataTable([
     ['Region', 'India', 'China', 'United States', 'Other', ],
     ...rawData.map(
@@ -46,6 +46,7 @@ function drawChart(rawData) {
       }
     )
   ]);
+  console.log(data)
   var options = {
     title: "Geographic evolution of new pharmaceutical manufacturing capacity",
     legend: { position: 'bottom', maxLines: 3 },
