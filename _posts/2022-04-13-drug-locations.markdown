@@ -38,6 +38,8 @@ function loadAndDrawChart() {
 }
 
 function drawChart(rawData) {
+  
+  console.log(rawData)
   var data = google.visualization.arrayToDataTable([
     ['Region', 'India', 'China', 'Europe', 'United States', 'Other', ],
     ...rawData.map(
