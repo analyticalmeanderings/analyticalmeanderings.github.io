@@ -11,7 +11,7 @@ What classes of drugs are most reliant on overseas manufacturers?
 <!--more-->
 # Therapeutic class analysis
 
-It's well known that signifacnt manufacturing capacity for US pharmaceutical is overseas. India and China account for less than 50% of DMFs for Dermatological and Ophthalmic Agents. Antivirals and Blood Glucose
+It's well known that significant manufacturing capacity for US pharmaceutical is overseas. India and China account for less than 50% of DMFs for Dermatological and Ophthalmic Agents. Antivirals and Blood Glucose
 Regulators are the most reliant on India and China for manufacturing capacity. Analgesics has the highest portion of DMFs sourced in the US at 25%.
 
 <div id="class_drug" style="width: 900px; height: 500px"></div>
