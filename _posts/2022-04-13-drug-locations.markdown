@@ -67,8 +67,8 @@ function drawChart(rawData) {
     series: [
       {color:'#ec9332'},
       {color:'#c44129'},
-      {color:'#3e8410'},
-      // {color:'#0560bd'},
+      // {color:'#3e8410'},
+      {color:'#0560bd'},
       {color:'#D3D3D3', visibleInLegend: false},
     ],
     isStacked: 'percent',
