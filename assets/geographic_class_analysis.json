@@ -7,13 +7,6 @@
         "Other": 295
     },
     {
-        "therapeutic_class": "Antibacterials",
-        "India": 200,
-        "China": 128,
-        "United States": 28,
-        "Other": 223
-    },
-    {
         "therapeutic_class": "Ophthalmic Agents",
         "India": 149,
         "China": 81,
@@ -21,11 +14,19 @@
         "Other": 220
     },
     {
-        "therapeutic_class": "Analgesics",
-        "India": 166,
-        "China": 42,
-        "United States": 105,
-        "Other": 106
+        "therapeutic_class": "Antibacterials",
+        "India": 200,
+        "China": 128,
+        "United States": 28,
+        "Other": 223
+    },
+
+    {
+        "therapeutic_class": "Blood Glucose Regulators",
+        "India": 213,
+        "China": 51,
+        "United States": 19,
+        "Other": 81
     },
     {
         "therapeutic_class": "Antivirals",
@@ -35,10 +36,10 @@
         "Other": 53
     },
     {
-        "therapeutic_class": "Blood Glucose Regulators",
-        "India": 213,
-        "China": 51,
-        "United States": 19,
-        "Other": 81
+        "therapeutic_class": "Analgesics",
+        "India": 166,
+        "China": 42,
+        "United States": 105,
+        "Other": 106
     }
 ]
