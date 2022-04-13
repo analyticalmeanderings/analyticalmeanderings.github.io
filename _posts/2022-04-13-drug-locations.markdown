@@ -47,16 +47,16 @@ function drawChart(rawData) {
   ]);
   
   var options = {
-    title: "Geographic evolution of new pharmaceutical manufacturing capacity",
+    title: "Geographic by therapeutic class",
     legend: { position: 'bottom', maxLines: 3 },
-    vAxis: {
-      minValue: 0,
-      ticks: [0, .25, .5, .75, 1],
-      title: 'Portion of Active Type II API DMFs', 
-      titleTextStyle: {italic: false}
-    },
+    // vAxis: {
+    //   minValue: 0,
+    //   ticks: [0, .25, .5, .75, 1],
+    //   title: 'Portion of Active Type II API DMFs', 
+    //   titleTextStyle: {italic: false}
+    // },
     hAxis: {
-      title: 'Year of DMF Submission', 
+      title: 'Portion of Active Type II API DMFs', 
       titleTextStyle: {italic: false}
     },
     annotations: {
