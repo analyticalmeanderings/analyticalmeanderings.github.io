@@ -49,12 +49,6 @@ function drawChart(rawData) {
   var options = {
     title: "Geographic by therapeutic class",
     legend: { position: 'bottom', maxLines: 3 },
-    // vAxis: {
-    //   minValue: 0,
-    //   ticks: [0, .25, .5, .75, 1],
-    //   title: 'Portion of Active Type II API DMFs', 
-    //   titleTextStyle: {italic: false}
-    // },
     hAxis: {
       title: 'Portion of Active Type II API DMFs', 
       titleTextStyle: {italic: false}
@@ -67,7 +61,6 @@ function drawChart(rawData) {
     series: [
       {color:'#ec9332'},
       {color:'#c44129'},
-      // {color:'#3e8410'},
       {color:'#0560bd'},
       {color:'#D3D3D3', visibleInLegend: false},
     ],
