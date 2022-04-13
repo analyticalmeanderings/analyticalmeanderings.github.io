@@ -39,10 +39,10 @@ function drawChart(rawData) {
   
   console.log(rawData)
   var data = google.visualization.arrayToDataTable([
-    ['Region', 'India', 'China', 'Europe', 'United States', 'Other', ],
+    ['Region', 'India', 'China', 'United States', 'Other', ],
     ...rawData.map(
-      ({therapeutic_class, India, China, Europe, US, Other}) => {
-        return [therapeutic_class, India, China, Europe, US, Other]
+      ({therapeutic_class, India, China, US, Other}) => {
+        return [therapeutic_class, India, China, US, Other]
       }
     )
   ]);
