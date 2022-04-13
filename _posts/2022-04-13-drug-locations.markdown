@@ -38,7 +38,7 @@ function loadAndDrawChart() {
 function drawChart(rawData) {
   
   var data = google.visualization.arrayToDataTable([
-    ['therapeutic_class', {label: 'India', type: 'number'}, {label: 'China', type: 'number'}, {label: 'US', type: 'number'}, {label: 'Other', type: 'number'}],
+    ['therapeutic_class', {label: 'India', type: 'number'}, {label: 'China', type: 'number'}, {label: 'United States', type: 'number'}, {label: 'Other', type: 'number'}],
     ...rawData.map(
       ({therapeutic_class, India, China, US, Other}) => {
         return [therapeutic_class, India, China, US, Other]
