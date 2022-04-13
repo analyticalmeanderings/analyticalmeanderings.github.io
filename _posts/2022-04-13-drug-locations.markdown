@@ -13,7 +13,7 @@ What types of drugs are most reliant on overseas manufacturers?
 
 It's well known that signifacnt manufacturing capacity for US pharmaceutical is overseas.
 
-<div id="dmf_area2" style="width: 900px; height: 500px"></div>
+<div id="class_drug" style="width: 900px; height: 500px"></div>
 <script
   type="text/javascript"
   src="https://www.gstatic.com/charts/loader.js"
@@ -76,7 +76,7 @@ function drawChart(rawData) {
   };
 
     var chart = new google.visualization.BarChart(
-      document.getElementById("dmf_area2")
+      document.getElementById("class_drug")
     );
     chart.draw(data, options);
 }
