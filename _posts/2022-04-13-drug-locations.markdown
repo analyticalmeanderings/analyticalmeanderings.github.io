@@ -42,7 +42,7 @@ function drawChart(rawData) {
     ['Region', 'India', 'China', 'Europe', 'United States', 'Other', ],
     ...rawData.map(
       ({therapeutic_class, India, China, Europe, US, Other}) => {
-        return [year, India, China, Europe, US, Other]
+        return [therapeutic_class, India, China, Europe, US, Other]
       }
     )
   ]);
@@ -74,7 +74,7 @@ function drawChart(rawData) {
     isStacked: 'percent',
   };
 
-    var chart = new google.visualization.AreaChart(
+    var chart = new google.visualization.BarChart(
       document.getElementById("dmf_area2")
     );
     chart.draw(data, options);
