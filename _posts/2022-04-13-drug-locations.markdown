@@ -14,6 +14,7 @@ It's well known that significant manufacturing capacity for US pharmaceutical is
 Regulators are the most reliant on India and China for manufacturing capacity. Analgesics has the highest portion of DMFs sourced in the US at 25%.
 
 <div id="class_drug" style="width: 900px; height: 500px"></div>
+<div id="aggro" style="width: 900px; height: 500px"></div>
 <script
   type="text/javascript"
   src="https://www.gstatic.com/charts/loader.js"
@@ -29,14 +30,18 @@ google.charts.load('current', {
   'packages': ['corechart']
 });
 google.charts.setOnLoadCallback(loadAndDrawChart);
+google.charts.setOnLoadCallback(loadAndDrawChart2);
 
 function loadAndDrawChart() {
   getJSON("../assets/geographic_class_analysis.json")
   .then(drawChart)
 }
+function loadAndDrawChart2() {
+  getJSON("../assets/classAntivirals.json")
+  .then(drawChart2)
+}
 
 
-console.log(loadAndDrawChart())
 
 function drawChart(rawData) {
   
@@ -72,6 +77,49 @@ function drawChart(rawData) {
 
     var chart = new google.visualization.BarChart(
       document.getElementById("class_drug")
+    );
+    chart.draw(data, options);
+}
+
+function drawChart2(rawData) {
+  var data = google.visualization.arrayToDataTable([
+    ['Region', 'India', 'China', 'Europe', 'United States', 'Other',  { role: 'annotation' }],
+    ...rawData.map(
+      ({year, India, China, Europe, US, Other, total}) => {
+        return [year, India, China, Europe, US, Other, total]
+      }
+    )
+  ]);
+  var options = {
+    title: "Geographic evolution of new pharmaceutical manufacturing capacity",
+    legend: { position: 'bottom', maxLines: 3 },
+    vAxis: {
+      minValue: 0,
+      ticks: [0, .25, .5, .75, 1],
+      title: 'Portion of new Type II currently active API DMFs by region', 
+      titleTextStyle: {italic: false}
+    },
+    hAxis: {
+      title: 'Year of DMF Submission', 
+      titleTextStyle: {italic: false}
+    },
+    annotations: {
+      textStyle: {
+        color: 'black',
+      },
+    },
+    series: [
+      {color:'#ec9332'},
+      {color:'#c44129'},
+      {color:'#3e8410'},
+      {color:'#0560bd'},
+      {color:'#D3D3D3', visibleInLegend: false},
+    ],
+    isStacked: 'percent',
+  };
+
+    var chart = new google.visualization.AreaChart(
+      document.getElementById("aggro")
     );
     chart.draw(data, options);
 }
