@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "US dependence on foreign manufacturing for antiviral medications"
+title:      "US dependence on foreign manufacturing capacity for antiviral medications"
 date:       2022-04-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
@@ -10,8 +10,9 @@ What classes of drugs are most reliant on foreign manufacturers?
 <!--more-->
 # Therapeutic class analysis
 
-Over 80% of API antiviral manufacturing sites It's well known that significant manufacturing capacity for US pharmaceutical is overseas. India and China account for less than 50% of DMFs for Dermatological and Ophthalmic Agents. Antivirals and Blood Glucose
-Regulators are the most reliant on India and China for manufacturing capacity. Analgesics has the highest portion of DMFs sourced in the US at 25%.
+Over 80% of API antiviral manufacturing sites that support US markets are located in India and China. <br>
+
+Analgesics have the highest portion of DMFs sourced in the US at 25%.
 
 <div id="class_drug" style="width: 900px; height: 500px"></div>
 <div id="aggro" style="width: 900px; height: 500px"></div>
