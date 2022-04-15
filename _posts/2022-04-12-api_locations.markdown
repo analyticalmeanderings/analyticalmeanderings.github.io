@@ -6,7 +6,6 @@ author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
 Increasing visibility to decrease risk. Applying Machine Learning to geographically assess global API manufacturing.
-<span class="label label-danger">DRAFT</span>
 
 <!--more-->
 # Global API manufacturing capacity is concentrated in India​ (the money slide)

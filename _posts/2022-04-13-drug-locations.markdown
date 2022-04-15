@@ -1,12 +1,11 @@
 ---
 layout:     post
-title:      "What classes of drugs are most reliant on overseas manufacturers?"
+title:      "US dependence on foreign manufacturing for antiviral medications"
 date:       2022-04-12 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-What classes of drugs are most reliant on overseas manufacturers?
-<span class="label label-danger">DRAFT</span>
+What classes of drugs are most reliant on foreign manufacturers?
 
 <!--more-->
 # Therapeutic class analysis
