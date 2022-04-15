@@ -5,7 +5,7 @@ date:       2022-02-20 12:00:00
 author:     "Matt Christian"
 header-img: "img/cover.jpeg"
 ---
-For decades foreign countries have provided the majority of new Active Pharmaceutical Ingredient (API) manufacturing capacity for US markets. But the *location* of new overseas API manufacturing sites has evolved over time. And while America's well documented dependence on China has been steadily growing, India actually has the largest growth in new API capacity.
+For decades foreign countries have provided the majority of new Active Pharmaceutical Ingredient (API) manufacturing capacity for US markets. But the *location* of new foreign API manufacturing sites has evolved over time. And while America's well documented dependence on China has been steadily growing, India actually has the largest growth in new API capacity.
 <span class="label label-danger">DRAFT</span>
 
 <!--more-->

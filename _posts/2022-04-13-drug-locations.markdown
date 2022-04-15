@@ -35,6 +35,9 @@ function loadAndDrawChart() {
   .then(drawChart)
 }
 
+
+console.log(loadAndDrawChart())
+
 function drawChart(rawData) {
   
   var data = google.visualization.arrayToDataTable([
