@@ -1,15 +1,15 @@
 ---
 layout:     post
 title:      "Report on Global API Manufacturing"
-date:       2022-04-11 12:00:00
+date:       2022-04-14 12:00:00
 author:     "Matt Christian"
-header-img: "img/cover.jpeg"
+header-img: "img/pills.jpeg"
 ---
 Placeholder for annual report. Everything is in the outputs layer.
 <span class="label label-danger">DRAFT</span>
 
 <!--more-->
-# Quality records
+# Global API manufacturing capacity is concentrated in India​ (the money slide)
 
 Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
 In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
