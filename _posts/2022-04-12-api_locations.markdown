@@ -19,6 +19,10 @@ Heat map of API facilities approved by US, EU, Japan, Korea and NZ. Each unit ei
 
 {% include image.html url="/img/foreign_reg.PNG"%}
 
+# Facilities in India tend to have broader capabilities whereas Chinese firms are more specialized
+
+{% include image.html url="/img/firm_size.png"%}
+
 # US API registrations from European and the US manufacturers have declined over time
 <div id="dmf_area2" style="width: 900px; height: 500px"></div>
 
