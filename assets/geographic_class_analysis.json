@@ -20,7 +20,13 @@
         "US": 28,
         "Other": 223
     },
-
+    {
+        "therapeutic_class": "Analgesics",
+        "India": 166,
+        "China": 42,
+        "US": 105,
+        "Other": 106
+    },
     {
         "therapeutic_class": "Blood Glucose Regulators",
         "India": 213,
@@ -34,12 +40,5 @@
         "China": 67,
         "US": 12,
         "Other": 53
-    },
-    {
-        "therapeutic_class": "Analgesics",
-        "India": 166,
-        "China": 42,
-        "US": 105,
-        "Other": 106
     }
 ]
