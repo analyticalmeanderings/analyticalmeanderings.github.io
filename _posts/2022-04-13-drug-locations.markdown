@@ -83,15 +83,15 @@ function drawChart(rawData) {
 
 function drawChart2(rawData) {
   var data = google.visualization.arrayToDataTable([
-    ['Region', 'India', 'China', 'Europe', 'United States', 'Other',  { role: 'annotation' }],
+    ['Region', 'India', 'China', 'Europe', 'United States', 'Other'],
     ...rawData.map(
-      ({year, India, China, Europe, US, Other, total}) => {
-        return [year, India, China, Europe, US, Other, total]
+      ({year, India, China, Europe, US, Other}) => {
+        return [year, India, China, Europe, US, Other]
       }
     )
   ]);
   var options = {
-    title: "Geographic evolution of new pharmaceutical manufacturing capacity",
+    title: "Geographic evolution of antiviral pharmaceutical manufacturing capacity",
     legend: { position: 'bottom', maxLines: 3 },
     vAxis: {
       minValue: 0,
