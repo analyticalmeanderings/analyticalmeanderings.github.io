@@ -3,7 +3,7 @@ layout:     post
 title:      "Report on Global API Manufacturing"
 date:       2022-04-14 12:00:00
 author:     "Matt Christian"
-header-img: "img/pills.jpg"
+header-img: "img/cover.jpeg"
 ---
 Increasing visibility to decrease risk. Applying Machine Learning to geographically assess global API manufacturing.
 <span class="label label-danger">DRAFT</span>
