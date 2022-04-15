@@ -3,7 +3,7 @@ layout:     post
 title:      "Report on Global API Manufacturing"
 date:       2022-04-14 12:00:00
 author:     "Matt Christian"
-header-img: "img/pills.jpeg"
+header-img: "img/pills.jpg"
 ---
 Increasing visibility to decrease risk. Applying Machine Learning to geographically assess global API manufacturing.
 <span class="label label-danger">DRAFT</span>
@@ -11,15 +11,19 @@ Increasing visibility to decrease risk. Applying Machine Learning to geographica
 <!--more-->
 # Global API manufacturing capacity is concentrated in India​ (the money slide)
 
-{% include image.html url="/img/inspection_location.PNG"%}
+{% include image.html url="/img/map.PNG"%}
 
 Heat map of API facilities approved by US, EU, Japan, Korea and NZ. Each unit either a product-facility-approval country combination or lower level of resolution (depending on granularity of the data). Hoverable details for each country like XXX US DMFs, YYY EU CEPs etc. This is the money slide
 
-Over the past two decades, India has played an increasingly important role in Active Pharmaceutical Ingredient (API) manufacturing for US markets.
-In 2000, 20% of new Drug Master Files (DMFs) were for Indian manufacturers. By 2021, that figure skyrocketed to 62%. 
-India and China now account for more than 86% of new DMFs, largely at the expense of European sites.
+# India dominates in API registration filings to stringent regulatory authorities 
 
+{% include image.html url="/img/foreign_reg.PNG"%}
+
+# US API registrations from European and the US manufacturers have declined over time
 <div id="dmf_area2" style="width: 900px; height: 500px"></div>
+
+# EU API registrations from European and the US manufacturers have declined over time
+
 <script
   type="text/javascript"
   src="https://www.gstatic.com/charts/loader.js"
