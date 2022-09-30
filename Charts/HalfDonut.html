@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <title>HalfDonutCharts</title>
+    <style>
+        p{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz"></div>
+
+    <script>
+      // set the dimensions and margins of the graph
+      const width = 250,
+        height = 250,
+        margin = 10,
+        thickness = 40;
+
+      // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+      const radius = Math.min(width, height) / 2 - margin;
+
+      // append the svg object to the div called 'my_dataviz'
+      const svg = d3
+        .select("#my_dataviz")
+        .append("svg")
+        .attr("width", width * 5)
+        .attr("height", height / 2 + 30)
+        .append("g")
+        .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+      // Create dummy data
+      const USAdata = {
+        "46%": 4779,
+        "27%": 2009,
+        "13%": 1378,
+        "6%": 975,  //6%
+        "8%": 849,
+      };
+
+      // Define angle range for half donut
+      var anglesRange = 0.5 * Math.PI;
+
+      // set the color scale
+      var ColorPicks = [
+        "#b51f7b",
+        "#3149e0",
+        "#148219",
+        "#732fa1",
+        "#928753",
+      ];
+      var MyColor = d3.scaleOrdinal(ColorPicks);
+
+      console.log(MyColor);
+
+      // Compute the position of each group on the pie:
+      const pie = d3
+        .pie()
+        .value(function (d) {
+          return d[1];
+        })
+        .sort(null)
+        .startAngle(anglesRange * -1)
+        .endAngle(anglesRange);
+
+      const USAdata_ready = pie(Object.entries(USAdata));
+      // Now I know that group A goes from 0 degrees to x degrees and so on.
+
+      // shape helper to build arcs:
+      const arcGenerator = d3
+        .arc()
+        .innerRadius(radius - thickness)
+        .outerRadius(radius);
+
+      // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+      svg
+        .selectAll("mySlices")
+        .data(USAdata_ready)
+        .join("path")
+        .attr("d", arcGenerator)
+        .attr("fill", function (d) {
+          return MyColor(d.data);
+        })
+        .attr("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("opacity", 0.7);
+
+      // Now add the annotation. Use the centroid method to get the best coordinates
+      svg
+        .selectAll("mySlices")
+        .data(USAdata_ready)
+        .join("text")
+        .text(function (d) {
+          return d.data[0];
+        })
+        .attr("transform", function (d) {
+          return `translate(${arcGenerator.centroid(d)})`;
+        })
+        .style("text-anchor", "middle")
+        .style("font-size", 14);
+
+      svg
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .text("USA");
+
+      const CEPdata = {
+        "39%": 1843,
+        "33%": 1534,
+        "13%": 626,
+        " ": 219,   // 5%
+        "10%": 473,
+      };
+
+      var g = svg
+        .append("g")
+
+        .attr("transform", `translate(${1 * width}, ${0})`);
+
+      const CEPdata_ready = pie(Object.entries(CEPdata));
+
+      // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+      g.selectAll("mySlices")
+        .data(CEPdata_ready)
+        .join("path")
+        .attr("d", arcGenerator)
+        .attr("fill", function (d) {
+          return MyColor(d.data);
+        })
+        .attr("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("opacity", 0.7);
+
+      // Now add the annotation. Use the centroid method to get the best coordinates
+      g.selectAll("mySlices")
+        .data(CEPdata_ready)
+        .join("text")
+        .text(function (d) {
+          return d.data[0];
+        })
+        .attr("transform", function (d) {
+          return `translate(${arcGenerator.centroid(d)})`;
+        })
+        .style("text-anchor", "middle")
+        .style("font-size", 14);
+
+      g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .text("European Union");
+
+      //// Korean Data
+
+      const Koreadata = {
+        "43%": 2193,
+        "19%": 963,
+        "27%": 1361,
+        " ": 60,
+        "10%": 490,
+      };
+
+      var g = svg
+        .append("g")
+
+        .attr("transform", `translate(${2 * width}, ${0})`);
+
+      const Koreadata_ready = pie(Object.entries(Koreadata));
+
+      // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+      g.selectAll("mySlices")
+        .data(Koreadata_ready)
+        .join("path")
+        .attr("d", arcGenerator)
+        .attr("fill", function (d) {
+          return MyColor(d.data);
+        })
+        .attr("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("opacity", 0.7);
+
+      // Now add the annotation. Use the centroid method to get the best coordinates
+      g.selectAll("mySlices")
+        .data(Koreadata_ready)
+        .join("text")
+        .text(function (d) {
+          return d.data[0];
+        })
+        .attr("transform", function (d) {
+          return `translate(${arcGenerator.centroid(d)})`;
+        })
+        .style("text-anchor", "middle")
+        .style("font-size", 14);
+
+      g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .text("Korea");
+
+      //// Japan Data
+
+      const Japandata = {
+        "17%": 130,
+        "26%": 189,
+        "24%": 179,
+        " ": 43,        // 6%
+        "27%": 195,
+      };
+
+      g = svg
+        .append("g")
+
+        .attr("transform", `translate(${3 * width}, ${0})`);
+
+      const Japandata_ready = pie(Object.entries(Japandata));
+      console.log(Japandata)
+
+      // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+      g.selectAll("mySlices")
+        .data(Japandata_ready)
+        .join("path")
+        .attr("d", arcGenerator)
+        .attr("fill", function (d) {
+          return MyColor(d.data);
+        })
+        .attr("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("opacity", 0.7);
+
+      // Now add the annotation. Use the centroid method to get the best coordinates
+      g.selectAll("mySlices")
+        .data(Japandata_ready)
+        .join("text")
+        .text(function (d) {
+          return d.data[0];
+        })
+        .attr("transform", function (d) {
+          return `translate(${arcGenerator.centroid(d)})`;
+        })
+        .style("text-anchor", "middle")
+        .style("font-size", 14);
+
+      g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .text("Japan");
+
+      // Now, get the legend
+
+      g = svg.append("g").attr("transform", `translate(${0}, ${20})`);
+
+      var LegendSpacing = 100;
+
+      var LegendOffset = 70;
+
+      var LegendText = ["India", "Europe", "China", "USA", "Other"];
+
+      for (let i = 1; i < 6; i++) {
+        g.append("circle")
+          .attr("cx", LegendOffset + LegendSpacing * i)
+          .attr("cy", 0)
+          .attr("r", 6)
+          .style("fill", ColorPicks[i-1]);
+        
+
+        g.append("text")
+          .attr("x", LegendOffset + 10 + LegendSpacing * i)
+          .attr("y", 0)
+          .text(LegendText[i-1])
+          .style("font-size", "15px")
+          .attr("alignment-baseline", "middle");
+      }
+
+    </script>
+    <p>Relative share of major contributors' (India, Europe, China, USA and rest of the world) active drug master files in different markets.</p>
+  </body>
+</html>

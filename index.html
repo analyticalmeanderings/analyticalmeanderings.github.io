@@ -1,125 +1,134 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="keywords" content="Medicine, Supply Chain" />
-    <meta name="description" content="Mapping pharmaceutical supply" />
-    <meta name="author" content="Matt Christian" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF8" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles.css" type="text/css" />
+---
+layout: page
+description: ""
+background: "img/cover.jpeg"
+---
 
-    <script type="text/javascript" src="./script.js"></script>
-  </head>
-  <body>
-    <div class="container-fluid p-5 my-5 bg-dark text-white"></div>
-    <h1>Matt Christian's Portfolio</h1>
+<!-- <table style="width:100%" align="center">
+
+		<td style="width:500px; text-align:center; vertical-align:middle; border-top:0px">
+		<img src="img/ik.jpg" style="max-height:100%; max-width:100%"/>
+		</td>
+<td align="left" style="width: 1000px; border-top:0px"> 
+<p>
+  Data Scientist with 10+ years of experience turning data into actionable insights 
+  for complex business problems.
+</p>
+<p>
+  Domain expertise includes logistics, pharmaceuticals, oil & gas, renewable energy, 
+  and federal government consulting.
+</p>	
+</td>
+</table> -->
+
+<h1>Insights Series Sandbox</h1>
+<p>
+  Welcome to the Sandbox! This is an open source project to develop blog post
+  type content for the pharmaceutical industry.<br />
+  <br />
+  Goal … less than 8 hours of Data Scientist LoE per initial submission<br />
+  Goal … one blog post per week<br />
+  30 minute meeting with policy person to prior in analysis<br />
+  Strategy … end on a question, don't try to solve the world's problems in a
+  blog post
+</p>
+
+<script
+  type="text/javascript"
+  src="https://www.gstatic.com/charts/loader.js"
+></script>
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["corechart"] });
+  google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+    var data = google.visualization.arrayToDataTable([
+      [
+        "Project Name",
+        "Development Phase",
+        "Priority level",
+        "Topic",
+        "Resource Days Spent",
+      ],
+      ["Defining Essential", 0.9, 5, "Essential Meds", 1],
+      ["Mining the Public Pricing Data", 0, 2, "Pricing", 1],
+      ["What's on a label?", 0, 3, "DMF Data", 1],
+      ["Recalls and Refusals", 0.5, 2, "Shortage Analysis", 1],
+      ["DMF Changes post pandemic", 1, 5, "DMF Data", 1],
+      ["Inspection decreases", 1, 6, "Inspections", 2],
+      ["Quality records", 1, 7, "Inspections", 1],
+      ["Count of approved manufacturers", 1, 8, "DMF Data", 1],
+      [
+        "Europe's declining importance for US pharmaceutical markets",
+        2.5,
+        10,
+        "DMF Data",
+        5,
+      ],
+      ["Where are DMFs for antibio?", 1, 9, "DMF Data", 1],
+      ["Moral hazard", 0.9, 5, "Shortage Analysis", 1],
+    ]);
+
+    var options = {
+      title: "Status of Insights Series Projects",
+      hAxis: {
+        ticks: [
+          { v: 0, f: "Rejected" },
+          { v: 1, f: "Prospecting" },
+          { v: 2, f: "Manual Validation" },
+          { v: 3, f: "Technical Review" },
+          { v: 4, f: "Final Review" },
+          { v: 5, f: "Completed" },
+        ],
+      },
+      vAxis: {
+        ticks: [
+          { v: 1, f: "Lowest Priority" },
+          { v: 12, f: "Highest Priority" },
+        ],
+        viewWindow: {
+          min: 0,
+          max: 12,
+        },
+        gridlines: { count: 1 },
+      },
+      bubble: { textStyle: { fontSize: 11 } },
+    };
+
+    var chart = new google.visualization.BubbleChart(
+      document.getElementById("series_chart_div")
+    );
+    chart.draw(data, options);
+  }
+</script>
+<!-- TODO: make mobile responsive -->
+<!-- <div id="series_chart_div" style="width: auto; max-width: 100% ; height: auto;"></div> -->
+<div id="series_chart_div" style="width: 900px; height: 500px"></div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+<script>
+  function ab_to_b(e) {
+    var data = "";
+    var bytes = new Uint8Array(e);
+    for (var i = 0; i < bytes.byteLength; i++) {
+      data += String.fromCharCode(bytes[i]);
+    }
+    return data;
+  }
+  fetch('assets/feather_light.xlsx').then((response)=>{
+    return response.arrayBuffer()
+  }).then((data)=>{
+    console.log('again')
+    const parsed_data = XLSX.read(ab_to_b(data), {type:'binary'})
+    console.log(parsed_data)
+    var backlog = parsed_data.Sheets['backlog'];
+    var sheet_data = XLSX.utils.sheet_to_json(backlog, {header:1});
+    console.log(sheet_data)
+
+    // add to chart build
+    // google.visualization.events.addEventListener(chart, "click", () => window.location.href = "yoururl")
+    
 
 
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-      <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-    </div>
-
-    <div id="Home" class="tabcontent">
-      <h2>Home</h2>
-      <h3>Biography</h3>
-      
-      
-      <div class="home_grid">
-        <img src="/images/profile.PNG" class="user-image" alt="Matt's Profile Photo">
-        <p>
-          Data Scientist with 10+ years of experience turning data into actionable
-          insights for complex business problems. Currently working on uncover the
-          upstream manufacturing sites for pharmaceuticals. Domain expertise
-          includes logistics, pharmaceuticals, oil & gas, renewable energy, and
-          federal government consulting. Education: M.S. in Financial Mathematics
-          from Johns Hopkins University, B.S. in Chemical Engineering from the
-          University of Virginia. If you are interested in colloborating, please
-          reach out to me on GitHub. My username is analyticalmeanderings. My other contact details are located on the links to the right.
-        </p>
-
-      
-      <nav class="cover-navigation navigation--social">
-        <ul class="navigation">
-      <!-- LinkedIn -->
-      <li class="navigation__item">
-        <a href="https://www.linkedin.com/in/matthew-christian-17577641" title="Matt on LinkedIn" target="_blank">
-          <i class="icon icon-social-linkedin"></i>
-          <span class="label">LinkedIn</span>
-        </a>
-      </li>
-
-      <!-- GitHub -->
-      <li class="navigation__item">
-        <a href="https://www.github.com/analyticalmeanderings" title="Matt on GitHub" target="_blank">
-          <i class="icon icon-social-github"></i>
-          <span class="label">GitHub</span>
-        </a>
-      </li>
-
-      <!-- Email -->
-      <li class="navigation__item">
-        <a href="mailto:matthew.bryan.christian@gmail.com" title="Email matthew.bryan.christian@gmail.com" target="_blank">
-          <i class="icon icon-mail"></i>
-          <span class="label">Email</span>
-        </a>
-      </li>
-      </ul>
-      </nav>
-    </div>
-
-
-      <iframe
-        id="myFrame"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/cjWrRRjy-ck?start=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-    </div>
-
-    <div id="Projects" class="tabcontent">
-      <h2>PacMen Exercise</h2>
-      <p>Have you ever wanted to see PacMen scramble across your screen? 
-        Look no further. 
-        This app leverages a PacMen factory to make copies. 
-        When you PacMen hit a wall, they turn around.</p>
-      <p>To launch the app, 
-        <a href="https://analyticalmeanderings.github.io/pacmen_exercise">click here</a>
-      </p>
-      <p>If you want to look under the hood, take a look on  
-        <a href="https://www.github.com/analyticalmeanderings/pacmen_exercise">GitHub</a>
-      </p>
-
-      <h2>Real Time Bus Tracker</h2>
-      <p>Find your bus routes in Boston with this app.
-        Never miss work again.
-      </p>
-      <p>To launch the app, 
-        <a href="https://analyticalmeanderings.github.io/real_time_bus_tracker">click here</a>
-      </p>
-      <p>If you want to look under the hood, take a look on  
-        <a href="https://www.github.com/analyticalmeanderings/real_time_bus_tracker">GitHub</a>
-      </p>
-
-      <h2>Eye Exercise</h2>
-      <p>This is one of the creepier things I've done.
-        The eyes on this app will haunt you.
-        Move your mouse around the screen, get unsettled.
-      </p>
-      <p>To launch the app, 
-        <a href="https://analyticalmeanderings.github.io/eye_exercise">click here</a>
-      </p>
-      <p>If you want to look under the hood, take a look on  
-        <a href="https://www.github.com/analyticalmeanderings/eye_exercise">GitHub</a>
-      </p>
-
-    </div>
-  </div>
-  </body>
-</html>
+  })
+</script> -->

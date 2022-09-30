@@ -1,0 +1,17 @@
+var sets = [
+         {"sets": [0], "label": "NADAC", "size": 27386},
+         {"sets": [1], "label": "Part B", "size": 7439},
+         {"sets": [2], "label": "Part D", "size": 12884},
+         {"sets": [3], "label": "VA", "size": 19850},
+         {"sets": [0, 1], "size": 420},
+         {"sets": [0, 2], "size": 5951},
+         {"sets": [0, 3], "size": 6398},
+         {"sets": [1, 2], "size": 965},
+         {"sets": [1, 3], "size": 3198},
+         {"sets": [2, 3], "size": 7874},
+         {"sets": [0, 1, 2], "size": 127},
+         {"sets": [0, 1, 3], "size": 155},
+         {"sets": [0, 2, 3], "size": 2837},
+         {"sets": [1, 2, 3], "size": 713},
+         {"sets": [0, 1, 2, 3], "size": 92},
+];

@@ -1,43 +1,18 @@
 # Site settings
 title: Matt Christian
-description: 'Data Scientist'
-url: 'https://analyticalmeanderings.github.io'
-baseurl: ''
-google_analytics: 'UA-83225772-1'
-disqus_shortname: 'analyticalmeanderings-github-io'
+header-img: ./img/cover.jpeg
+email: matthew.bryan.christian@gmail.com
 
-author:
-  name: 'Matt Christian'
-  email: matthew.bryan.christian@gmail.com
-  github_username:  analyticalmeanderings
-  linkedin_username:  matthew-christian-17577641
-
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+url: "http://analyticalmeanderings.github.io"
+github_username:  analyticalmeanderings
+linkedin: https://www.linkedin.com/in/matthew-christian-17577641
 
 # Build settings
-destination: _site
-paginate: 10
-permalink: /:title/index.html
 markdown: kramdown
 highlighter: rouge
-
-# sass:
-#     sass_dir: _sass
-#     style: compressed
-
-pattern_styles: css/main.css
-
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
-
-gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+paginate: 6
+paginate_path: blog/page:num
+excerpt_separator: <!--more-->
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+permalink: /blog/:title
+#<link rel="stylesheet" href="{{ "/assets/css/clean-blog.css, " | prepend: site.baseurl }}"

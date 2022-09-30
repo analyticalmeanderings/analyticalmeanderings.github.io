@@ -1,0 +1,44 @@
+[
+    {
+        "therapeutic_class": "Dermatological Agents",
+        "India": 169,
+        "China": 102,
+        "US": 47,
+        "Other": 295
+    },
+    {
+        "therapeutic_class": "Ophthalmic Agents",
+        "India": 149,
+        "China": 81,
+        "US": 33,
+        "Other": 220
+    },
+    {
+        "therapeutic_class": "Antibacterials",
+        "India": 200,
+        "China": 128,
+        "US": 28,
+        "Other": 223
+    },
+    {
+        "therapeutic_class": "Analgesics",
+        "India": 166,
+        "China": 42,
+        "US": 105,
+        "Other": 106
+    },
+    {
+        "therapeutic_class": "Blood Glucose Regulators",
+        "India": 213,
+        "China": 51,
+        "US": 19,
+        "Other": 81
+    },
+    {
+        "therapeutic_class": "Antivirals",
+        "India": 239,
+        "China": 67,
+        "US": 12,
+        "Other": 53
+    }
+]
