@@ -23,30 +23,6 @@ header{
     position: fixed;
     z-index: 2;
 }
-#sound{
-    padding: 7px;
-    background-color: #1b1b1b;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-.sound-cloud{
-    font-size: 1.2rem;
-    margin: 7px;
-    color: #f50057;
-}
-.on-off{
-    cursor: pointer;
-    margin-left: 5px;
-}
-#off{
-    color: #f50057;
-}
-#on{
-    display: none;
-    color: #08fdd8;
-}
 .btns-container .fas{
     font-size: 2rem;
     padding: 10px;
@@ -155,7 +131,7 @@ header{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
+    padding-left: 30rem;
 }
 .text-zone h1{
     font-size: 3rem;
@@ -468,7 +444,8 @@ header{
 
     /* home section */
     #section-home{
-        padding-left: 10vh;
+        padding-left: 15%;
+        padding-top: 12vh;
     }
     .text-zone h1{
         margin-top: 20px;
@@ -563,6 +540,32 @@ header{
         font-size: 1.7rem;
         line-height: 2rem;
     }
+    .particle {
+        position: fixed;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out, width 0.3s ease, height 0.3s ease;
+        mix-blend-mode: screen;
+        z-index: 1000;
+    }
+    
+    .trail {
+        animation: trailEffect 0.3s forwards;
+    }
+    
+    @keyframes trailEffect {
+        to {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+    }
+    
+    
 
     
 }
