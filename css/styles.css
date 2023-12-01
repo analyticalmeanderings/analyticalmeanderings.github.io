@@ -540,30 +540,20 @@ header{
         font-size: 1.7rem;
         line-height: 2rem;
     }
-    .particle {
+    .swirl-element {
         position: fixed;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
-        background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+        background-color: white;
         pointer-events: none;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out, width 0.3s ease, height 0.3s ease;
-        mix-blend-mode: screen;
-        z-index: 1000;
+        opacity: 0.7;
+        transition: transform 0.5s, opacity 0.5s;
+        z-index: 10000;
     }
     
-    .trail {
-        animation: trailEffect 0.3s forwards;
-    }
     
-    @keyframes trailEffect {
-        to {
-            width: 0;
-            height: 0;
-            opacity: 0;
-        }
-    }
+    
     
     
 
