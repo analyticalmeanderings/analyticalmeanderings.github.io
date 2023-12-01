@@ -1,0 +1,18 @@
+body.bg-dark {
+    background-color: #121212 !important;
+}
+
+.text-light-green {
+    color: #32CD32;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .nav-link {
+    color: #32CD32;
+}
+
+.hero-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Add additional custom styles here */
